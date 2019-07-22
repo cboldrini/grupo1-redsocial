@@ -1,0 +1,35 @@
+///////////// FUENTES //////////////
+
+<link href="https://fonts.googleapis.com/css?family=Exo:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+font-family: 'Exo', sans-serif;
+
+
+
+
+
+
+
+///////////// COLORES //////////////
+
+:root{
+	--azuloscuro:#011627;
+	--rosa:#EF767A;
+	--rosa-hover:#fF567A;
+	--turquesa:#23F0C7;
+	--blanco:#FFF;
+	--gris-claro:#E8EFF0;
+	--amarillo: #eFd337;
+	--violeta: #6D466B;
+	--azul-claro:#3A7CA5;
+	--azul-medio:#2F6690;
+	--azul-oscuro:#16425B;
+	--celeste: #30C5FF;
+	--celeste-hover: #50a5FF;
+	--naranja: #C75000;
+	--verde-agua: #5BE598;
+	--verde-agua-hover: #3Bd588;
+	--verde-agua: #5BE598;
+	--verde-medio: #499167;
+	--gris-oscuro: #333;
+}
