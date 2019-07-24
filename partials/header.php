@@ -5,7 +5,7 @@
 <body>
 
 
-<header>
+<header class="header-landing">
 	<div class="container-fluid row">
 		<div class="container">
 			<div class="col-md-2 logo col-sm-4 col-4"><a href="index.php">INSIDE</a></div>
@@ -22,6 +22,7 @@
 				</nav>
 			</div>
 			<i class="icon-toggle fas fa-bars"></i>
+			<i class="icon-exit fas fa-times"></i>
 		</div>
 	</div>
 

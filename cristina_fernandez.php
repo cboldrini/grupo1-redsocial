@@ -4,16 +4,22 @@
 
 <section id="profile" class="container-fluid row">
 
-	<div class="container user col-md-10">
+<?php 
+	require_once 'partials/menu_left.php';
+ ?>
 
-		<div class="wrapper-img col-md-1">
+
+<div class="main col-lg-10 col-md-9 col-sm-9 col-12">
+	<div class="user col-md-11 col-12">
+
+		<div class="wrapper-img col-md-2 col-2">
 			<img src="img/cristina.png" alt="">
 		</div>
 
-		<div class="wrapper-txt col-md-10">
-			<p class="user">Cristina Fernandez</p>
-			<p class="job-title">Senadora de la Nación</p>
-			<p class="area">Poder Legislativo</p>
+		<div class="wrapper-txt col-md-10 col-10">
+			<p class="user-name">Cristina Fernandez</p>
+			<p class="job-title">Gerente</p>
+			<p class="area"><a href="rrhh.php">Depto de Recursos Humanos</a></p>
 			<div class="actions">
 				<i class="fas fa-envelope"></i>
 				<i class="fas fa-comment"></i>
@@ -27,16 +33,16 @@
 	require_once 'partials/posts_filters.php';
  	?>
 
-	<div class="container posts col-md-10">
+	<div class="posts col-md-11">
 		
 		<div class="post">
 			<div class="wrapper-img col-md-1 col-2 col-sm-2">
-				<a href="cristina_fernandez.php"></a><img src="img/cristina.png" alt=""></a>
+				<a href="cristina_fernandez.php"><img src="img/cristina.png" alt=""></a>
 			</div>
 			
 			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
 				<p class="post-info">
-					<a href="cristina.php" class="post-user">Cristina Fernandez</a>
+					<a href="cristina_fernandez.php" class="post-user">Cristina Fernandez</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
 				</p>
 				<p class="post-message">Vamos a volver.</p>
@@ -52,12 +58,12 @@
 		
 		<div class="post">
 			<div class="wrapper-img col-md-1 col-2 col-sm-2">
-				<a href="cristina_fernandez.php"></a><img src="img/cristina.png" alt=""></a>
+				<a href="cristina_fernandez.php"><img src="img/cristina.png" alt=""></a>
 			</div>
 			
 			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
 				<p class="post-info">
-					<a href="cristina.php" class="post-user">Cristina Fernandez</a>
+					<a href="cristina_fernandez.php" class="post-user">Cristina Fernandez</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
 				</p>
 				<p class="post-message">Vamos a volver.</p>
@@ -73,12 +79,12 @@
 
 		<div class="post">
 			<div class="wrapper-img col-md-1 col-2 col-sm-2">
-				<a href="cristina_fernandez.php"></a><img src="img/cristina.png" alt=""></a>
+				<a href="cristina_fernandez.php"><img src="img/cristina.png" alt=""></a>
 			</div>
 			
 			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
 				<p class="post-info">
-					<a href="cristina.php" class="post-user">Cristina Fernandez</a>
+					<a href="cristina_fernandez.php" class="post-user">Cristina Fernandez</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
 				</p>
 				<p class="post-message">Vamos a volver.</p>
@@ -94,12 +100,12 @@
 
 		<div class="post">
 			<div class="wrapper-img col-md-1 col-2 col-sm-2">
-				<a href="cristina_fernandez.php"></a><img src="img/cristina.png" alt=""></a>
+				<a href="cristina_fernandez.php"><img src="img/cristina.png" alt=""></a>
 			</div>
 			
 			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
 				<p class="post-info">
-					<a href="cristina.php" class="post-user">Cristina Fernandez</a>
+					<a href="cristina_fernandez.php" class="post-user">Cristina Fernandez</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
 				</p>
 				<p class="post-message">Vamos a volver.</p>
@@ -115,12 +121,33 @@
 
 		<div class="post">
 			<div class="wrapper-img col-md-1 col-2 col-sm-2">
-				<a href="cristina_fernandez.php"></a><img src="img/cristina.png" alt=""></a>
+				<a href="cristina_fernandez.php"><img src="img/cristina.png" alt=""></a>
 			</div>
 			
 			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
 				<p class="post-info">
-					<a href="cristina.php" class="post-user">Cristina Fernandez</a>
+					<a href="cristina_fernandez.php" class="post-user">Cristina Fernandez</a>
+					<span class="post-date">21 de Julio de 2019 | 09:35</span>
+				</p>
+				<p class="post-message">Vamos a volver.</p>
+				
+				<div class="post-actions">
+					<i class="fas fa-thumbs-up"></i>
+					<i class="fas fa-reply"></i>
+					<i class="fas fa-share-alt"></i>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="post">
+			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+				<a href="cristina_fernandez.php"><img src="img/cristina.png" alt=""></a>
+			</div>
+			
+			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+				<p class="post-info">
+					<a href="cristina_fernandez.php" class="post-user">Cristina Fernandez</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
 				</p>
 				<p class="post-message">Vamos a volver.</p>
@@ -135,9 +162,9 @@
 		</div>
 
 	</div>
-
+</div>
 </section>
 
- <?php 
-	require_once 'partials/footer_in.php';
+<?php 
+	require_once 'partials/footer_scripts.php';
  ?>

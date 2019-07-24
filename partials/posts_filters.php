@@ -1,4 +1,4 @@
-	<div class="container filters col-md-10">
+	<div class="filters col-md-11">
 		<ul>
 			<li><a href="#">Todos</a></li>
 			<li><a href="#">Posts</a></li>

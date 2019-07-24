@@ -5,25 +5,22 @@
 <body>
 
 
-<header class="header_in">
-	<div class="container-fluid row">
-		<div class="container">
-			<div class="col-md-2 logo col-sm-4 col-4"><a href="timeline.php">INSIDE</a></div>
-			<div class="col-md-8 menu">
-				<nav>
-					<ul>
-						<li><a href="timeline.php"><p>TIMELINE</p></a></li>
-						<li><a href="contacts.php"><p>CONTACTOS</p></a></li>
-						<li><a href="groups.php"><p>GRUPOS</p></a></li>
-						<li><a href="wiki.php"><p>WIKI</p></a></li>
-						<li><a href="#"><p>DASHBOARD</p></a></li>
-						<li><a href="profile.php"><img class="user" src="img/eze.png" alt=""></a></li>
-					</ul>
-				</nav>
-			</div>
-			<i class="icon-toggle fas fa-bars"></i>
-		</div>
+<header class="header-in container-fluid row">
+	<div class="logo col-md-2 col-sm-4 col-4"><a href="timeline.php">INSIDE</a></div>
+	<div class="menu col-md-6">
+		<nav>
+			<ul>
+				<li><a href="timeline.php"><p>TIMELINE</p></a></li>
+				<li><a href="contacts.php"><p>CONTACTOS</p></a></li>
+				<li><a href="groups.php"><p>GRUPOS</p></a></li>
+				<li><a href="wiki.php"><p>WIKI</p></a></li>
+				<li><a href="#"><p>DASHBOARD</p></a></li>
+				<li><a href="profile.php"><img class="user" src="img/eze.png" alt=""></a></li>
+			</ul>
+		</nav>
 	</div>
+	<i class="icon-toggle fas fa-bars"></i>
+	<i class="icon-exit fas fa-times"></i>
 
 	<div class="main-toggle container-fluid row">
 		<nav>

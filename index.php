@@ -14,7 +14,7 @@
 		
 		<form action="timeline.php" class="formulario col-md-5">
 			<input type="text" placeholder="Usuario">
-			<input type="password" placeholder="Contraseña">
+			<input type="password" placeholder="Contraseña"><br>
 			<button class="btn-azul-claro">INICIAR SESIÓN</button>
 		</form>
 		

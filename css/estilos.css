@@ -39,6 +39,10 @@ a:hover{
 	transition: .3s;
 }
 
+.row{
+	margin: 0;
+}
+
 .container-fluid{
 	margin-right: 0;
 	padding-right: 0;
@@ -46,7 +50,12 @@ a:hover{
 
 .active{
 	display: block !important;
-	.transition: .3s;
+	transition: .3s;
+}
+
+.none{
+	display: none !important;
+	transition: .3s;
 }
 
 .btn-turquesa{
@@ -185,13 +194,11 @@ header .menu nav ul li a{
 	height: 60px;
 }
 
-header .menu nav ul li a:hover{
-}
 
 header .menu nav ul li a p{
 	margin: 0;
 	padding: 0;
-	border-top: 3px solid transparent;
+	border-top: 4px solid transparent;
 	color:  var(--azul-claro);
 	font-size: .8rem;
 	transition: .3s;
@@ -199,32 +206,32 @@ header .menu nav ul li a p{
 	transition: .3s;
 }
 
-header .menu nav ul li:nth-child(1) a p:hover{
-	border-top: 3px solid var(--amarillo);
+header.header-landing .menu nav ul li:nth-child(1) a p:hover{
+	border-color: var(--amarillo);
 	color:  var(--amarillo);
 	transition: .3s;
 }
 
-header .menu nav ul li:nth-child(2) a p:hover{
-	border-top: 3px solid var(--rosa);
+header.header-landing .menu nav ul li:nth-child(2) a p:hover{
+	border-color: var(--rosa);
 	color:  var(--rosa);
 	transition: .3s;
 }
 
-header .menu nav ul li:nth-child(3) a p:hover{
-	border-top: 3px solid var(--violeta);
+header.header-landing .menu nav ul li:nth-child(3) a p:hover{
+	border-color: var(--violeta);
 	color:  var(--violeta);
 	transition: .3s;
 }
 
-header .menu nav ul li:nth-child(4) a p:hover{
-	border-top: 3px solid var(--verde-medio);
+header.header-landing .menu nav ul li:nth-child(4) a p:hover{
+	border-color: var(--verde-medio);
 	color:  var(--verde-medio);
 	transition: .3s;
 }
 
-header .menu nav ul li:nth-child(5) a p:hover{
-	border-top: 3px solid var(--naranja);
+header.header-landing .menu nav ul li:nth-child(5) a p:hover{
+	border-color: var(--naranja);
 	color:  var(--naranja);
 	transition: .3s;
 }
@@ -242,7 +249,7 @@ header .menu nav ul li i:hover{
 	color:  var(--celeste-hover);
 }
 
-header .icon-toggle{
+header .icon-toggle, header .icon-exit{
 	display: none;
 }
 
@@ -800,35 +807,127 @@ header .icon-toggle{
 
 /*****************************  Header IN  *******************************/
 
-.header_in{
-	-webkit-box-shadow: -1px 10px 5px -6px rgba(235,236,245,0.66);
--moz-box-shadow: -1px 10px 5px -6px rgba(235,236,245,0.66);
-box-shadow: -1px 10px 5px -6px rgba(235,236,245,0.66);
+.header-in{
+	background-color: var(--azul-claro);
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
 }
 
-.header_in .logo a{
+.header-in .logo a{
+	color: var(--blanco);
 }
 
-.header_in .menu nav ul li a p{
+.header-in .menu nav ul li a p{
+	color: var(--blanco);
+	border-top: 4px solid transparent;
 }
 
-.header_in .menu nav ul li img{
+.header-in .menu nav ul li a p:hover{
+	border-top: 4px solid var(--blanco);
+	color:  var(--blanco);
+	transition: .3s;
+}
+
+.header-in .menu nav ul li img{
 	width: 35px;
 	opacity: .9;
+	border-radius: 50%;
 }
 
-.header_in .menu nav ul li img:hover{
+.header-in .menu nav ul li img:hover{
 	opacity: 1;
 }
+
+
+
+
+
+/*****************************  Menu Izquierdo  *******************************/
+
+.menu-left{
+	background-color: var(--gris-claro);
+	position: fixed;
+    height: calc(100% - 60px);
+}
+
+.menu-left input{
+	width: 100%;
+	margin-top: 15px;
+	background-color: var(--blanco);
+	padding: 5px;
+	font-size: .8rem;
+	border: none;
+}
+
+.menu-left nav{
+	margin-top: 15px;
+}
+
+.menu-left nav ul li{
+	padding: 5px 0;
+	list-style: none;
+	color: var(--azul-claro);
+	cursor: pointer;
+}
+
+.menu-left nav ul li:hover{
+	color: var(--azul-medio);
+	font-weight: 600;
+	transition: .1s;
+}
+
+.menu-left nav ul .options{
+	padding-left: 15px;
+	font-size: .8rem;
+	display: none;
+}
+
+.menu-left nav ul .options a{
+	font-size: .8rem;
+}
+
+.menu-left nav ul li i{
+	margin-right: 5px;
+}
+
+.menu-left nav ul li a{
+	color: var(--azul-claro);
+	font-size: 1rem;
+	font-weight: 500;
+	transition: .1s;
+}
+
+.menu-left nav ul li a:hover{
+	color: var(--azul-medio);
+	font-weight: 600;
+	transition: .1s;
+}
+
+
+
+
+/*****************************  Main  *******************************/
+
+.main{
+	position: absolute;
+	right: 0;
+}
+
 
 /*****************************  Timeline  *******************************/
 
 #timeline{
-	padding: 90px 0;
+	padding: 60px 0 0 0;
 	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	position: absolute;
 }
 
-#timeline .post-new{
+
+#timeline .main .post-new{
 	margin: 15px auto;
 	margin-bottom: 30px;
 	padding: 5px 0;
@@ -841,13 +940,13 @@ box-shadow: -1px 10px 5px -6px rgba(235,236,245,0.66);
 	border: 1px solid #ddd;
 }
 
-#timeline .post-new .wrapper-img img{
+#timeline .main .post-new .wrapper-img img{
 	height: 60px;
 	width: 60px;
 	border-radius: 50%;
 }
 
-#timeline .post-new form{
+#timeline .main .post-new form{
 	padding: 0;
 	padding-left: 30px;
 	display: flex;
@@ -855,18 +954,18 @@ box-shadow: -1px 10px 5px -6px rgba(235,236,245,0.66);
 	flex-wrap: wrap;
 }
 
-#timeline .post-new form input{
+#timeline .main .post-new form input{
 	padding-left: 0;
 	height: 60px;
 	border: none;
 	background-color: transparent;
 }
 
-#timeline .post-new form input::placeholder{
+#timeline .main .post-new form input::placeholder{
 	color: var(--gris-oscuro);
 }
 
-#timeline .post-new form button{
+#timeline .main .post-new form button{
 	padding: 20px;
 	height: 60px;
 	border: none;
@@ -874,7 +973,7 @@ box-shadow: -1px 10px 5px -6px rgba(235,236,245,0.66);
 	color: var(--azul-claro);
 }
 
-#timeline .post-new form button:hover{
+#timeline .main .post-new form button:hover{
 	color: var(--azul-oscuro);
 }
 
@@ -1011,13 +1110,21 @@ box-shadow: -1px 10px 5px -6px rgba(235,236,245,0.66);
 
 
 #profile{
-	padding: 90px 0;
+	padding: 60px 0;
 	margin: 0;
 }
 
-#profile .container{
+/*#profile .container{
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
+}
+*/
+
+#profile .user{
+	margin: 15px auto;
+	display: flex;
+	justify-content: space-around;
 	flex-wrap: wrap;
 }
 
@@ -1042,7 +1149,17 @@ box-shadow: -1px 10px 5px -6px rgba(235,236,245,0.66);
 	color: var(--gris-oscuro);
 }
 
-#profile .user .wrapper-txt .user{
+#profile .user .wrapper-txt p a{
+	margin-bottom: 0;
+	color: var(--azul-claro);
+}
+
+#profile .user .wrapper-txt p a:hover{
+	color: var(--azul-medio);
+	text-decoration: underline;
+}
+
+#profile .user .wrapper-txt .user-name{
 	font-weight: bold;
 	font-size: 2rem;
 }
@@ -1603,6 +1720,18 @@ footer .list ul li a:hover{
 	font-size: 2rem;
 }
 
+.menu-left{
+	display: none;
+}
+
+
+#profile .user .wrapper-img img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	position: absolute;
+	right: 0;
+}
 
 }
 
@@ -1621,14 +1750,20 @@ footer .list ul li a:hover{
 @media (max-width: 800px) {
 
 
+.header-landing .logo{
+	padding-left: 0;
+}
+
+.header-landing .icon-toggle, .header-landing .icon-exit{
+	color:  var(--azul-claro);
+}
 
 
 header .logo a{
 	font-size: 2rem;
 }
 
-header .icon-toggle{
-	display: block;
+header .icon-toggle, header .icon-exit{
 	font-size: 2rem;
 	font-weight: bold;
 	margin: 0;
@@ -1636,7 +1771,15 @@ header .icon-toggle{
 	padding-right: 15px;
 	line-height: 60px;
 	height: 60px;
-	color:  var(--azul-claro);
+	color:  var(--blanco);
+}
+
+header .icon-toggle{
+	display: block;
+}
+
+header .icon-exit{
+	display: none;
 }
 
 header .menu{
@@ -1646,13 +1789,8 @@ header .menu{
 .main-toggle{
 	background-color: var(--blanco);
 	transition: .3s;
+	width: 100%;
 }
-
-.active{
-	transition: .3s;
-}
-
-
 
 
 .main-toggle nav ul li{
@@ -1661,14 +1799,15 @@ header .menu{
 	padding: 15px 0;
 	list-style: none;
 	display: block;
-	border-top: .04px solid #ccc;
+	border-bottom: .04px solid #ccc;
 }
 
 
 .main-toggle nav ul li a{
 	margin: 0;
 	padding: 0;
-	padding-left: 15px;
+	text-align: center;
+	margin: auto;
 	border-top: 3px solid transparent;
 	color:  var(--azul-claro);
 	font-size: .8rem;
@@ -1676,15 +1815,17 @@ header .menu{
 	font-weight: bold;
 }
 
-.main-toggle nav ul li a:hover{
-	margin: 0;
-	padding: 0;
-	border-top: 3px solid var(--azul-medio);
-	transition: .3s;
-}
 
 #header .container{
 	padding-top: 100px;
 }
 
+}
+
+
+
+
+
+@media (min-width: 1240px) {
+	.container
 }

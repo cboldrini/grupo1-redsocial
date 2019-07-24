@@ -3,7 +3,7 @@
  ?>
 
 <section id="group" class="container-fluid row">
-
+<div class="container">
 	<div class="container group col-md-10">
 
 		<div class="wrapper-img col-md-1">
@@ -114,7 +114,7 @@
 			</div>
 
 		</div>	
-
+</div>
 </section>
 
  <?php 
