@@ -6,9 +6,9 @@
 			<li id="menu_left_groups"><i class="fas fa-users"></i>Grupos</li>
 			<li class="menu-left-groups-options options">
 				<ul>
-					<li><a href=""><i class="fas fa-plus"></i>Crear grupo</a></li>
-					<li><a href=""><i class="fas fa-users"></i>Mis grupos</a></li>
-					<li><a href=""><i class="fas fa-search"></i>Explorar</a></li>
+					<li><a class="btn-new-group" href="#"><i class="fas fa-plus"></i>Crear grupo</a></li>
+					<li><a href="groups.php"><i class="fas fa-users"></i>Mis grupos</a></li>
+					<li><a href="groups.php"><i class="fas fa-search"></i>Explorar</a></li>
 				</ul>
 			</li>
 
@@ -24,10 +24,10 @@
 			<li id="menu_left_contacts"><i class="fas fa-user"></i>Contactos</li>
 			<li class="menu-left-contacts-options options">
 				<ul>
-					<li><a href=""><i class="fas fa-users"></i>Mis contactos</a></li>
-					<li><a href=""><i class="fas fa-plus"></i>Sugeridos</a></li>
-					<li><a href=""><i class="fas fa-users"></i>Seguidos</a></li>
-					<li><a href=""><i class="fas fa-users"></i>Seguidores</a></li>
+					<li><a href="contacts.php"><i class="fas fa-users"></i>Mis contactos</a></li>
+					<li><a href="contacts.php"><i class="fas fa-plus"></i>Sugeridos</a></li>
+					<li><a href="contacts.php"><i class="fas fa-users"></i>Seguidos</a></li>
+					<li><a href="contacts.php"><i class="fas fa-users"></i>Seguidores</a></li>
 				</ul>
 			</li>
 

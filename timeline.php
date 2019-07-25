@@ -2,7 +2,10 @@
 	require_once 'partials/header_in.php';
  ?>
 
+
+
 <section id="timeline" class="container-fluid row">
+
 
 <?php 
 	require_once 'partials/menu_left.php';
@@ -25,6 +28,8 @@
 
 	</div>
 
+	
+
 	<?php 
 	require_once 'partials/posts_filters.php';
  	?>
@@ -42,6 +47,27 @@
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
 				</p>
 				<p class="post-message">Permuto sillón de Rivadavia (casi sin uso) por helicoptero. Consultas por inbox.</p>
+				
+				<div class="post-actions">
+					<i class="fas fa-thumbs-up"></i>
+					<i class="fas fa-reply"></i>
+					<i class="fas fa-share-alt"></i>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="post">
+			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+				<a href="profe_eze.php"><img src="img/eze.png" alt=""></a>
+			</div>
+			
+			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+				<p class="post-info">
+					<a href="profe_eze.php" class="post-user">Profe Eze</a>
+					<span class="post-date">21 de Julio de 2019 | 09:35</span>
+				</p>
+				<p class="post-message"><a href="profe_eze.php">@profe_eze</a> se unió al equipo de <a href="desarrollo.php">@desarrollo</a></p>
 				
 				<div class="post-actions">
 					<i class="fas fa-thumbs-up"></i>
@@ -84,6 +110,27 @@
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
 				</p>
 				<p class="post-message">No te olvides de poner el where en el delete from.</p>
+				
+				<div class="post-actions">
+					<i class="fas fa-thumbs-up"></i>
+					<i class="fas fa-reply"></i>
+					<i class="fas fa-share-alt"></i>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="post">
+			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+				<a href="mauricio_macri.php"><img src="img/macri.png" alt=""></a>
+			</div>
+			
+			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+				<p class="post-info">
+					<a href="mauricio_macri.php" class="post-user">Mauricio Macri</a>
+					<span class="post-date">21 de Julio de 2019 | 09:35</span>
+				</p>
+				<p class="post-message"><a href="mauricio_macri.php">@mauricio_macri</a> se unió al equipo de <a href="finanzas.php">@finanzas</a></p>
 				
 				<div class="post-actions">
 					<i class="fas fa-thumbs-up"></i>

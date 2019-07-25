@@ -24,7 +24,154 @@
 	padding: 0;
 	font-family: 'Exo', sans-serif;
 	box-sizing: border-box;
+}
 
+
+/* Transparentar la página para visualizar los MODALS*/
+
+.body-modal{
+	background-color: black;
+	opacity: .5;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	position: fixed;
+	left: 0;
+	z-index: 999999;
+}
+
+.modal-new-group{
+	z-index: 999999;
+	background-color: var(--blanco);
+	color: var(--azul-claro);
+	width: 50%;
+	height: 70vh;
+	position: fixed;
+	top: 15%;
+	left: 25%;
+	display: none;
+	border-radius: 3px;
+	padding: 30px;
+	overflow: auto;
+}
+
+
+.modal-new-group .modal-exit{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+}
+
+.modal-new-group form{
+	margin: auto;
+}
+
+.modal-new-group input{
+	padding: 10px 5px;
+	margin-bottom: 10px;
+	border: none;
+	border-bottom: 2px solid #ccc;
+}
+
+.modal-new-group .contacts{
+	margin: 30px auto;
+	padding: 0;
+}
+
+.modal-new-group .contact{
+	color: var(--gris-oscuro);
+	padding: 5px 0;	
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 40px;
+	width: 100%;
+}
+
+
+
+.modal-new-group .contact .wrapper-img{
+}
+
+.modal-new-group .contact .wrapper-img img{
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+}
+
+.modal-new-group .contact .wrapper-txt{
+	padding-left: 15px;
+}
+
+.modal-new-group .contact .wrapper-txt p{
+	padding-left: 0;
+}
+
+.modal-new-group .contact .wrapper-txt p a i{
+	margin-left: 5px;
+	color: var(--azul-oscuro);
+}
+
+.modal-new-group .contact .wrapper-txt p a i:hover{
+	margin-left: 5px;
+	color: var(--azul-claro);
+}
+
+.modal-new-group .contact .wrapper-txt .info{
+	margin-bottom: 5px;
+}
+
+.modal-new-group .contact .wrapper-txt .user-name{
+	font-weight: bold;
+	color: var(--gris-oscuro);
+	.transition: .1s;
+}
+
+.modal-new-group .contact .wrapper-txt .user-name:hover{
+	font-weight: bold;
+	color: var(--azul-medio);
+	text-decoration: underline;
+	.transition: .1s;
+}
+
+.modal-new-group .contact .wrapper-txt .job-title{
+	font-size: .9rem;
+	margin-bottom: 5px;
+}
+
+.modal-new-group .contact .wrapper-txt .separator{
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.modal-new-group .contact .wrapper-txt .area a{
+	color: var(--azul-claro);
+}
+
+.modal-new-group .contact .wrapper-txt .area a:hover{
+	color: var(--azul-medio);
+	text-decoration: underline;
+}
+
+.modal-new-group .contact .wrapper-txt .actions{
+}
+
+.modal-new-group .contact .wrapper-txt .actions i{
+	font-size: .9rem;
+	color: var(--azul-claro);
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.modal-new-group .contact .wrapper-txt .actions i:hover{
+	color: var(--azul-medio);
+}
+
+.modal-new-group .btn-crear{
+	position: absolute;
+	right: 25px;
+	margin-bottom: 5px;
 }
 
 a{
@@ -979,6 +1126,8 @@ header .icon-toggle, header .icon-exit{
 #timeline .main .post-new form button:hover{
 	color: var(--azul-oscuro);
 }
+
+
 
 
 

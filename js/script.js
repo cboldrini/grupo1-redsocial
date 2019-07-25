@@ -174,15 +174,45 @@ if( document.querySelector("#menu_left_groups") &&
 	});
 
 
-
-
 };
 
 
 
 
 
+////////////////////  Nuevo Post  ////////////////////////
+
+if (document.querySelector(".btn-new-group")) {
+
+	let btn_new_group = document.querySelector(".btn-new-group");
+	let modal_new_group = document.querySelector(".modal-new-group");
+	let body_modal = document.querySelector('.body-modal');
+	let modal_exit = document.querySelector('.modal-exit');
+
+	btn_new_group.addEventListener('click',function(){
+		modal_new_group.classList.add('active');
+		body_modal.classList.add('active');
+	});
+
+	modal_exit.addEventListener('click',function(){
+		modal_new_group.classList.remove('active');
+		body_modal.classList.remove('active');
+	});
+
+
+
+
+}
+
+
+
+
+
+
 ////////////////////  Cambiar de bloque de datos en Edit Profile  ////////////////////////
+
+
+if (document.querySelector("#profile_edit")) {
 
 let btn_datos_personales = document.querySelector("#btn_datos_personales");
 let btn_datos_contacto = document.querySelector("#btn_datos_contacto");
@@ -358,6 +388,12 @@ btn_datos_configuracion.addEventListener('mouseover',function(){
 	datos_configuracion.classList.add('active');
 	datos_configuracion.classList.remove('none');
 })
+}
+
+
+
+
+
 
 
 ////////////////////  Scroll dentro de la página /////////////////////////
