@@ -37,8 +37,7 @@
 			<img src="img/waves.png" alt="">
 			<div class="wrapper-text col-md-8">
 				<h3>Chat</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam distinctio cum ullam, eum incidunt delectus dicta laudantium autem quaerat quia, adipisci, asperiores. Quam dolore.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam distinctio cum ullam, eum incidunt delectus dicta laudantium autem quaerat quia, adipisci, asperiores. Quam dolore, a nesciunt alias ut dolorem?</p>
+				<p>Mediante este particular y muy popular sistema de charla, estaremos en condiciones de contactarnos con otras personas con las cuales entablar una conversación, en forma directa y rápida, y además gratis, lo que nos puede permitir, si así lo queremos, estar horas frente a la pantalla conociendo gente interesante.</p>
 			</div>
 		</div>
 
@@ -46,8 +45,8 @@
 			<img src="img/waves.png" alt="">
 			<div class="wrapper-text col-md-8">
 				<h3>Red social</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam distinctio cum ullam, eum incidunt delectus dicta laudantium autem quaerat quia, adipisci, asperiores. Quam dolore.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam distinctio cum ullam, eum incidunt delectus dicta laudantium autem quaerat quia, adipisci, asperiores. Quam dolore, a nesciunt alias ut dolorem?</p>
+				<p>Muchas empresas al oír el término dicen: “pero si ya estoy en Facebook”, y los más avanzados: “pero si ya tengo una estrategia en Social Media”.
+				Las estrategias en social media forman parte de la comunicación y suelen situarse en los departamentos de marketing o comunicación de las empresas.</p>
 			</div>
 		</div>
 
@@ -55,8 +54,7 @@
 			<img src="img/waves.png" alt="">
 			<div class="wrapper-text col-md-8">
 				<h3>Grupos</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam distinctio cum ullam, eum incidunt delectus dicta laudantium autem quaerat quia, adipisci, asperiores. Quam dolore.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam distinctio cum ullam, eum incidunt delectus dicta laudantium autem quaerat quia, adipisci, asperiores. Quam dolore, a nesciunt alias ut dolorem?</p>
+				<p>Mediante este particular y muy popular sistema de charla, estaremos en condiciones de contactarnos con otras personas con las cuales entablar una conversación, en forma directa y rápida, y además gratis, lo que nos puede permitir, si así lo queremos, estar horas frente a la pantalla conociendo gente interesante.</p>
 			</div>
 		</div>
 
@@ -64,8 +62,8 @@
 			<img src="img/waves.png" alt="">
 			<div class="wrapper-text col-md-8">
 				<h3>Administración de personal</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam distinctio cum ullam, eum incidunt delectus dicta laudantium autem quaerat quia, adipisci, asperiores. Quam dolore.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam distinctio cum ullam, eum incidunt delectus dicta laudantium autem quaerat quia, adipisci, asperiores. Quam dolore, a nesciunt alias ut dolorem?</p>
+				<p>Muchas empresas al oír el término dicen: “pero si ya estoy en Facebook”, y los más avanzados: “pero si ya tengo una estrategia en Social Media”.
+				Las estrategias en social media forman parte de la comunicación y suelen situarse en los departamentos de marketing o comunicación de las empresas.</p>
 			</div>
 		</div>
 
@@ -73,8 +71,8 @@
 			<img src="img/waves.png" alt="">
 			<div class="wrapper-text col-md-8">
 				<h3>Dashboard</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam distinctio cum ullam, eum incidunt delectus dicta laudantium autem quaerat quia, adipisci, asperiores. Quam dolore.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam distinctio cum ullam, eum incidunt delectus dicta laudantium autem quaerat quia, adipisci, asperiores. Quam dolore, a nesciunt alias ut dolorem?</p>
+				<p>Muchas empresas al oír el término dicen: “pero si ya estoy en Facebook”, y los más avanzados: “pero si ya tengo una estrategia en Social Media”.
+				Las estrategias en social media forman parte de la comunicación y suelen situarse en los departamentos de marketing o comunicación de las empresas.</p>
 			</div>
 		</div>
 	
