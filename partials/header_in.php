@@ -46,8 +46,10 @@
 	<i class="modal-exit fas fa-times"></i>
 
 	<form action="#" class="col-md-11">
-		<input class="col-md-11" type="text" placeholder="Nombre del grupo">
-		<input class="col-md-11" type="text" placeholder="Descripción">
+		<label for="">Nombre del grupo</label>
+		<input class="col-md-11" type="text">
+		<label for="">Descripción</label>
+		<input class="col-md-11" type="text">
 	</form>
 	
 	<div class="container filters col-md-11">

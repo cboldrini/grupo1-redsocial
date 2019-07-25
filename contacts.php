@@ -53,7 +53,7 @@
 				<p class="info">
 					<a href="cristina_fernandez.php" class="user-name">Cristina Fernandez</a>
 				</p>
-				<p class="job-title">Gerente<span class="separator">|</span><span class="area"><a href="rrhh.php">Departamento de Recursos Humano</a></span></p>
+				<p class="job-title">Gerente<span class="separator">|</span><span class="area"><a href="rrhh.php">Departamento de Recursos Humanos</a></span></p>
 				
 				<div class="actions">
 					<i class="fas fa-envelope"></i>

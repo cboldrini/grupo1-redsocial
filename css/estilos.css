@@ -67,11 +67,16 @@
 	margin: auto;
 }
 
+.modal-new-group label{
+	font-weight: bold;
+}
+
 .modal-new-group input{
 	padding: 10px 5px;
 	margin-bottom: 10px;
 	border: none;
-	border-bottom: 2px solid #ccc;
+	border: 1px solid #ccc;
+	/*border-bottom: 2px solid #ccc;*/
 }
 
 .modal-new-group .contacts{
@@ -171,7 +176,7 @@
 .modal-new-group .btn-crear{
 	position: absolute;
 	right: 25px;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 
 a{
