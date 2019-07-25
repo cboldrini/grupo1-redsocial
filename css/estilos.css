@@ -1514,6 +1514,15 @@ header .icon-toggle, header .icon-exit{
 	color: var(--azul-claro);
 }
 
+#profile_edit .column-2 .datos .dato .edit-exit{
+	color: red;
+}
+
+#profile_edit .column-2 .datos .dato .edit-exit:hover{
+	text-decoration: underline;
+	color: red;
+}
+
 #profile_edit .column-2 .datos .dato a i{
 	margin-right: 5px;
 }

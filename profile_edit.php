@@ -105,42 +105,42 @@
 				
 				<div class="dato">
 					<p class="label col-md-10">JavaScript</p>
-					<a href=""><i class="fas fa-trash"></i>Eliminar</a>
+					<a class="edit-exit" href=""><i class="fas fa-trash"></i>Eliminar</a>
 				</div>
 
 				<div class="dato">
 					<p class="label col-md-10">HTML</p>
-					<a href=""><i class="fas fa-trash"></i>Eliminar</a>
+					<a class="edit-exit" href=""><i class="fas fa-trash"></i>Eliminar</a>
 				</div>
 
 				<div class="dato">
 					<p class="label col-md-10">Desarrollo</p>
-					<a href=""><i class="fas fa-trash"></i>Eliminar</a>
+					<a class="edit-exit" href=""><i class="fas fa-trash"></i>Eliminar</a>
 				</div>
 
 				<div class="dato">
 					<p class="label col-md-10">Inglés</p>
-					<a href=""><i class="fas fa-trash"></i>Eliminar</a>
+					<a class="edit-exit" href=""><i class="fas fa-trash"></i>Eliminar</a>
 				</div>
 
 				<div class="dato">
 					<p class="label col-md-10">PHP</p>
-					<a href=""><i class="fas fa-trash"></i>Eliminar</a>
+					<a class="edit-exit" href=""><i class="fas fa-trash"></i>Eliminar</a>
 				</div>
 
 				<div class="dato">
 					<p class="label col-md-10">MySQL</p>
-					<a href=""><i class="fas fa-trash"></i>Eliminar</a>
+					<a class="edit-exit" href=""><i class="fas fa-trash"></i>Eliminar</a>
 				</div>
 
 				<div class="dato">
 					<p class="label col-md-10">Laravel</p>
-					<a href=""><i class="fas fa-trash"></i>Eliminar</a>
+					<a class="edit-exit" href=""><i class="fas fa-trash"></i>Eliminar</a>
 				</div>
 
 				<div class="dato">
 					<p class="label col-md-10">React</p>
-					<a href=""><i class="fas fa-trash"></i>Eliminar</a>
+					<a class="edit-exit" href=""><i class="fas fa-trash"></i>Eliminar</a>
 				</div>
 
 			</div>
@@ -149,22 +149,22 @@
 				
 				<div class="dato">
 					<p class="label col-md-10">Desarrollo</p>
-					<a href=""><i class="fas fa-times-circle"></i>Abandonar</a>
+					<a class="edit-exit" href=""><i class="fas fa-times-circle"></i>Abandonar</a>
 				</div>
 
 				<div class="dato">
 					<p class="label col-md-10">Transformación Digital</p>
-					<a href=""><i class="fas fa-times-circle"></i>Abandonar</a>
+					<a class="edit-exit" href=""><i class="fas fa-times-circle"></i>Abandonar</a>
 				</div>
 
 				<div class="dato">
 					<p class="label col-md-10">Coordinadores</p>
-					<a href=""><i class="fas fa-times-circle"></i>Abandonar</a>
+					<a class="edit-exit" href=""><i class="fas fa-times-circle"></i>Abandonar</a>
 				</div>
 
 				<div class="dato">
 					<p class="label col-md-10">Comisión de Diversidad e Igualdad de género</p>
-					<a href=""><i class="fas fa-times-circle"></i>Abandonar</a>
+					<a class="edit-exit" href=""><i class="fas fa-times-circle"></i>Abandonar</a>
 				</div>
 
 			</div>
