@@ -19,7 +19,7 @@
 		<div class="wrapper-txt col-md-10 col-10">
 			<p class="user-name">Mauricio Macri</p>
 			<p class="job-title">Gerente</p>
-			<p class="area"><a href="finanzas.php">Depto de Finanzas</a></p>
+			<p class="area"><a href="finanzas.php">Departamento de Finanzas</a></p>
 			<div class="actions">
 				<i class="fas fa-envelope"></i>
 				<i class="fas fa-comment"></i>
@@ -36,11 +36,11 @@
 	<div class="posts col-md-11">
 		
 		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+			<div class="wrapper-img col-lg-1 col-md-2 col-sm-2 col-2">
 				<a href="mauricio_macri.php"><img src="img/macri.png" alt=""></a>
 			</div>
 			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="post-info">
 					<a href="mauricio_macri.php" class="post-user">Cristina Fernandez</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
@@ -57,11 +57,11 @@
 		</div>
 		
 		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+			<div class="wrapper-img col-lg-1 col-md-2 col-sm-2 col-2">
 				<a href="elisa_carrio.php"><img src="img/carrio.png" alt=""></a>
 			</div>
 			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="post-info">
 					<a href="elisa_carrio.php" class="post-user">Elisa Carrio</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
@@ -78,11 +78,11 @@
 		</div>
 
 		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+			<div class="wrapper-img col-lg-1 col-md-2 col-sm-2 col-2">
 				<a href="mauricio_macri.php"><img src="img/macri.png" alt=""></a>
 			</div>
 			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="post-info">
 					<a href="mauricio_macri.php" class="post-user">Cristina Fernandez</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
@@ -99,11 +99,11 @@
 		</div>
 
 		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+			<div class="wrapper-img col-lg-1 col-md-2 col-sm-2 col-2">
 				<a href="mauricio_macri.php"><img src="img/macri.png" alt=""></a>
 			</div>
 			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="post-info">
 					<a href="mauricio_macri.php" class="post-user">Cristina Fernandez</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
@@ -120,11 +120,11 @@
 		</div>
 
 		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+			<div class="wrapper-img col-lg-1 col-md-2 col-sm-2 col-2">
 				<a href="mauricio_macri.php"><img src="img/macri.png" alt=""></a>
 			</div>
 			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="post-info">
 					<a href="mauricio_macri.php" class="post-user">Cristina Fernandez</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
@@ -141,11 +141,11 @@
 		</div>
 
 		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+			<div class="wrapper-img col-lg-1 col-md-2 col-sm-2 col-2">
 				<a href="mauricio_macri.php"><img src="img/macri.png" alt=""></a>
 			</div>
 			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="post-info">
 					<a href="mauricio_macri.php" class="post-user">Cristina Fernandez</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
@@ -162,11 +162,11 @@
 		</div>
 
 		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+			<div class="wrapper-img col-lg-1 col-md-2 col-sm-2 col-2">
 				<a href="mauricio_macri.php"><img src="img/macri.png" alt=""></a>
 			</div>
 			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="post-info">
 					<a href="mauricio_macri.php" class="post-user">Cristina Fernandez</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>

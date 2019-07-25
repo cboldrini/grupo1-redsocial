@@ -1,5 +1,4 @@
 :root{
-	--azuloscuro:#011627;
 	--rosa:#EF767A;
 	--rosa-hover:#fF567A;
 	--turquesa:#23F0C7;
@@ -15,7 +14,6 @@
 	--naranja: #C75000;
 	--verde-agua: #5BE598;
 	--verde-agua-hover: #3Bd588;
-	--verde-agua: #5BE598;
 	--verde-medio: #499167;
 	--gris-oscuro: #333;
 }
@@ -65,6 +63,7 @@ a:hover{
 	transition: .3s;
 	border-radius: 3px;
 	border: none;
+	cursor: pointer;
 }
 
 .btn-turquesa:hover{
@@ -80,6 +79,7 @@ a:hover{
 	transition: .3s;
 	border-radius: 3px;
 	border: none;
+	cursor: pointer;
 }
 
 .btn-celeste:hover{
@@ -95,6 +95,7 @@ a:hover{
 	transition: .3s;
 	border-radius: 3px;
 	border: none;
+	cursor: pointer;
 }
 
 .btn-rosa:hover{
@@ -110,6 +111,7 @@ a:hover{
 	transition: .3s;
 	border-radius: 3px;
 	border: none;
+	cursor: pointer;
 }
 
 .btn-verde-agua:hover{
@@ -119,17 +121,18 @@ a:hover{
 }
 
 .btn-azul-claro{
-	background-color: var(--azul-claro);
-	color: var(--blanco);
+	background-color: var(--azul-claro) !important;
+	color: var(--blanco) !important;
 	padding: 10px 40px;
 	transition: .3s;
 	border-radius: 3px;
 	border: none;
+	cursor: pointer;
 }
 
 .btn-azul-claro:hover{
 	background-color: var(--azul-medio) !important;
-	color: var(--blanco);
+	color: var(--blanco) !important;
 	transition: .3s;
 }
 
@@ -1191,11 +1194,185 @@ header .icon-toggle, header .icon-exit{
 
 
 
+
+
+/*****************************  Edit Profile  *******************************/
+
+#profile_edit{
+	padding: 60px 0;
+	margin: 0;
+}
+
+
+
+#profile_edit .wrapper-profile{
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+
+#profile_edit .column-1 .wrapper-img{
+	position: relative;
+}
+
+
+
+#profile_edit .column-1 .wrapper-img img{
+	width: 200px;
+	height: 200px;
+	cursor: pointer;
+	transition: .3s;
+}
+
+#profile_edit .column-1 .wrapper-img:hover img{
+	opacity: .4;
+	transition: .3s;
+}
+
+#profile_edit .column-1 .wrapper-img .photo-change{
+	width: 200px;
+	height: 200px;
+	background-color: black;
+	position: absolute;
+	bottom: 0;
+	border-radius: 100%;
+	transition: .3s;
+	opacity: 0;
+}
+
+#profile_edit .column-1 .wrapper-img:hover .photo-change{
+	transition: .3s;
+	opacity: 1;
+}
+
+
+#profile_edit .column-1 .wrapper-img p{
+	position: absolute;
+	top: 90px;
+	left: 50px;
+	z-index: 99999;
+	opacity: 0;
+	transition: .2s;
+}
+
+#profile_edit .column-1 .wrapper-img:hover p{
+	opacity: 1;
+	transition: .2s;
+}
+
+#profile_edit .column-1 .wrapper-img p a{
+	color: var(--blanco);
+	transition: .1s;
+}
+
+#profile_edit .column-1 .wrapper-img p a:hover{
+	text-decoration: underline;
+	transition: .1s;
+}
+
+#profile_edit .column-1 .wrapper-txt{
+	width: 200px;
+	margin-top: 15px;
+}
+
+#profile_edit .column-1 .wrapper-txt ul li{
+	list-style: none;
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 1.2rem;
+}
+
+#profile_edit .column-1 .wrapper-txt ul li:nth-child(1){
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+#profile_edit .column-1 .wrapper-txt ul li a{
+	color: var(--azul-claro);
+}
+
+#profile_edit .column-1 .wrapper-txt ul li a:hover{
+	color: var(--azul-medio);
+	text-decoration: underline;
+}
+
+#profile_edit .column-1 .wrapper-txt .edit{
+	font-size: .8rem;
+	margin-left: 10px;
+	font-weight: 400;
+	color: var(--azul-claro);
+	opacity: 0;
+	transition: .1s;
+}
+
+#profile_edit .column-1 .wrapper-txt ul li:hover .edit{
+	opacity: 1;
+}
+
+#profile_edit .column-1 .wrapper-txt .edit:hover{
+	font-weight: bold;
+	color: var(--azul-oscuro);
+	transition: .1s;
+	text-decoration: none;
+}
+
+#profile_edit .column-2 .datos{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#profile_edit .column-2 .filters ul li{
+	cursor: pointer;
+}
+
+.datos-contacto, .datos-intereses, .datos-grupos, .datos-proyectos .datos-configuracion{
+	display: none;
+}
+
+#profile_edit .column-2 .datos .dato{
+	border-bottom: 1px solid #ddd;
+	padding: 10px 0;
+}
+
+#profile_edit .column-2 .datos p{
+	margin: 0;
+	display: inline-block;
+}
+
+#profile_edit .column-2 .datos .dato .label{
+	font-weight: bold;
+}
+
+#profile_edit .column-2 .datos .dato .value{
+}
+
+#profile_edit .column-2 .datos .dato a{
+	font-size: .8rem;
+	display: none;
+	color: var(--azul-claro);
+}
+
+#profile_edit .column-2 .datos .dato a i{
+	margin-right: 5px;
+}
+
+#profile_edit .column-2 .datos .dato:hover a{
+	display: inline;
+}
+
+#profile_edit .column-2 .datos .dato a:hover{
+	color: var(--azul-medio);
+	text-decoration: underline;
+}
+
 /*****************************  Contacts  *******************************/
 
 
 #contacts{
-	padding-top: 90px;
+	padding: 60px 0;
+	margin: 0;
 }
 
 
@@ -1260,7 +1437,13 @@ header .icon-toggle, header .icon-exit{
 	margin-left: 5px;
 }
 
-#contacts .contact .wrapper-txt .area{
+#contacts .contact .wrapper-txt .area a{
+	color: var(--azul-claro);
+}
+
+#contacts .contact .wrapper-txt .area a:hover{
+	color: var(--azul-medio);
+	text-decoration: underline;
 }
 
 #contacts .contact .wrapper-txt .actions{
@@ -1286,7 +1469,8 @@ header .icon-toggle, header .icon-exit{
 
 
 #groups{
-	padding-top: 90px;
+	padding: 60px 0;
+	margin: 0;
 }
 
 
@@ -1383,17 +1567,15 @@ header .icon-toggle, header .icon-exit{
 /*****************************  Group  *******************************/
 
 #group{
-	padding-top: 90px;
-}
-
-#group{
-	padding: 90px 0;
+	padding: 60px 0;
 	margin: 0;
 }
 
-#group .container{
+
+#group .group{
+	margin: 15px auto;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	flex-wrap: wrap;
 }
 
@@ -1538,13 +1720,14 @@ header .icon-toggle, header .icon-exit{
 
 
 #wiki{
-	padding-top:90px;
+	padding: 60px 0;
 	margin: 0;
 }
 
 #wiki .busqueda{
 	border: 1px solid var(--gris-claro);
-	margin: auto;	
+	/*margin-top: 15px;*/
+	margin: 15px auto;	
 }
 
 #wiki .busqueda form{
@@ -1593,9 +1776,13 @@ header .icon-toggle, header .icon-exit{
 /*****************************  Article  *******************************/
 
 #article{
-	padding-top: 90px;
-	padding-bottom: 60px;
+	padding: 60px 0;
 	margin: 0;
+}
+
+#article .article{
+	margin-top: 30px;
+	margin-bottom: 60px;
 }
 
 #article .article .info .author{
@@ -1603,8 +1790,8 @@ header .icon-toggle, header .icon-exit{
 }
 
 #article .article .info .author img{
-	width: 30px;
-	height: 30px;
+	width: 60px;
+	height: 60px;
 }
 
 #article .article .info .author a{
@@ -1702,10 +1889,9 @@ footer .list ul li a:hover{
 
 @media (max-width: 576px) {
 
-.post .wrapper-img img, .contact .wrapper-img img, .group .wrapper-img img, .group .wrapper-img img, .wiki .wrapper-img img{
-	height: 30px;
-	width: 30px;
-	border-radius: 50%;
+.post .wrapper-img img, .contact .wrapper-img img, .group .wrapper-img img, .group .wrapper-img img, .wiki .wrapper-img img, .member .wrapper-img img{
+	height: 40px !important;
+	width: 40px !important;
 }
 
 
@@ -1731,6 +1917,16 @@ footer .list ul li a:hover{
 	border-radius: 50%;
 	position: absolute;
 	right: 0;
+}
+
+#profile_edit img{
+	width: 120px !important;
+	height: 120px !important;
+}
+
+#profile_edit .column-1 .wrapper-txt{
+	width: 120px !important;
+	margin-top: 15px !important;
 }
 
 }

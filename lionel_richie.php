@@ -36,11 +36,11 @@
 	<div class="posts col-md-11">
 		
 		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+			<div class="wrapper-img col-lg-1 col-md-2 col-sm-2 col-2">
 				<a href="lionel_richie.php"><img src="img/lionel.png" alt=""></a>
 			</div>
 			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="post-info">
 					<a href="lionel_richie.php" class="post-user">Lionel</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
@@ -57,11 +57,11 @@
 		</div>
 		
 		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+			<div class="wrapper-img col-lg-1 col-md-2 col-sm-2 col-2">
 				<a href="lionel_richie.php"><img src="img/lionel.png" alt=""></a>
 			</div>
 			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="post-info">
 					<a href="lionel_richie.php" class="post-user">Lionel</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
@@ -78,11 +78,11 @@
 		</div>
 
 		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+			<div class="wrapper-img col-lg-1 col-md-2 col-sm-2 col-2">
 				<a href="lionel_richie.php"><img src="img/lionel.png" alt=""></a>
 			</div>
 			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="post-info">
 					<a href="lionel_richie.php" class="post-user">Lionel</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
@@ -99,11 +99,11 @@
 		</div>
 
 		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+			<div class="wrapper-img col-lg-1 col-md-2 col-sm-2 col-2">
 				<a href="lionel_richie.php"><img src="img/lionel.png" alt=""></a>
 			</div>
 			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="post-info">
 					<a href="lionel_richie.php" class="post-user">Lionel</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
@@ -120,11 +120,11 @@
 		</div>
 
 		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+			<div class="wrapper-img col-lg-1 col-md-2 col-sm-2 col-2">
 				<a href="lionel_richie.php"><img src="img/lionel.png" alt=""></a>
 			</div>
 			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="post-info">
 					<a href="lionel_richie.php" class="post-user">Lionel</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
@@ -141,11 +141,11 @@
 		</div>
 
 		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+			<div class="wrapper-img col-lg-1 col-md-2 col-sm-2 col-2">
 				<a href="lionel_richie.php"><img src="img/lionel.png" alt=""></a>
 			</div>
 			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="post-info">
 					<a href="lionel_richie.php" class="post-user">Lionel</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
@@ -162,11 +162,11 @@
 		</div>
 
 		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
+			<div class="wrapper-img col-lg-1 col-md-2 col-sm-2 col-2">
 				<a href="lionel_richie.php"><img src="img/lionel.png" alt=""></a>
 			</div>
 			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="post-info">
 					<a href="lionel_richie.php" class="post-user">Lionel</a>
 					<span class="post-date">21 de Julio de 2019 | 09:35</span>
