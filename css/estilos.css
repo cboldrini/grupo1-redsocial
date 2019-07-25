@@ -1013,7 +1013,13 @@ header .icon-toggle, header .icon-exit{
 	color: var(--azul-medio);
 }
 
+.filter-active{
+	border-bottom: 3px solid var(--azul-medio) !important;
+}
 
+.filter-none{
+	border-bottom: 3px solid transparent !important;
+}
 
 
 .posts{

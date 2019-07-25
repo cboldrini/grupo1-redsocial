@@ -198,6 +198,18 @@ let datos_intereses = document.querySelector(".datos-intereses");
 let datos_configuracion = document.querySelector(".datos-configuracion");
 
 btn_datos_personales.addEventListener('mouseover',function(){
+	btn_datos_personales.classList.add('filter-active');
+	btn_datos_personales.classList.remove('filter-none');
+	btn_datos_contacto.classList.remove('filter-active');
+	btn_datos_contacto.classList.add('filter-none');
+	btn_datos_intereses.classList.remove('filter-active');
+	btn_datos_intereses.classList.add('filter-none');
+	btn_datos_grupos.classList.remove('filter-active');
+	btn_datos_grupos.classList.add('filter-none');
+	btn_datos_proyectos.classList.remove('filter-active');
+	btn_datos_proyectos.classList.add('filter-none');
+	btn_datos_configuracion.classList.remove('filter-active');
+	btn_datos_configuracion.classList.add('filter-none');
 	datos_personales.classList.add('active');
 	datos_personales.classList.remove('none');
 	datos_contacto.classList.remove('active');
@@ -213,6 +225,18 @@ btn_datos_personales.addEventListener('mouseover',function(){
 })
 
 btn_datos_contacto.addEventListener('mouseover',function(){
+	btn_datos_personales.classList.remove('filter-active');
+	btn_datos_personales.classList.add('filter-none');
+	btn_datos_contacto.classList.add('filter-active');
+	btn_datos_contacto.classList.remove('filter-none');
+	btn_datos_intereses.classList.remove('filter-active');
+	btn_datos_intereses.classList.add('filter-none');
+	btn_datos_grupos.classList.remove('filter-active');
+	btn_datos_grupos.classList.add('filter-none');
+	btn_datos_proyectos.classList.remove('filter-active');
+	btn_datos_proyectos.classList.add('filter-none');
+	btn_datos_configuracion.classList.remove('filter-active');
+	btn_datos_configuracion.classList.add('filter-none');
 	datos_personales.classList.remove('active');
 	datos_personales.classList.add('none');
 	datos_contacto.classList.add('active');
@@ -228,6 +252,18 @@ btn_datos_contacto.addEventListener('mouseover',function(){
 })
 
 btn_datos_intereses.addEventListener('mouseover',function(){
+	btn_datos_personales.classList.remove('filter-active');
+	btn_datos_personales.classList.add('filter-none');
+	btn_datos_contacto.classList.remove('filter-active');
+	btn_datos_contacto.classList.add('filter-none');
+	btn_datos_intereses.classList.add('filter-active');
+	btn_datos_intereses.classList.remove('filter-none');
+	btn_datos_grupos.classList.remove('filter-active');
+	btn_datos_grupos.classList.add('filter-none');
+	btn_datos_proyectos.classList.remove('filter-active');
+	btn_datos_proyectos.classList.add('filter-none');
+	btn_datos_configuracion.classList.remove('filter-active');
+	btn_datos_configuracion.classList.add('filter-none');
 	datos_personales.classList.remove('active');
 	datos_personales.classList.add('none');
 	datos_contacto.classList.remove('active');
@@ -243,6 +279,18 @@ btn_datos_intereses.addEventListener('mouseover',function(){
 })
 
 btn_datos_grupos.addEventListener('mouseover',function(){
+	btn_datos_personales.classList.remove('filter-active');
+	btn_datos_personales.classList.add('filter-none');
+	btn_datos_contacto.classList.remove('filter-active');
+	btn_datos_contacto.classList.add('filter-none');
+	btn_datos_intereses.classList.remove('filter-active');
+	btn_datos_intereses.classList.add('filter-none');
+	btn_datos_grupos.classList.add('filter-active');
+	btn_datos_grupos.classList.remove('filter-none');
+	btn_datos_proyectos.classList.remove('filter-active');
+	btn_datos_proyectos.classList.add('filter-none');
+	btn_datos_configuracion.classList.remove('filter-active');
+	btn_datos_configuracion.classList.add('filter-none');
 	datos_personales.classList.remove('active');
 	datos_personales.classList.add('none');
 	datos_contacto.classList.remove('active');
@@ -258,6 +306,18 @@ btn_datos_grupos.addEventListener('mouseover',function(){
 })
 
 btn_datos_proyectos.addEventListener('mouseover',function(){
+	btn_datos_personales.classList.remove('filter-active');
+	btn_datos_personales.classList.add('filter-none');
+	btn_datos_contacto.classList.remove('filter-active');
+	btn_datos_contacto.classList.add('filter-none');
+	btn_datos_intereses.classList.remove('filter-active');
+	btn_datos_intereses.classList.add('filter-none');
+	btn_datos_grupos.classList.remove('filter-active');
+	btn_datos_grupos.classList.add('filter-none');
+	btn_datos_proyectos.classList.add('filter-active');
+	btn_datos_proyectos.classList.remove('filter-none');
+	btn_datos_configuracion.classList.remove('filter-active');
+	btn_datos_configuracion.classList.add('filter-none');
 	datos_personales.classList.remove('active');
 	datos_personales.classList.add('none');
 	datos_contacto.classList.remove('active');
@@ -273,6 +333,18 @@ btn_datos_proyectos.addEventListener('mouseover',function(){
 })
 
 btn_datos_configuracion.addEventListener('mouseover',function(){
+	btn_datos_personales.classList.remove('filter-active');
+	btn_datos_personales.classList.add('filter-none');
+	btn_datos_contacto.classList.remove('filter-active');
+	btn_datos_contacto.classList.add('filter-none');
+	btn_datos_intereses.classList.remove('filter-active');
+	btn_datos_intereses.classList.add('filter-none');
+	btn_datos_grupos.classList.remove('filter-active');
+	btn_datos_grupos.classList.add('filter-none');
+	btn_datos_proyectos.classList.remove('filter-active');
+	btn_datos_proyectos.classList.add('filter-none');
+	btn_datos_configuracion.classList.add('filter-active');
+	btn_datos_configuracion.classList.remove('filter-none');
 	datos_personales.classList.remove('active');
 	datos_personales.classList.add('none');
 	datos_contacto.classList.remove('active');
