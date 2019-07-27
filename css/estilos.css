@@ -2019,14 +2019,27 @@ header .icon-toggle, header .icon-exit{
 }
 
 ::-webkit-scrollbar {
-display: none;
+/*display: none;*/
+width: 5px;
+height: 5px;
+
 }
+
+::-webkit-scrollbar-track-piece  {
+    background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    background-color: #ddd;
+}
+
+
 
 #chat .menu-contacts{
 	background-color: var(--gris-claro);
 	position: fixed;
     height: calc(100% - 60px);
-	overflow: auto;
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -2035,13 +2048,12 @@ display: none;
 #chat .menu-contacts .busqueda{
 	background-color: var(--blanco);
 	border-bottom: 1px solid #ddd;
-	padding-bottom: 10px;
-	padding-left: 15px;
-	padding-right: 15px;
 	position: fixed;
+	height: 55px;
 	width: 100%;
 	top: 60px;
 	z-index: 99999;
+	padding: 0;
 }
 
    
@@ -2050,13 +2062,18 @@ display: none;
 	width: 100%;
 	margin-top: 15px;
 	background-color: var(--blanco);
-	padding: 5px;
+	padding: 5px 25px;
 	font-size: .8rem;
 	border: none;
 }
 
 #chat .menu-contacts .contacts{
-	margin-top: 50px;
+	position: fixed;
+    height: calc(100% - 115px);
+	bottom: 0;
+	overflow: auto;
+	scrollbar-color: #ddd #eee;
+	scrollbar-width: none;
 }
 
 #chat .menu-contacts .contact{
@@ -2172,6 +2189,8 @@ display: none;
 #chat .conversation .messages{
 	width: 90%;
 	margin: auto;
+	scrollbar-color: #ddd #eee;
+	scrollbar-width: thin;
 	margin-bottom: 70px;
 	margin-top: 50px;
 	padding-top: 10px;

@@ -6,7 +6,7 @@
 
 <div class="menu-contacts col-lg-3 col-md-4 col-sm-4 col-12">
 
-	<div class="busqueda col-lg-3 col-md-3 col-sm-4">
+	<div class="busqueda col-lg-3 col-md-4 col-sm-4">
 		<input type="text" placeholder="Buscar">
 	</div>
 
@@ -406,6 +406,24 @@
 			<div class="msg received">
 				<div class="wrapper-txt">
 					<span class="txt">Después contame como te quedó.</span>
+				</div>
+				<span class="date-time">19:21</span>
+			</div>
+		</div>
+
+		<div class="wrapper-msg">
+			<div class="msg sent">
+				<div class="wrapper-txt">
+					<span class="txt">Dale! Vos cómo venis?</span>
+				</div>
+				<span class="date-time">19:21</span>
+			</div>
+		</div>
+
+		<div class="wrapper-msg">
+			<div class="msg received">
+				<div class="wrapper-txt">
+					<span class="txt">Bieen! Quemado también, pero me está gustando.</span>
 				</div>
 				<span class="date-time">19:21</span>
 			</div>
