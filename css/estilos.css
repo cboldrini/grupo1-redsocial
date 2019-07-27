@@ -2328,6 +2328,21 @@ footer .list ul li a:hover{
 	right: 0;
 }
 
+
+#profile_edit .photo-change {
+	width: 120px !important;
+	height: 120px !important;
+}
+
+#profile_edit .photo-change p:nth-child(1){
+	display: none;
+}
+
+#profile_edit .photo-change p:nth-child(2){
+	top: 40%;
+	font-size: 1.2rem;
+}
+
 #profile_edit img{
 	width: 120px !important;
 	height: 120px !important;
