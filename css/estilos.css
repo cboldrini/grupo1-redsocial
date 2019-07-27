@@ -2033,7 +2033,7 @@ display: none;
 
 
 #chat .menu-contacts .busqueda{
-	background-color: var(--gris-claro);
+	background-color: var(--blanco);
 	border-bottom: 1px solid #ddd;
 	padding-bottom: 10px;
 	padding-left: 15px;
@@ -2213,7 +2213,7 @@ display: none;
 }
 
 #chat .conversation .new-msg{
-	background-color: var(--gris-claro);
+	background-color: var(--blanco);
 	border-top: 1px solid #ddd;
 	color: var(--gris-oscuro);
 	height: 60px;
@@ -2224,6 +2224,7 @@ display: none;
 }
 
 #chat .conversation .new-msg input{
+	background-color: var(--blanco);
 	padding: 15px;
 	max-height: 40px;
 	margin: 0 auto;
