@@ -17,7 +17,7 @@
 		<div class="column-1 col-lg-3 col-6">
 			<div class="wrapper-img">
 				<div class="photo-change">
-					<p><a href="">Cambiar foto</a></p>
+					<p><a href=""><i class="fas fa-camera"></i>Cambiar foto</a></p>
 					<p><a href=""><i class="fas fa-camera"></i></a></p>
 				</div>
 				<img src="img/eze.png" alt="">

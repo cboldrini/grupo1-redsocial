@@ -1409,10 +1409,18 @@ header .icon-toggle, header .icon-exit{
 #profile_edit .column-1 .wrapper-img p{
 	position: absolute;
 	top: 90px;
-	left: 50px;
+	left: 40px;
 	z-index: 99999;
 	opacity: 0;
 	transition: .2s;
+}
+
+#profile_edit .column-1 .wrapper-img p i{
+	margin-right: 5px;
+}
+
+#profile_edit .column-1 .wrapper-img p:nth-child(2){
+	display: none;
 }
 
 #profile_edit .column-1 .wrapper-img:hover p{
@@ -2340,7 +2348,9 @@ footer .list ul li a:hover{
 
 #profile_edit .photo-change p:nth-child(2){
 	top: 40%;
+	left: 50px;
 	font-size: 1.2rem;
+	display: block !important;
 }
 
 #profile_edit img{

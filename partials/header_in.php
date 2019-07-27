@@ -31,6 +31,7 @@
 				<li><div class="container"><a href="wiki.php">WIKI</a></div></li>
 				<li><div class="container"><a href="chat.php">CHAT</a></div></li>
 				<li><div class="container"><a href="profile.php">PERFIL</a></div></li>
+				<li><div class="container"><a href="index.php">INSIDE</a></div></li>
 			</ul>
 		</nav>
 	</div>
