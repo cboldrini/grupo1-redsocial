@@ -910,8 +910,6 @@ header .icon-toggle, header .icon-exit{
 
 
 #header-faqs .formulario button{
-	position: absolute;
-	left: 0;
 }
 
 
@@ -2010,7 +2008,229 @@ header .icon-toggle, header .icon-exit{
 
 
 
+/*****************************  Chat  *******************************/
 
+
+#chat{
+	padding: 60px 0;
+	margin: 0;
+	display: flex;
+    flex-direction: row;
+}
+
+::-webkit-scrollbar {
+display: none;
+}
+
+#chat .menu-contacts{
+	background-color: var(--gris-claro);
+	position: fixed;
+    height: calc(100% - 60px);
+	overflow: auto;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+#chat .menu-contacts .busqueda{
+	background-color: var(--gris-claro);
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: fixed;
+	width: 100%;
+	top: 60px;
+	z-index: 99999;
+}
+
+   
+
+#chat .menu-contacts .busqueda input{
+	width: 100%;
+	margin-top: 15px;
+	background-color: var(--blanco);
+	padding: 5px;
+	font-size: .8rem;
+	border: none;
+}
+
+#chat .menu-contacts .contacts{
+	margin-top: 50px;
+}
+
+#chat .menu-contacts .contact{
+	display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+#chat .menu-contacts .contact:hover{
+	background-color: #ccc;
+}
+
+#chat .menu-contacts .contact .wrapper-img .img{
+	width: 50px;
+	height: 50px;
+}
+
+#chat .menu-contacts .contact .wrapper-img .img img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+#chat .menu-contacts .contact .wrapper-txt{
+	margin-left: 10px;
+	margin-right: 5px;
+	width: 100%;
+}
+
+#chat .menu-contacts .contact .wrapper-txt .top{
+	position: relative;
+}
+
+#chat .menu-contacts .contact .wrapper-txt .wrapper-cnt-name{
+	overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    max-width: 85%;
+}
+
+#chat .menu-contacts .contact .wrapper-txt .contact-name{
+	font-weight: bold;
+}
+
+
+#chat .menu-contacts .contact .wrapper-txt .date-time{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: .8rem;
+}
+
+#chat .menu-contacts .contact .wrapper-txt .bottom{
+	overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    max-width: 85%;
+}
+
+#chat .menu-contacts .contact .wrapper-txt .last-message{
+	font-size: .9rem;
+}
+
+#chat .conversation{
+	background-color: #eee;
+	border-left: 1px solid #ddd;
+	position: absolute;
+	right: 0;
+	padding: 0;
+}
+
+#chat .conversation .contact{
+	background-color: var(--gris-claro);
+	border-bottom: 1px solid #ddd;
+	color: var(--gris-oscuro);
+	height: 55px;
+	position: fixed;
+	top: 60px;
+	width: 100%;
+	padding-left: 15px;
+	padding-top: 10px;
+	box-sizing: border-box;
+	display: flex;
+}
+
+#chat .conversation .contact .wrapper-img{
+	width: 35px;
+	height: 35px;
+	margin-right: 10px;
+}
+
+#chat .conversation .contact .wrapper-img img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+#chat .conversation .contact .wrapper-txt{
+	height: 35px;
+	font-size: 1.2rem;
+	line-height: 35px;
+	font-weight: bold;
+}
+
+#chat .conversation .contact .wrapper-txt .contact-name{
+}
+
+#chat .conversation .messages{
+	width: 90%;
+	margin: auto;
+	margin-bottom: 70px;
+	margin-top: 50px;
+	padding-top: 10px;
+	overflow: auto;
+}
+
+#chat .conversation .messages .wrapper-msg{
+	overflow: hidden;
+}
+
+#chat .conversation .messages .msg{
+	background-color: var(--azul-claro);
+	border-radius: 4px;
+	color: var(--blanco);
+	max-width: 65%;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+#chat .conversation .messages .msg .wrapper-txt{
+	padding-right: 10px;
+}
+
+#chat .conversation .messages .msg .txt{
+}
+
+#chat .conversation .messages .msg .date-time{
+	margin-top: 5px;
+	font-size: .7rem;
+	float: right;
+}
+
+#chat .conversation .messages .received{
+	float: left;
+}
+
+#chat .conversation .messages .sent{
+	float: right;
+}
+
+#chat .conversation .new-msg{
+	background-color: var(--gris-claro);
+	border-top: 1px solid #ddd;
+	color: var(--gris-oscuro);
+	height: 60px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 10px;
+}
+
+#chat .conversation .new-msg input{
+	padding: 15px;
+	max-height: 40px;
+	margin: 0 auto;
+	font-size: 1rem;
+	line-height: 1rem;
+	border: none;
+}
 
 /*****************************  Footer  *******************************/
 

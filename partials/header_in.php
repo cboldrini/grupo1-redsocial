@@ -14,7 +14,7 @@
 				<li><a href="contacts.php"><p>CONTACTOS</p></a></li>
 				<li><a href="groups.php"><p>GRUPOS</p></a></li>
 				<li><a href="wiki.php"><p>WIKI</p></a></li>
-				<li><a href="#"><p>DASHBOARD</p></a></li>
+				<li><a href="chat.php"><p>CHAT</p></a></li>
 				<li><a href="profile.php"><img class="user" src="img/eze.png" alt=""></a></li>
 			</ul>
 		</nav>
@@ -29,7 +29,7 @@
 				<li><div class="container"><a href="contacts.php">CONTACTOS</a></div></li>
 				<li><div class="container"><a href="groups.php">GRUPOS</a></div></li>
 				<li><div class="container"><a href="wiki.php">WIKI</a></div></li>
-				<li><div class="container"><a href="#">DASHBOARD</a></div></li>
+				<li><div class="container"><a href="chat.php">CHAT</a></div></li>
 				<li><div class="container"><a href="profile.php">PERFIL</a></div></li>
 			</ul>
 		</nav>
