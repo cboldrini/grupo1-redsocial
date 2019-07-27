@@ -2318,6 +2318,10 @@ footer .list ul li a:hover{
 	margin-top: 15px !important;
 }
 
+#chat .conversation{
+	display: none;
+}
+
 }
 
 
