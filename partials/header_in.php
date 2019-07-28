@@ -1,8 +1,26 @@
+<!-------------------------------------------------------------------------------------------
+----------------------------------------- HEAD  ---------------------------------------------
+ -------------------------------------------------------------------------------------------->
+
+
 <?php 
 	require_once 'partials/head.php';
  ?>
 
+
+
+<!-------------------------------------------------------------------------------------------
+-------------------------------------------- BODY  ------------------------------------------
+ -------------------------------------------------------------------------------------------->
+
+
 <body>
+
+
+
+<!-------------------------------------------------------------------------------------------
+------------------------------------------- HEADER  -----------------------------------------
+ -------------------------------------------------------------------------------------------->
 
 
 <header class="header-in container-fluid row">
@@ -15,14 +33,40 @@
 				<li><a href="groups.php"><p>GRUPOS</p></a></li>
 				<li><a href="wiki.php"><p>WIKI</p></a></li>
 				<li><a href="chat.php"><p>CHAT</p></a></li>
-				<li><a href="profile.php"><img class="user" src="img/eze.png" alt=""></a></li>
+				<li class="btn-menu-profile"><img class="user" src="<?php echo $foto_usr; ?>" alt=""></li>
 			</ul>
 		</nav>
 	</div>
 	<i class="icon-toggle fas fa-bars"></i>
 	<i class="icon-exit fas fa-times"></i>
 
-	<div class="main-toggle container-fluid row">
+
+
+
+
+<!-------------------------------------------------------------------------------------------
+--------------------------------------- MENU PROFILE  ---------------------------------------
+ -------------------------------------------------------------------------------------------->
+
+
+	<div class="menu-profile">
+		<nav>
+			<ul>
+				<li><a href="profile.php">Perfil</a></li>
+				<li><a href="profile_edit.php">Editar</a></li>
+				<li><a href="admin/cerrar.php">Cerrar sesión</a></li>
+			</ul>
+		</nav>
+	</div>
+	
+
+
+<!-------------------------------------------------------------------------------------------
+--------------------------------------- MENU TOGGLE  ----------------------------------------
+ -------------------------------------------------------------------------------------------->	
+
+
+	<div class="menu-toggle container-fluid row">
 		<nav>
 			<ul>
 				<li><div class="container"><a href="timeline.php">TIMELINE</a></div></li>
@@ -38,9 +82,25 @@
 </header>
 	
 
+
+
+
+<!-------------------------------------------------------------------------------------------
+------------------------------------------ MODALS  ------------------------------------------
+ -------------------------------------------------------------------------------------------->	
+
+
+
 <div class="body-modal">
 	
 </div>
+
+
+
+
+<!-------------------------------------------------------------------------------------------
+--------------------------------------- MODAL NEW GROUP -------------------------------------
+ -------------------------------------------------------------------------------------------->	
 
 <div class="modal-new-group">
 
@@ -67,15 +127,15 @@
 	
 		<div class="contact">
 			<div class="wrapper-img col-lg-2 col-md-2 col-sm-2 col-2">
-				<a href="mauricio_macri.php"><img src="img/macri.png" alt=""></a>
+				<a href="contact.php"><img src="img/macri.png" alt=""></a>
 			</div>
 			
 			<div class="wrapper-txt col-lg-10 col-md-10 col-sm-10 col-10">
 				<p class="info">
-					<a href="mauricio_macri.php" class="user-name">Mauricio Macri</a>
+					<a href="contact.php" class="user-name">Mauricio Macri</a>
 					<a href=""><i class="fas fa-plus"></i></a>
 				</p>
-				<p class="job-title">Gerente<span class="separator">|</span><span class="area"><a href="finanzas.php">Departamento de Finanzas</a></span></p>
+				<p class="job-title">Gerente<span class="separator">|</span><span class="area"><a href="group.php">Departamento de Finanzas</a></span></p>
 				
 				<div class="actions">
 					<i class="fas fa-envelope"></i>
@@ -89,15 +149,15 @@
 
 		<div class="contact">
 			<div class="wrapper-img col-lg-2 col-md-2 col-sm-2 col-2">
-				<a href="cristina_fernandez.php"><img src="img/cristina.png" alt=""></a>
+				<a href="contact.php"><img src="img/cristina.png" alt=""></a>
 			</div>
 			
 			<div class="wrapper-txt col-lg-10 col-md-10 col-sm-10 col-10">
 				<p class="info">
-					<a href="cristina_fernandez.php" class="user-name">Cristina Fernandez</a>
+					<a href="contact.php" class="user-name">Cristina Fernandez</a>
 					<a href=""><i class="fas fa-plus"></i></a>
 				</p>
-				<p class="job-title">Gerente<span class="separator">|</span><span class="area"><a href="rrhh.php">Departamento de Recursos Humano</a></span></p>
+				<p class="job-title">Gerente<span class="separator">|</span><span class="area"><a href="group.php">Departamento de Recursos Humano</a></span></p>
 				
 				<div class="actions">
 					<i class="fas fa-envelope"></i>
@@ -111,15 +171,15 @@
 
 		<div class="contact">
 			<div class="wrapper-img col-lg-2 col-md-2 col-sm-2 col-2">
-				<a href="elisa_carrio.php"><img src="img/carrio.png" alt=""></a>
+				<a href="contact.php"><img src="img/carrio.png" alt=""></a>
 			</div>
 			
 			<div class="wrapper-txt col-lg-10 col-md-10 col-sm-10 col-10">
 				<p class="info">
-					<a href="elisa_carrio.php" class="user-name">Elisa Carrio</a>
+					<a href="contact.php" class="user-name">Elisa Carrio</a>
 					<a href=""><i class="fas fa-plus"></i></a>
 				</p>
-				<p class="job-title">Coordinadora<span class="separator">|</span><span class="area"><a href="comunicaciones.php">Departamento de Comunicaciones</a></span></p>
+				<p class="job-title">Coordinadora<span class="separator">|</span><span class="area"><a href="group.php">Departamento de Comunicaciones</a></span></p>
 				
 				<div class="actions">
 					<i class="fas fa-envelope"></i>
@@ -133,15 +193,15 @@
 
 		<div class="contact">
 			<div class="wrapper-img col-lg-2 col-md-2 col-sm-2 col-2">
-				<a href="lionel_richie.php"><img src="img/lionel.png" alt=""></a>
+				<a href="contact.php"><img src="img/lionel.png" alt=""></a>
 			</div>
 			
 			<div class="wrapper-txt col-lg-10 col-md-10 col-sm-10 col-10">
 				<p class="info">
-					<a href="lionel_richie.php" class="user-name">Lionel Richie</a>
+					<a href="contact.php" class="user-name">Lionel Richie</a>
 					<a href=""><i class="fas fa-plus"></i></a>
 				</p>
-				<p class="job-title">Analista<span class="separator">|</span><span class="area"><a href="comunicaciones.php">Departamento de Comunicaciones</a></span></p>
+				<p class="job-title">Analista<span class="separator">|</span><span class="area"><a href="group.php">Departamento de Comunicaciones</a></span></p>
 				
 				<div class="actions">
 					<i class="fas fa-envelope"></i>
@@ -155,15 +215,15 @@
 
 		<div class="contact">
 			<div class="wrapper-img col-lg-2 col-md-2 col-sm-2 col-2">
-				<a href="profe_eze.php"><img src="img/eze.png" alt=""></a>
+				<a href="contact.php"><img src="img/eze.png" alt=""></a>
 			</div>
 			
 			<div class="wrapper-txt col-lg-10 col-md-10 col-sm-10 col-10">
 				<p class="info">
-					<a href="profe_eze.php" class="user-name">Profe Eze</a>
+					<a href="contact.php" class="user-name">Profe Eze</a>
 					<a href=""><i class="fas fa-plus"></i></a>
 				</p>
-				<p class="job-title">Coordinador<span class="separator">|</span><span class="area"><a href="desarrollo.php">Departamento de Desarrollo</a></span></p>
+				<p class="job-title">Coordinador<span class="separator">|</span><span class="area"><a href="group.php">Departamento de Desarrollo</a></span></p>
 				
 				<div class="actions">
 					<i class="fas fa-envelope"></i>

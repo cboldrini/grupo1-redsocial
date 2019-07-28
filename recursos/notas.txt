@@ -33,3 +33,12 @@ font-family: 'Exo', sans-serif;
 	--verde-medio: #499167;
 	--gris-oscuro: #333;
 }
+
+
+
+
+
+
+///////////// DB en insidedh - HOSTING //////////////
+
+localhost:3306 (predeterminado para MySQL, v10.1.39)

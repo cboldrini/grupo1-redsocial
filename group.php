@@ -19,16 +19,12 @@ if (!$conexion) {
 
 
 
+require_once 'views/group.views.php';
 
 
 
 
 
 
-////////////////////////// LLAMANDO A LA VISTA ////////////////////////////
-
-require_once 'views/wiki.views.php';
 
 ?>
-
-

@@ -1,18 +1,31 @@
 <?php 
 
 
-$bd_config = array(
-	'basedatos' => 'megawiki_megafiter',
-	'usuario' => 'megawiki_alberio',
+$db_config = array(
+	'basedatos' => 'insidedh_',
+	'usuario' => 'inside_admin',
 	'pass' => '1487Sony!'
 );
 
-$blog_config = array(
-	'post_por_pagina' => '10',
+// $db_config = array(
+// 	'basedatos' => 'inside',
+// 	'usuario' => 'root',
+// 	'pass' => ''
+// );
+
+$wiki_config = array(
+	'articulos_por_pagina' => '10',
 );
 
-$blog_admin = array(
-	'usuario' => 'mega',
+$admin = array(
+	'usuario' => 'fran',
 	'password' => '1234'
 )
+
+
+
+
+
+
+
  ?>

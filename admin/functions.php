@@ -1,25 +1,48 @@
 <?php 
 
-// CONEXIÓN CON LA BASE DE DATOS //
 
-function conexion($bd_config){
+
+//////////////////////////////////////////////////////////////////////////
+/////////////////////// CONEXIÓN CON BASE DE DATOS ///////////////////////
+//////////////////////////////////////////////////////////////////////////
+
+function conexion($db_config){
 	try {
-		$conexion = new PDO('mysql:host=181.119.169.68;dbname='.$bd_config['basedatos'],$bd_config['usuario'],$bd_config['pass']);
+	$conexion = new PDO('mysql:host=149.56.21.30;dbname='.$db_config['basedatos'], $db_config['usuario'], $db_config['pass']);
+	$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 		return $conexion;
+
 	} catch (PDOException $e) {
-		return false;
+		return false;		
 	}
 }
 
 
 
+// function conexion($db_config){
+//   try {
+//   $conexion = new PDO('mysql:host=localhost;dbname='.$db_config['basedatos'], $db_config['usuario'], $db_config['pass']);
+//   $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+//     return $conexion;
+
+//   } catch (PDOException $e) {
+//     return false;   
+//   }
+// }
 
 
-// SESIONES Y COOKIES //
+
+
+
+//////////////////////////////////////////////////////////////////////////
+////////////////////////// SESIONES Y COOKIES ////////////////////////////
+//////////////////////////////////////////////////////////////////////////
 
 function comprobarSesion(){
-	if (!isset($_SESSION['admin'])) {
-		header('login.php');
+	if (!isset($_SESSION['user'])) {
+		header('Location: error.php');
 	}
 }
 
@@ -27,7 +50,9 @@ function comprobarSesion(){
 
 
 
-// FUNCIONES GENERALES //
+//////////////////////////////////////////////////////////////////////////
+////////////////////////// FUNCIONES GENERALES ///////////////////////////
+//////////////////////////////////////////////////////////////////////////
 
 function limpiarDatos($datos){
 	$datos = trim($datos);
@@ -42,86 +67,133 @@ function pagina_actual(){
 
 
 
-
-// OBTENER DATOS DE DB //
-
-function obtener_post($post_por_pagina, $conexion){
-	$inicio = (pagina_actual() > 1) ? (pagina_actual() * $post_por_pagina - $post_por_pagina) : 0;
-	$sentencia = $conexion->prepare("SELECT  SQL_CALC_FOUND_ROWS * FROM articulos LIMIT $inicio, $post_por_pagina");
-	$sentencia->execute();
-	return $sentencia->fetchAll();
-};
-
-function obtener_anydesks($conexion){
-	$sentencia = $conexion->prepare("SELECT * FROM anydesk");
-	$sentencia->execute();
-	return $sentencia->fetchAll();
-};
-
-function obtener_internos($conexion){
-	$sentencia = $conexion->prepare("SELECT * FROM internos");
-	$sentencia->execute();
-	return $sentencia->fetchAll();
-};
-
-function obtener_sedes($conexion){
-	$sentencia = $conexion->prepare("SELECT * FROM sedes");
-	$sentencia->execute();
-	return $sentencia->fetchAll();
-};
-
-// $sedes = obtener_sedes($conexion);
-
-function obtener_colaboradores($conexion,$where){
-	$sentencia = $conexion->prepare("SELECT * FROM colaboradores $where");
-	$sentencia->execute();
-	return $sentencia->fetchAll();
-};
+///////////////////////// VALIDAR CONTRASEÑAS /////////////////////////////
 
 
-function obtener_faqs($conexion){
-	$sentencia = $conexion->prepare("SELECT * FROM faqs");
-	$sentencia->execute();
-	return $sentencia->fetchAll();
-};
-
-function obtener_categorias_faqs($conexion){
-	$sentencia = $conexion->prepare("SELECT * FROM faqs_categorias");
-	$sentencia->execute();
-	return $sentencia->fetchAll();
-};
-
-function numero_paginas($post_por_pagina, $conexion){
-	$total_post = $conexion->prepare('SELECT FOUND_ROWS() as total');
-	$total_post->execute();
-	$total_post = $total_post->fetch()['total'];
-
-	$numero_paginas = ceil($total_post / $post_por_pagina);
-	return $numero_paginas;
+function validar_password($password){
+   if(strlen($password) < 6){
+      $detalleErrorPassword = "La contraseña debe tener al menos 6 caracteres";
+      return false;
+   }
+   if(strlen($password) > 16){
+      $detalleErrorPassword = "La contraseña no puede tener más de 16 caracteres";
+      return false;
+   }
+   if (!preg_match('`[a-z]`',$password)){
+      $detalleErrorPassword = "La contraseña debe tener al menos una letra minúscula";
+      return false;
+   }
+   if (!preg_match('`[A-Z]`',$password)){
+      $detalleErrorPassword = "La contraseña debe tener al menos una letra mayúscula";
+      return false;
+   }
+   if (!preg_match('`[0-9]`',$password)){
+      $detalleErrorPassword = "La contraseña debe tener al menos un caracter numérico";
+      return false;
+   }
+   $detalleErrorPassword = "";
+   return true;
 }
 
-function id_articulo($id){
-	return (int)limpiarDatos($id);
-};
 
 
-function obtener_post_por_id($conexion, $id){
-	$resultado = $conexion->query("SELECT * FROM articulos WHERE id = $id LIMIT 1");
-	$resultado = $resultado->fetchAll();
-	return ($resultado) ? $resultado : false;
-}
+//////////////////////  Mejorar formato de fecha  ////////////////////////
 
 function fecha($fecha){
-	$timestamp = strtotime($fecha);
-	$meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  $timestamp = strtotime($fecha);
+  $meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
 
-	$dia = date('d', $timestamp);
-	$mes = date('m', $timestamp) - 1;
-	$year = date('Y', $timestamp);
+  $dia = date('d', $timestamp);
+  $mes = date('m', $timestamp) - 1;
+  $year = date('Y', $timestamp);
 
-	$fecha = "$dia de " . $meses[$mes] . " del $year";
-	return $fecha;
+  $fecha = "$dia de " . $meses[$mes] . " del $year";
+  return $fecha;
 }
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////
+//////////////////// OBTENER DATOS DE BASE DE DATOS //////////////////////
+//////////////////////////////////////////////////////////////////////////
+
+
+
+///////////  VALIDAR SI EL EMAIL QUE SE INGRESA NO ESTÁ USADO ////////////
+
+function emailUsado($conexion, $email){
+    $sentencia = $conexion->prepare("SELECT * FROM users WHERE email=:email;");
+    $sentencia->execute(array(':email' => $email));
+    return !!$sentencia->fetch(PDO::FETCH_ASSOC);
+}
+
+
+
+/////////////  VALIDAR SI EL PASSWORD COINCIDE CON EL USUARIO ////////////
+
+function obtenerPassword($conexion, $email){
+    $sentencia = $conexion->prepare("SELECT password FROM users WHERE email= '$email' LIMIT 1;");
+    $sentencia->execute();
+	return $sentencia->fetchAll();
+}
+
+
+
+///////////////////  OBTENER LOS DATOS DEL USUARIO //////////////////////
+
+function obtenerDatosDeUsuario($conexion, $email){
+    $sentencia = $conexion->prepare("SELECT * FROM users WHERE email= '$email' ;");
+    $sentencia->execute();
+	return $sentencia->fetchAll();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////
+//////////////////// INSERTAR DATOS EN BASE DE DATOS /////////////////////
+//////////////////////////////////////////////////////////////////////////
+
+
+
+function nuevoUsuario($conexion, $email, $nombre, $apellido, $password){
+  $sentencia = $conexion->prepare(
+    "INSERT INTO users(id, email, first_name, last_name, password) 
+    VALUES (null,:email,:nombre,:apellido,:password)"
+  );
+
+   $sentencia->execute(array(
+    ':email' => $email,
+    ':nombre' => $nombre,
+    ':apellido' => $apellido,
+    ':password' => $password
+  ));
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

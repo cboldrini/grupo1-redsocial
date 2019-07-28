@@ -1,36 +1,53 @@
-////////////////////  Aparecer o desaparecer Menú con el Toggle  ////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////// GENERALES /////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// MENUS ////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////  Mostrar/ocultar menú con el Toggle  //////////////////////
 
 let toggleNav = document.querySelector('.icon-toggle');
 let exitNav = document.querySelector('.icon-exit');
-let mainNav = document.querySelector('.main-toggle');
+let menuNav = document.querySelector('.menu-toggle');
 
 
-mainNav.addEventListener('click',function(){
-	mainNav.classList.remove('active');
+menuNav.addEventListener('click',function(){
+	menuNav.classList.remove('active');
 	exitNav.classList.remove('active');
 	toggleNav.classList.add('active');
 	toggleNav.classList.remove('none');
 })
 
 toggleNav.addEventListener('click',function(){
-	if(mainNav.classList.contains('active')){
-		mainNav.classList.remove('active');
+	if(menuNav.classList.contains('active')){
+		menuNav.classList.remove('active');
 		exitNav.classList.remove('active');
 		toggleNav.classList.add('active');
 	} else{
-		mainNav.classList.add('active');
+		menuNav.classList.add('active');
 		exitNav.classList.add('active');
 		toggleNav.classList.add('none');
 	};
 });
 
 exitNav.addEventListener('click',function(){
-	if(mainNav.classList.contains('active')){
-		mainNav.classList.remove('active');
+	if(menuNav.classList.contains('active')){
+		menuNav.classList.remove('active');
 		exitNav.classList.remove('active');
 		toggleNav.classList.remove('none');
 	} else{
-		mainNav.classList.add('active');
+		menuNav.classList.add('active');
 		exitNav.classList.add('active');
 		toggleNav.classList.add('none');
 	};
@@ -39,85 +56,27 @@ exitNav.addEventListener('click',function(){
 
 
 
+/////////////////////  Mostrar/ocultar menú del perfil ////////////////////////
 
-////////////////////  Mostrar los distintos Servicios según el botón en el INDEX/////////////////////////
-
-
-if (document.querySelector('.btn-servicio-chat') && 
-	document.querySelector('.btn-servicio-redsocial') && 
-	document.querySelector('.btn-servicio-grupos') && 
-	document.querySelector('.btn-servicio-adp') && 
-	document.querySelector('.btn-servicio-dashboard') && 
-	document.querySelector('.servicio-chat') && 
-	document.querySelector('.servicio-redsocial') && 
-	document.querySelector('.servicio-grupos') && 
-	document.querySelector('.servicio-adp') && 
-	document.querySelector('.servicio-dashboard')
+if (document.querySelector('.menu-profile') && 
+	document.querySelector('.btn-menu-profile')
  ) {
-     
 
-let btn_servicio_chat = document.querySelector('.btn-servicio-chat');
-let btn_servicio_redsocial = document.querySelector('.btn-servicio-redsocial');
-let btn_servicio_grupos = document.querySelector('.btn-servicio-grupos');
-let btn_servicio_adp = document.querySelector('.btn-servicio-adp');
-let btn_servicio_dashboard = document.querySelector('.btn-servicio-dashboard');
-
-let servicio_chat = document.querySelector('.servicio-chat');
-let servicio_redsocial = document.querySelector('.servicio-redsocial');
-let servicio_grupos = document.querySelector('.servicio-grupos');
-let servicio_adp = document.querySelector('.servicio-adp');
-let servicio_dashboard = document.querySelector('.servicio-dashboard');
+let menu_profile = document.querySelector('.menu-profile');
+let btn_menu_profile = document.querySelector('.btn-menu-profile');
 
 
-
-btn_servicio_chat.addEventListener('mouseover',function(){
-	servicio_chat.classList.add('servicio-active');
-	servicio_chat.classList.remove('servicio-none');
-	servicio_redsocial.classList.remove('servicio-active');
-	servicio_grupos.classList.remove('servicio-active');
-	servicio_adp.classList.remove('servicio-active');
-	servicio_dashboard.classList.remove('servicio-active');
+btn_menu_profile.addEventListener('click',function(){
+	if(menu_profile.classList.contains('active')){
+		menu_profile.classList.remove('active');
+		menu_profile.classList.add('none');
+	} else{
+		menu_profile.classList.add('active');
+		menu_profile.classList.remove('none');
+	};
 });
 
-btn_servicio_redsocial.addEventListener('mouseover',function(){
-	servicio_chat.classList.remove('servicio-active');
-	servicio_chat.classList.add('servicio-none');
-	servicio_redsocial.classList.add('servicio-active');
-	servicio_grupos.classList.remove('servicio-active');
-	servicio_adp.classList.remove('servicio-active');
-	servicio_dashboard.classList.remove('servicio-active');
-});
-
-btn_servicio_grupos.addEventListener('mouseover',function(){
-	servicio_chat.classList.remove('servicio-active');
-	servicio_chat.classList.add('servicio-none');
-	servicio_redsocial.classList.remove('servicio-active');
-	servicio_grupos.classList.add('servicio-active');
-	servicio_adp.classList.remove('servicio-active');
-	servicio_dashboard.classList.remove('servicio-active');
-});
-
-btn_servicio_adp.addEventListener('mouseover',function(){
-	servicio_chat.classList.remove('servicio-active');
-	servicio_chat.classList.add('servicio-none');
-	servicio_redsocial.classList.remove('servicio-active');
-	servicio_grupos.classList.remove('servicio-active');
-	servicio_adp.classList.add('servicio-active');
-	servicio_dashboard.classList.remove('servicio-active');
-});
-
-btn_servicio_dashboard.addEventListener('mouseover',function(){
-	servicio_chat.classList.remove('servicio-active');
-	servicio_chat.classList.add('servicio-none');
-	servicio_redsocial.classList.remove('servicio-active');
-	servicio_grupos.classList.remove('servicio-active');
-	servicio_adp.classList.remove('servicio-active');
-	servicio_dashboard.classList.add('servicio-active');
-});
-
-
-
-}
+};
 
 
 
@@ -125,7 +84,9 @@ btn_servicio_dashboard.addEventListener('mouseover',function(){
 
 
 
-////////////////////  Mostrar las opciones del MENU IZQUIERDO /////////////////////////
+
+
+////////////////////  Mostrar las opciones del MENU IZQUIERDO /////////////////////
 
 if( document.querySelector("#menu_left_groups") && 
 	document.querySelector(".menu-left-groups-options") && 
@@ -180,7 +141,14 @@ if( document.querySelector("#menu_left_groups") &&
 
 
 
-////////////////////  Nuevo Post  ////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// MODALS ///////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////  MOSTRAR MODAL NEW GROUP  ////////////////////////////
 
 if (document.querySelector(".btn-new-group")) {
 
@@ -199,9 +167,6 @@ if (document.querySelector(".btn-new-group")) {
 		body_modal.classList.remove('active');
 	});
 
-
-
-
 }
 
 
@@ -209,8 +174,23 @@ if (document.querySelector(".btn-new-group")) {
 
 
 
-////////////////////  Cambiar de bloque de datos en Edit Profile  ////////////////////////
 
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// FILTROS //////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////  CAMBIAR DE BLOQUE DE DATOS EN EDIT PROFILE  /////////////////
 
 if (document.querySelector("#profile_edit")) {
 
@@ -392,19 +372,84 @@ btn_datos_configuracion.addEventListener('mouseover',function(){
 
 
 
+/////////////////  CAMBIAR DE CUADRO DE SERVICIOS EN INDEX ////////////////////
+
+
+if (document.querySelector('.btn-servicio-chat') && 
+	document.querySelector('.btn-servicio-redsocial') && 
+	document.querySelector('.btn-servicio-grupos') && 
+	document.querySelector('.btn-servicio-adp') && 
+	document.querySelector('.btn-servicio-dashboard') && 
+	document.querySelector('.servicio-chat') && 
+	document.querySelector('.servicio-redsocial') && 
+	document.querySelector('.servicio-grupos') && 
+	document.querySelector('.servicio-adp') && 
+	document.querySelector('.servicio-dashboard')
+ ) {
+     
+
+let btn_servicio_chat = document.querySelector('.btn-servicio-chat');
+let btn_servicio_redsocial = document.querySelector('.btn-servicio-redsocial');
+let btn_servicio_grupos = document.querySelector('.btn-servicio-grupos');
+let btn_servicio_adp = document.querySelector('.btn-servicio-adp');
+let btn_servicio_dashboard = document.querySelector('.btn-servicio-dashboard');
+
+let servicio_chat = document.querySelector('.servicio-chat');
+let servicio_redsocial = document.querySelector('.servicio-redsocial');
+let servicio_grupos = document.querySelector('.servicio-grupos');
+let servicio_adp = document.querySelector('.servicio-adp');
+let servicio_dashboard = document.querySelector('.servicio-dashboard');
 
 
 
-
-////////////////////  Scroll dentro de la página /////////////////////////
-
-
-$('a[href=#contacto]').click(function (event){
-	event.stopPropagation();
-	var Position = jQuery('[id="contacto"]').offset().top;
-
-	jQuery('html, body').animate({ scrollTop: Position }, 1100);
-
-	return false;
-
+btn_servicio_chat.addEventListener('mouseover',function(){
+	servicio_chat.classList.add('servicio-active');
+	servicio_chat.classList.remove('servicio-none');
+	servicio_redsocial.classList.remove('servicio-active');
+	servicio_grupos.classList.remove('servicio-active');
+	servicio_adp.classList.remove('servicio-active');
+	servicio_dashboard.classList.remove('servicio-active');
 });
+
+btn_servicio_redsocial.addEventListener('mouseover',function(){
+	servicio_chat.classList.remove('servicio-active');
+	servicio_chat.classList.add('servicio-none');
+	servicio_redsocial.classList.add('servicio-active');
+	servicio_grupos.classList.remove('servicio-active');
+	servicio_adp.classList.remove('servicio-active');
+	servicio_dashboard.classList.remove('servicio-active');
+});
+
+btn_servicio_grupos.addEventListener('mouseover',function(){
+	servicio_chat.classList.remove('servicio-active');
+	servicio_chat.classList.add('servicio-none');
+	servicio_redsocial.classList.remove('servicio-active');
+	servicio_grupos.classList.add('servicio-active');
+	servicio_adp.classList.remove('servicio-active');
+	servicio_dashboard.classList.remove('servicio-active');
+});
+
+btn_servicio_adp.addEventListener('mouseover',function(){
+	servicio_chat.classList.remove('servicio-active');
+	servicio_chat.classList.add('servicio-none');
+	servicio_redsocial.classList.remove('servicio-active');
+	servicio_grupos.classList.remove('servicio-active');
+	servicio_adp.classList.add('servicio-active');
+	servicio_dashboard.classList.remove('servicio-active');
+});
+
+btn_servicio_dashboard.addEventListener('mouseover',function(){
+	servicio_chat.classList.remove('servicio-active');
+	servicio_chat.classList.add('servicio-none');
+	servicio_redsocial.classList.remove('servicio-active');
+	servicio_grupos.classList.remove('servicio-active');
+	servicio_adp.classList.remove('servicio-active');
+	servicio_dashboard.classList.add('servicio-active');
+});
+
+}
+
+
+
+
+

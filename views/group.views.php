@@ -14,13 +14,13 @@
 	<div class="group col-md-11">
 
 		<div class="wrapper-img col-md-2 col-2">
-			<img src="img/rrhh.png" alt="">
+			<img src="img/comunicaciones.png" alt="">
 		</div>
 
 		<div class="wrapper-txt col-md-10 col-10">
-			<p class="name">RRHH</p>
-			<p class="description">Departamento de Recursos Humanos</p>
-			<a href="" class="members">18 <i class="fas fa-users"></i></a>
+			<p class="name">Comunicaciones</p>
+			<p class="description">Departamento de Comunicaciones</p>
+			<a href="" class="members">36 <i class="fas fa-users"></i></a>
 			<div class="actions">
 				<i class="fas fa-envelope"></i>
 				<i class="fas fa-comment"></i>
@@ -49,7 +49,7 @@
 			
 			<div class="wrapper-txt col-lg-11 col-md-10 col-sm-10 col-10">
 				<p class="info">
-					<a href="mauricio_macri.php" class="user-name">Mauricio Macri</a>
+					<a href="contact.php" class="user-name">Mauricio Macri</a>
 				</p>
 				<p class="job-title">Presidente de la Nación<span class="separator">|</span><span class="area">Poder Ejecutivo</span></p>
 				
@@ -70,7 +70,7 @@
 			
 			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
 				<p class="info">
-					<a href="cristina_fernandez.php" class="user-name">Cristina Fernandez</a>
+					<a href="contact.php" class="user-name">Cristina Fernandez</a>
 				</p>
 				<p class="job-title">Senadora de la Nación<span class="separator">|</span><span class="area">Poder Legislativo</span></p>
 				
@@ -91,7 +91,7 @@
 			
 			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
 				<p class="info">
-					<a href="elisa_carrio.php" class="user-name">Elisa Carrio</a>
+					<a href="contact.php" class="user-name">Elisa Carrio</a>
 				</p>
 				<p class="job-title">Diputada de la Nación<span class="separator">|</span><span class="area">Poder Legislativo</span></p>
 				
@@ -112,7 +112,7 @@
 			
 			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
 				<p class="info">
-					<a href="lionel_richie.php" class="user-name">Lionel Richie</a>
+					<a href="contact.php" class="user-name">Lionel Richie</a>
 				</p>
 				<p class="job-title">Cantautor<span class="separator">|</span><span class="area">SONY Music</span></p>
 				

@@ -26,7 +26,7 @@
 		</div>
 	</div>
 
-	<div class="main-toggle container-fluid row">
+	<div class="menu-toggle container-fluid row">
 		<nav>
 			<ul>
 				<li><div class="container"><a href="#header">INICIAR SESIÓN</a></div></li>
@@ -40,4 +40,6 @@
 	</div>
 </header>
 	
+
+
 

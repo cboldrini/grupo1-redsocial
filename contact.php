@@ -22,13 +22,8 @@ if (!$conexion) {
 
 
 
-
-
-
 ////////////////////////// LLAMANDO A LA VISTA ////////////////////////////
 
-require_once 'views/wiki.views.php';
+require_once 'views/contact.views.php';
 
 ?>
-
-
