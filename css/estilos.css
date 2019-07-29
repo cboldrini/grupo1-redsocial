@@ -487,6 +487,15 @@ header .icon-toggle, header .icon-exit{
     height: 100vh;
 }
 
+#header .fondo{
+	background-color: var(--azul-claro);
+	opacity: .3;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
 #header .container{
 	padding-top: 180px;
 	padding-bottom: 200px;
@@ -2686,13 +2695,16 @@ header .menu{
     height: 50vh;
 }
 
+#header .fondo{
+	height: 50vh;
+}
+
 #header .container {
     padding-top: 130px;
     padding-bottom: 100px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 
 

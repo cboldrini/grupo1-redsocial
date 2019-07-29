@@ -17,11 +17,13 @@
  -------------------------------------------------------------------------------------------->
 
 <section id="header" class="row container-fluid">
+	<div class="fondo">
+	</div>
 	
 	<div class="container">
 		<div class="wrapper-titular col-md-6">
 			<h1>PLATAFORMA DE COMUNICACIÓN INTERNA PARA ORGANIZACIONES</h1>
-			<a href="#contacto" class="btn-azul-claro">EMPEZAR AHORA</a>
+			<a href="#contacto" class="btn-azul-claro">CONTACTANOS</a>
 		</div>
 
 		
@@ -36,7 +38,7 @@
 
 		
 	</div>
-
+	
 </section>
 
 
@@ -177,7 +179,7 @@
 		<div class="wrapper-text col-md-6">
 			<h4>En todos los dispositivos</h4>
 			<p>Con responsive design, Inside está pensado para adaptarse a cualquier dispositivo.</p>
-			<a href="#contacto" class="btn-rosa">EMPEZAR AHORA</a>
+			<a href="#contacto" class="btn-rosa">CONTACTANOS</a>
 		</div>
 
 	</div>
@@ -211,7 +213,7 @@
 	<div class="container">
 		<h4>Estar adentro es simple</h4>
 		<p>Te contactas con un representante. Acordas un plan a tu medida, y ya podes empezar.</p>
-		<a href="#contacto" class="btn-azul-claro">EMPEZAR AHORA</a>
+		<a href="#contacto" class="btn-azul-claro">CONTACTANOS</a>
 	</div>
 </section>
 
