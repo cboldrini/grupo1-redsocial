@@ -142,6 +142,81 @@ if( document.querySelector("#menu_left_groups") &&
 
 
 
+///////////////////////  CAMBIAR DE PASO EN REGISTRO  /////////////////////////
+
+if (document.querySelector('.btn-siguiente') && 
+	document.querySelector('.btn-anterior') && 
+	document.querySelector('.btn-paso1') && 
+	document.querySelector('.btn-paso2') && 
+	document.querySelector('.wrapper-paso1') && 
+	document.querySelector('.wrapper-paso2')
+ ) {
+
+	let btn_siguiente = document.querySelector('.btn-siguiente');
+	let btn_anterior = document.querySelector('.btn-anterior');
+	let btn_paso_1 = document.querySelector('.btn-paso1');
+	let btn_paso_2 = document.querySelector('.btn-paso2');
+	let wrapper_paso_1 = document.querySelector('.wrapper-paso1');
+	let wrapper_paso_2 = document.querySelector('.wrapper-paso2');
+
+
+	btn_siguiente.addEventListener('click',function(){
+		wrapper_paso_1.classList.add('none');
+		wrapper_paso_1.classList.remove('active');
+		wrapper_paso_2.classList.add('active');
+		wrapper_paso_2.classList.remove('none');
+		btn_paso_1.classList.add('not-focus');
+		btn_paso_2.classList.remove('focus');
+		btn_paso_2.classList.add('focus');
+		btn_paso_2.classList.remove('not-focus');
+	});
+
+	btn_paso_1.addEventListener('click',function(){
+		wrapper_paso_1.classList.remove('none');
+		wrapper_paso_1.classList.add('active');
+		wrapper_paso_2.classList.remove('active');
+		wrapper_paso_2.classList.add('none');
+		btn_paso_2.classList.add('not-focus');
+		btn_paso_2.classList.remove('focus');
+		btn_paso_1.classList.add('focus');
+		btn_paso_1.classList.remove('not-focus');
+	});
+
+	btn_paso_2.addEventListener('click',function(){
+		wrapper_paso_1.classList.add('none');
+		wrapper_paso_1.classList.remove('active');
+		wrapper_paso_2.classList.add('active');
+		wrapper_paso_2.classList.remove('none');
+		btn_paso_1.classList.add('not-focus');
+		btn_paso_2.classList.remove('focus');
+		btn_paso_2.classList.add('focus');
+		btn_paso_2.classList.remove('not-focus');
+	});
+
+	btn_anterior.addEventListener('click',function(){
+		wrapper_paso_1.classList.remove('none');
+		wrapper_paso_1.classList.add('active');
+		wrapper_paso_2.classList.remove('active');
+		wrapper_paso_2.classList.add('none');
+		btn_paso_2.classList.add('not-focus');
+		btn_paso_2.classList.remove('focus');
+		btn_paso_1.classList.add('focus');
+		btn_paso_1.classList.remove('not-focus');
+	});
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// MODALS ///////////////////////////////////////

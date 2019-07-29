@@ -154,7 +154,13 @@ function obtenerDatosDeUsuario($conexion, $email){
 
 
 
+///////////////////  OBTENER ID NUEVO USUARIO ////////////////////////////
 
+function obtenerIdNuevoUsuario($conexion){
+    $sentencia = $conexion->prepare("SELECT MAX(id) as id FROM users  ;");
+    $sentencia->execute();
+  return $sentencia->fetch();
+}
 
 
 

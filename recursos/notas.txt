@@ -13,7 +13,6 @@ font-family: 'Exo', sans-serif;
 ///////////// COLORES //////////////
 
 :root{
-	--azuloscuro:#011627;
 	--rosa:#EF767A;
 	--rosa-hover:#fF567A;
 	--turquesa:#23F0C7;
@@ -29,9 +28,9 @@ font-family: 'Exo', sans-serif;
 	--naranja: #C75000;
 	--verde-agua: #5BE598;
 	--verde-agua-hover: #3Bd588;
-	--verde-agua: #5BE598;
 	--verde-medio: #499167;
 	--gris-oscuro: #333;
+	--rojo: #EC0606;
 }
 
 
