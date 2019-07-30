@@ -9,6 +9,143 @@
 
 
 
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// REGISTRO /////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////  VALIDAR IGUALDAD EN PASSWORDS  /////////////////////////
+
+$(document).ready(function() {
+	$("#password").keyup(checkPasswordMatch);
+});
+
+$(document).ready(function() {
+	$("#password2").keyup(checkPasswordMatch2);
+});
+
+function checkPasswordMatch() {
+	var password = $("#password").val();
+	var password2 = $("#password2").val();
+
+	if (password != password2) {
+		$("#validacionPassword2").html("<span><i class='fas fa-exclamation-circle'></i>Las contraseñas no coinciden.</span>");
+	} 
+
+	else {
+		$("#validacionPassword2").html("<span><i class='fas fa-check'></i>Las contraseñas son iguales.</span>");
+	}
+}
+
+function checkPasswordMatch2() {
+	var password = $("#password").val();
+	var password2 = $("#password2").val();
+
+	if (password != password2) {
+		$("#validacionPassword2").html("<span><i class='fas fa-exclamation-circle'></i>Las contraseñas no coinciden.</span>");
+	} 
+
+	else {
+		$("#validacionPassword2").html("<span><i class='fas fa-check'></i>Las contraseñas son iguales.</span>");
+	}
+}
+
+
+
+////////////////////////  VALIDAR LONGITUD DE NOMBRE  //////////////////////////
+
+$(document).ready(function() {
+	$("#nombre").keyup(checkNombre);
+});
+
+function checkNombre() {
+	var nombre = $("#nombre").val();
+	var longitudNombre = nombre.length;
+
+	if (longitudNombre < 3) {
+		$("#validacionNombre").html("<span><i class='fas fa-exclamation-circle'></i>El nombre debe tener al menos 3 letras.</span>");
+	} 
+
+	else {
+		$("#validacionNombre").html("<span><i class='fas fa-check'></i></span>");
+	}
+}
+
+
+///////////////////////  VALIDAR LONGITUD DE APELLIDO  /////////////////////////
+
+$(document).ready(function() {
+	$("#apellido").keyup(checkApellido);
+});
+
+function checkApellido() {
+	var apellido = $("#apellido").val();
+	var longitudApellido = apellido.length;
+
+	if (longitudApellido < 3) {
+		$("#validacionApellido").html("<span><i class='fas fa-exclamation-circle'></i>El apellido debe tener al menos 3 letras.</span>");
+	} 
+
+	else {
+		$("#validacionApellido").html("<span><i class='fas fa-check'></i></span>");
+	}
+}
+
+
+
+
+///////////////////////////////  VALIDAR EMAIL  ////////////////////////////////
+
+
+$(document).ready(function() {
+	$("#email").keyup(checkEmail);
+});
+
+// function checkEmail() {
+// 	var email = $("#email").value;
+// 	var xhttp = new XMLHttpRequest();
+// 	xhttp.onreadystatechange = function() {
+// 		if(xhttp.readyState == 4 && xhttp.satus == 200) {
+// 			$("#validacionEmail").innerHTML = xhttp.responseText;
+// 			var emailResponsed = $("#")
+// 		}
+// 	}
+// }
+
+function checkEmail() {
+	var email = document.getElementById("email").value;
+	var longitudEmail = email.length;
+
+	if (longitudEmail == 0) {
+		document.getElementById("validacionEmail").innerHTML = "<i class='fas fa-exclamation-circle'></i>Debes ingresar un email.<input id='emailChecker' type='hidden' value='0' name='emailChecker'> ";
+
+	} 
+
+	else {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			
+		if(xhttp.readyState == 4 && xhttp.satus == 200) {
+			document.getElementById("validacionEmail").innerHTML = xhttp.responseText;
+			emailExistente = document.getElementById("emailChecker").value;
+
+
+			if (emailExistente == "1") {
+				alert("El email ya existe");
+			}
+
+
+		}
+	}
+	}
+}
+
+
+
+
 ////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// MENUS ////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

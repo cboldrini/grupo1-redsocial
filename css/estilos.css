@@ -27,6 +27,8 @@
 	--verde-medio: #499167;
 	--gris-oscuro: #333;
 	--rojo: #EC0606;
+	--naranja-megatlon: #E93A1B;
+
 }
 
 
@@ -1086,7 +1088,15 @@ header .icon-toggle, header .icon-exit{
 }
 
 #register form .wrapper-paso2 label{
-	background-color: red;
+	background-color: var(--azul-claro);
+	color: var(--blanco);
+	font-size: 70px;
+	line-height: 120px;
+	width: 120px;
+	height: 120px;
+	text-align:center;
+	border-radius: 50%;
+	cursor: pointer;
 }
 
 #register form .wrapper-paso2 input[type="file"]{

@@ -13,16 +13,21 @@
 
 
 		<div class="wrapper-paso1">
-			<input type="email" name="email" required autofocus placeholder="Email" value="<?php if(isset($email)) echo $email ;?>">
+			<input type="email" name="email" id="email" required autofocus placeholder="Email" maxlength="40" value="<?php if(isset($email)) echo $email ;?>">
 			<?php echo $errorEmail ?>
-			<input type="text" name="first_name" required  placeholder="Nombre" value="<?php if(isset($nombre)) echo $nombre ;?>">
+			<div id="validacionEmail"></div>
+			<input type="text" name="first_name" id="nombre" maxlength="24" required  placeholder="Nombre" value="<?php if(isset($nombre)) echo $nombre ;?>">
 			<?php echo $errorNombre ?>
-			<input type="text" name="last_name" required  placeholder="Apellido" value="<?php if(isset($apellido)) echo $apellido ;?>">
+			<div id="validacionNombre"></div>
+			<input type="text" name="last_name" id="apellido" maxlength="24" required  placeholder="Apellido" value="<?php if(isset($apellido)) echo $apellido ;?>">
 			<?php echo $errorApellido ?>
-			<input type="password" name="password" required  placeholder="Contraseña">
+			<div id="validacionApellido"></div>
+			<input type="password" name="password" maxlength="18" id="password" required  placeholder="Contraseña">
 			<?php echo $errorPassword ?>
-			<input type="password" name="password2" required  placeholder="Repetir contraseña">
+			<div id="validacionPassword"></div>
+			<input type="password" name="password2" maxlength="18" id="password2" required  placeholder="Repetir contraseña">
 			<?php echo $errorPassword2 ?>
+			<div id="validacionPassword2"></div>
 			
 			<div class="actions">
 				<span class="btn-azul-claro btn-siguiente">SIGUIENTE</span>
@@ -31,12 +36,21 @@
 		</div>
 		
 		<div class="wrapper-paso2">
-			<input type="file" name="foto" accept=".png">
+			<label for="file-upload"><i class="fas fa-cloud-upload-alt"></i></label>
+			<input type="file" id="file-upload" name="foto" accept=".png" style='display: none;'>
 			<div class="actions">
 				<span class="btn-azul-claro btn-anterior">ANTERIOR</span>
 				<button class="btn-azul-claro">ENVIAR</button>
 			</div>
 		</div>
+
+
+<!-- 		<label for="file-upload" class="subir">
+   				<i class="fas fa-cloud-upload-alt"></i> Subir archivo
+			</label>
+			<input id="file-upload" onchange='cambiar()' type="file" style='display: none;'/>
+			<div id="info"></div>
+			<input type="submit" value="Enviar">  -->
 
 		
 
