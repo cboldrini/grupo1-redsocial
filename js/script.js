@@ -17,6 +17,49 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
+//////////////////////  VALIDAR LONGITUD DE CONTRASEÑA  ////////////////////////
+
+
+$(document).ready(function() {
+	$("#password").keyup(checkLengthPassword);
+});
+
+function checkLengthPassword() {
+	var password = $("#password").val();
+	var longitudPassword = password.length;
+
+	if (longitudPassword < 6) {
+		$("#validacionPassword").html("<span><i class='icon-alert fas fa-exclamation-circle'></i>Debe tener al menos 6 caracteres.</span>");
+	} 
+
+	else{
+		$("#validacionPassword").html("<span><i class='icon-check fas fa-check'></i></span>");
+	}
+};
+
+
+//////////////////////////  MOSTRAR FOTO AL CARGAR  ///////////////////////////
+
+
+$(document).ready(function() {
+	$("#password").keyup(checkLengthPassword);
+});
+
+function checkLengthPassword() {
+	var password = $("#password").val();
+	var longitudPassword = password.length;
+
+	if (longitudPassword < 6) {
+		$("#validacionPassword").html("<span><i class='icon-alert fas fa-exclamation-circle'></i>Debe tener al menos 6 caracteres.</span>");
+	} 
+
+	else{
+		$("#validacionPassword").html("<span><i class='icon-check fas fa-check'></i></span>");
+	}
+};
+
+
+
 //////////////////////  VALIDAR IGUALDAD EN PASSWORDS  /////////////////////////
 
 $(document).ready(function() {
