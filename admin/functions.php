@@ -127,10 +127,11 @@ function fecha($fecha){
 ///////////  VALIDAR SI EL EMAIL QUE SE INGRESA NO ESTÁ USADO ////////////
 
 function emailUsado($conexion, $email){
-    $sentencia = $conexion->prepare("SELECT * FROM users WHERE email=:email;");
+    $sentencia = $conexion->prepare("SELECT COUNT(email) FROM users WHERE email=:email;");
     $sentencia->execute(array(':email' => $email));
-    return !!$sentencia->fetch(PDO::FETCH_ASSOC);
+    return !!$sentencia->fetchColumn(0);
 }
+
 
 
 

@@ -31,12 +31,12 @@ function checkPasswordMatch() {
 	var password = $("#password").val();
 	var password2 = $("#password2").val();
 
-	if (password != password2) {
-		$("#validacionPassword2").html("<span><i class='fas fa-exclamation-circle'></i>Las contraseñas no coinciden.</span>");
+	if (password != password2 && password != "" && password2 != "") {
+		$("#validacionPassword2").html("<span><i class='icon-alert fas fa-exclamation-circle'></i>Las contraseñas no coinciden.</span>");
 	} 
 
-	else {
-		$("#validacionPassword2").html("<span><i class='fas fa-check'></i>Las contraseñas son iguales.</span>");
+	else if(password == password2 && password != "" && password2 != "") {
+		$("#validacionPassword2").html("<span><i class='icon-check fas fa-check'></i>Las contraseñas son iguales.</span>");
 	}
 }
 
@@ -44,12 +44,14 @@ function checkPasswordMatch2() {
 	var password = $("#password").val();
 	var password2 = $("#password2").val();
 
-	if (password != password2) {
-		$("#validacionPassword2").html("<span><i class='fas fa-exclamation-circle'></i>Las contraseñas no coinciden.</span>");
+
+
+	if (password != password2 && password != "" && password2 != "") {
+		$("#validacionPassword2").html("<span><i class='icon-alert fas fa-exclamation-circle'></i>Las contraseñas no coinciden.</span>");
 	} 
 
-	else {
-		$("#validacionPassword2").html("<span><i class='fas fa-check'></i>Las contraseñas son iguales.</span>");
+	else if(password == password2 && password != "" && password2 != "") {
+		$("#validacionPassword2").html("<span><i class='icon-check fas fa-check'></i></span>");
 	}
 }
 
@@ -66,11 +68,11 @@ function checkNombre() {
 	var longitudNombre = nombre.length;
 
 	if (longitudNombre < 3) {
-		$("#validacionNombre").html("<span><i class='fas fa-exclamation-circle'></i>El nombre debe tener al menos 3 letras.</span>");
+		$("#validacionNombre").html("<span><i class='icon-alert fas fa-exclamation-circle'></i>El nombre debe tener al menos 3 letras.</span>");
 	} 
 
 	else {
-		$("#validacionNombre").html("<span><i class='fas fa-check'></i></span>");
+		$("#validacionNombre").html("<span><i class='icon-check fas fa-check'></i></span>");
 	}
 }
 
@@ -86,11 +88,12 @@ function checkApellido() {
 	var longitudApellido = apellido.length;
 
 	if (longitudApellido < 3) {
-		$("#validacionApellido").html("<span><i class='fas fa-exclamation-circle'></i>El apellido debe tener al menos 3 letras.</span>");
+		$("#validacionApellido").html("<span><i class='icon-alert fas fa-exclamation-circle'></i>El apellido debe tener al menos 3 letras.</span>");
 	} 
+	
 
 	else {
-		$("#validacionApellido").html("<span><i class='fas fa-check'></i></span>");
+		$("#validacionApellido").html("<span><i class='icon-check fas fa-check'></i></span>");
 	}
 }
 
@@ -100,9 +103,9 @@ function checkApellido() {
 ///////////////////////////////  VALIDAR EMAIL  ////////////////////////////////
 
 
-$(document).ready(function() {
-	$("#email").keyup(checkEmail);
-});
+// $(document).ready(function() {
+// 	$("#email").keyup(checkEmail);
+// });
 
 // function checkEmail() {
 // 	var email = $("#email").value;
@@ -115,33 +118,52 @@ $(document).ready(function() {
 // 	}
 // }
 
-function checkEmail() {
-	var email = document.getElementById("email").value;
+$('#email').blur(function(){
+
+	var email = $("#email").val();
 	var longitudEmail = email.length;
 
 	if (longitudEmail == 0) {
-		document.getElementById("validacionEmail").innerHTML = "<i class='fas fa-exclamation-circle'></i>Debes ingresar un email.<input id='emailChecker' type='hidden' value='0' name='emailChecker'> ";
-
+		$("#validacionEmail").html("<i class='icon-alert fas fa-exclamation-circle'></i>Debes ingresar un email.<input id='emailChecker' type='hidden' value='0' name='emailChecker'> ");
+		
 	} 
 
-	else {
-		var xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function() {
-			
-		if(xhttp.readyState == 4 && xhttp.satus == 200) {
-			document.getElementById("validacionEmail").innerHTML = xhttp.responseText;
-			emailExistente = document.getElementById("emailChecker").value;
+	else { 
 
+		$.ajax(
 
-			if (emailExistente == "1") {
-				alert("El email ya existe");
-			}
+			'check_email.php',
+			{method: "GET", //Le indicas el metodo
+       		data: {email: email}, //le pasas el archivo con los datos que queres mandar al php
+		    success: function(respuesta) {
+		   		if (respuesta == 1) {
+		   			$("#validacionEmail").html("<i class='icon-alert fas fa-exclamation-circle'></i><span id='mensajeEmail'>El email ya está registrado.</span><input id='emailChecker' type='hidden' value='0' name='emailChecker'> ");
+		    	} 
 
+		    	else {
+		    		$("#validacionEmail").html("<i class='icon-check fas fa-check'></i><span id='mensajeEmail'></span><input id='emailChecker' type='hidden' value='0' name='emailChecker'> ");
+		    	}
+		   	}
 
-		}
+		    // error: function() {
+		    // 	alert("no disponible");
+		    // 	alert(data);
+		    // $("#validacionEmail").html("<i class='icon-alert fas fa-exclamation-circle'></i>Hay un error.<input id='emailChecker' type='hidden' value='0' name='emailChecker'> ");
+		    // }
+
+		   }
+		);
 	}
-	}
-}
+
+
+
+});
+
+
+
+
+
+
 
 
 

@@ -9,9 +9,12 @@ require_once 'admin/functions.php';
 
 $conexion = conexion($db_config);
 
-
+$email = $_GET['email'];
 
 $emailExistente = emailUsado($conexion, $email);
+
+echo $emailExistente;
+// echo "Hola";
 
 // var_dump($emailExistente);
 
