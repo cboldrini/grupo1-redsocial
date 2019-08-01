@@ -27,7 +27,7 @@
 				<ul>
 					<li><?php echo $nombre_usr; ?><a class="edit" href=""><i class="fas fa-pencil-alt"></i></a></li>
 					<li>Desarrollo<a class="edit" href=""><i class="fas fa-pencil-alt"></i></a></li>
-					<li><a href="">Coordinador</a><a class="edit" href=""><i class="fas fa-pencil-alt"></i></a></li>
+					<li><a href="">Aprendiz</a><a class="edit" href=""><i class="fas fa-pencil-alt"></i></a></li>
 				</ul>
 			</div>
 		

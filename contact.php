@@ -17,6 +17,26 @@ if (!$conexion) {
 	header('Location: error.php');
 }
 
+$idUsuario = $_GET["user"];
+
+
+
+$usuario = obtenerDatosDeUsuarioPorId($conexion, $idUsuario);
+$area = obtenerAreaPorIdUsuario($conexion, $idUsuario);
+$posts = obtenerPostsPorIdUsuario($conexion,$idUsuario);
+
+
+$nombre = $usuario["first_name"];
+$apellido = $usuario["last_name"];
+$email = $usuario["email"];
+$foto = $usuario["photo"];
+$nombreCompleto = $nombre ." " . $apellido;
+$area = $area["area"];
+
+
+
+
+
 
 
 

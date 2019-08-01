@@ -195,8 +195,8 @@
 	<div class="container">
 		<h3>Ellos ya estan adentro:</h3>
 		<div class="wrapper-clientes">
-			<div class="item col-md-3"><img src="img/megatlon.png" alt="Logo Megatlón"></div>
-			<div class="item col-md-3"><img src="img/fiter.png" alt="Logo Fiter"></div>
+			<div class="item col-md-3"><img src="" alt=""></div>
+			<div class="item col-md-3"><img src="" alt=""></div>
 		</div>
 	</div>
 </section>

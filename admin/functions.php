@@ -154,6 +154,34 @@ function obtenerDatosDeUsuario($conexion, $email){
 }
 
 
+function obtenerDatosDeUsuarioPorId($conexion, $id){
+    $sentencia = $conexion->prepare("SELECT * FROM users WHERE id= '$id' ;");
+    $sentencia->execute();
+  return $sentencia->fetch();
+}
+
+function obtenerAreaPorIdUsuario($conexion, $id){
+    $sentencia = $conexion->prepare("
+      SELECT areas.name as area FROM users 
+      INNER JOIN areas 
+      ON area_id = areas.id 
+      WHERE users.id= '$id' 
+      ;");
+    $sentencia->execute();
+  return $sentencia->fetch();
+}
+
+function obtenerPostsPorIdUsuario($conexion, $id){
+    $sentencia = $conexion->prepare("
+      SELECT * FROM posts
+      INNER JOIN users
+      ON user_id = users.id 
+      WHERE user_id = '$id' 
+
+      ;");
+    $sentencia->execute();
+  return $sentencia->fetchAll();
+}
 
 ///////////////////  OBTENER ID NUEVO USUARIO ////////////////////////////
 
@@ -165,7 +193,17 @@ function obtenerIdNuevoUsuario($conexion){
 
 
 
+///////////////////////////  OBTENER POSTS ////////////////////////////////
 
+function obtenerPosts($conexion){
+    $sentencia = $conexion->prepare("
+      SELECT * FROM posts 
+      INNER JOIN users 
+      ON user_id = users.id 
+      ;");
+    $sentencia->execute();
+  return $sentencia->fetchAll();
+}
 
 
 
@@ -192,9 +230,7 @@ function nuevoUsuario($conexion, $email, $nombre, $apellido, $password){
 
 
 
-
-
-
+///////////////////////// GUARDAR FOTO TEMPORAL /////////////////////////////
 
 
 

@@ -1,3 +1,4 @@
+$( document ).ready(function() {
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -17,33 +18,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
+
 //////////////////////  VALIDAR LONGITUD DE CONTRASEÑA  ////////////////////////
 
 
-$(document).ready(function() {
-	$("#password").keyup(checkLengthPassword);
-});
-
-function checkLengthPassword() {
-	var password = $("#password").val();
-	var longitudPassword = password.length;
-
-	if (longitudPassword < 6) {
-		$("#validacionPassword").html("<span><i class='icon-alert fas fa-exclamation-circle'></i>Debe tener al menos 6 caracteres.</span>");
-	} 
-
-	else{
-		$("#validacionPassword").html("<span><i class='icon-check fas fa-check'></i></span>");
-	}
-};
+$("#password").keyup(checkLengthPassword);
+$("#password").blur(checkLengthPassword);
 
 
-//////////////////////////  MOSTRAR FOTO AL CARGAR  ///////////////////////////
-
-
-$(document).ready(function() {
-	$("#password").keyup(checkLengthPassword);
-});
 
 function checkLengthPassword() {
 	var password = $("#password").val();
@@ -62,13 +44,13 @@ function checkLengthPassword() {
 
 //////////////////////  VALIDAR IGUALDAD EN PASSWORDS  /////////////////////////
 
-$(document).ready(function() {
-	$("#password").keyup(checkPasswordMatch);
-});
 
-$(document).ready(function() {
-	$("#password2").keyup(checkPasswordMatch2);
-});
+$("#password").keyup(checkPasswordMatch);
+$("#password").blur(checkPasswordMatch);
+$("#password2").keyup(checkPasswordMatch2);
+$("#password2").blur(checkPasswordMatch2);
+
+
 
 function checkPasswordMatch() {
 	var password = $("#password").val();
@@ -89,7 +71,7 @@ function checkPasswordMatch2() {
 
 
 
-	if (password != password2 && password != "" && password2 != "") {
+	if (password != password2) {
 		$("#validacionPassword2").html("<span><i class='icon-alert fas fa-exclamation-circle'></i>Las contraseñas no coinciden.</span>");
 	} 
 
@@ -102,9 +84,10 @@ function checkPasswordMatch2() {
 
 ////////////////////////  VALIDAR LONGITUD DE NOMBRE  //////////////////////////
 
-$(document).ready(function() {
-	$("#nombre").keyup(checkNombre);
-});
+
+$("#nombre").keyup(checkNombre);
+$("#nombre").blur(checkNombre);
+
 
 function checkNombre() {
 	var nombre = $("#nombre").val();
@@ -122,9 +105,10 @@ function checkNombre() {
 
 ///////////////////////  VALIDAR LONGITUD DE APELLIDO  /////////////////////////
 
-$(document).ready(function() {
-	$("#apellido").keyup(checkApellido);
-});
+
+$("#apellido").keyup(checkApellido);
+$("#apellido").blur(checkApellido);
+
 
 function checkApellido() {
 	var apellido = $("#apellido").val();
@@ -141,25 +125,8 @@ function checkApellido() {
 }
 
 
-
-
 ///////////////////////////////  VALIDAR EMAIL  ////////////////////////////////
 
-
-// $(document).ready(function() {
-// 	$("#email").keyup(checkEmail);
-// });
-
-// function checkEmail() {
-// 	var email = $("#email").value;
-// 	var xhttp = new XMLHttpRequest();
-// 	xhttp.onreadystatechange = function() {
-// 		if(xhttp.readyState == 4 && xhttp.satus == 200) {
-// 			$("#validacionEmail").innerHTML = xhttp.responseText;
-// 			var emailResponsed = $("#")
-// 		}
-// 	}
-// }
 
 $('#email').blur(function(){
 
@@ -201,6 +168,12 @@ $('#email').blur(function(){
 
 
 });
+
+
+
+//////////////////////////  MOSTRAR FOTO AL CARGAR  ///////////////////////////
+
+
 
 
 
@@ -730,3 +703,13 @@ btn_servicio_dashboard.addEventListener('mouseover',function(){
 
 
 
+
+
+
+
+
+
+
+/////////////////  CIERRE DEL DOCUMENT.READY ////////////////////
+
+});

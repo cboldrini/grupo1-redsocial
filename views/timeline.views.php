@@ -36,153 +36,41 @@
  	?>
 
 	<div class="posts col-md-11">
+
+		<?php foreach ($posts as $post): ?>
+
+			<div class="post">
+				<div class="wrapper-img col-md-1 col-2 col-sm-2">
+					<a href="contact.php?user=<?php echo $post['id'];?>"><img src="<?php echo $post['photo'];?>" alt=""></a>
+				</div>
+				
+				<div class="wrapper-txt col-md-11 col-10 col-sm-10">
+					<p class="post-info">
+						<a href="contact.php?user=<?php echo $post['id'];?>" class="post-user">
+							<?php echo $post['first_name'] . " " . $post['last_name'];?>		
+						</a>
+
+						<span class="post-date">
+							<?php echo $post['created_date'];?>
+						</span>
+					</p>
+					<p class="post-message">
+						<?php echo $post['message'];?>
+					</p>
+					
+					<div class="post-actions">
+						<i class="fas fa-thumbs-up"></i>
+						<i class="fas fa-reply"></i>
+						<i class="fas fa-share-alt"></i>
+					</div>
+				</div>
+				
+			</div>
+		<?php endforeach; ?>
+
+
+
 		
-		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
-				<a href="contact.php"><img src="img/macri.png" alt=""></a>
-			</div>
-			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
-				<p class="post-info">
-					<a href="contact.php" class="post-user">Mauricio Macri</a>
-					<span class="post-date">21 de Julio de 2019 | 09:35</span>
-				</p>
-				<p class="post-message">Permuto sillón de Rivadavia (casi sin uso) por helicoptero. Consultas por inbox.</p>
-				
-				<div class="post-actions">
-					<i class="fas fa-thumbs-up"></i>
-					<i class="fas fa-reply"></i>
-					<i class="fas fa-share-alt"></i>
-				</div>
-			</div>
-			
-		</div>
-
-		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
-				<a href="contact.php"><img src="img/eze.png" alt=""></a>
-			</div>
-			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
-				<p class="post-info">
-					<a href="contact.php" class="post-user">Profe Eze</a>
-					<span class="post-date">21 de Julio de 2019 | 09:35</span>
-				</p>
-				<p class="post-message"><a href="profe_eze.php">@profe_eze</a> se unió al equipo de <a href="group.php">@desarrollo</a></p>
-				
-				<div class="post-actions">
-					<i class="fas fa-thumbs-up"></i>
-					<i class="fas fa-reply"></i>
-					<i class="fas fa-share-alt"></i>
-				</div>
-			</div>
-			
-		</div>
-
-		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
-				<a href="contact.php"><img src="img/cristina.png" alt=""></a>
-			</div>
-			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
-				<p class="post-info">
-					<a href="contact.php" class="post-user">Cristina Fernandez</a>
-					<span class="post-date">21 de Julio de 2019 | 09:35</span>
-				</p>
-				<p class="post-message">Vamos a volver.</p>
-				
-				<div class="post-actions">
-					<i class="fas fa-thumbs-up"></i>
-					<i class="fas fa-reply"></i>
-					<i class="fas fa-share-alt"></i>
-				</div>
-			</div>
-			
-		</div>
-
-		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
-				<a href="contact.php"><img src="img/lionel.png" alt=""></a>
-			</div>
-			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
-				<p class="post-info">
-					<a href="contact.php" class="post-user">Lionel Ricchie</a>
-					<span class="post-date">21 de Julio de 2019 | 09:35</span>
-				</p>
-				<p class="post-message">No te olvides de poner el where en el delete from.</p>
-				
-				<div class="post-actions">
-					<i class="fas fa-thumbs-up"></i>
-					<i class="fas fa-reply"></i>
-					<i class="fas fa-share-alt"></i>
-				</div>
-			</div>
-			
-		</div>
-
-		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
-				<a href="contact.php"><img src="img/macri.png" alt=""></a>
-			</div>
-			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
-				<p class="post-info">
-					<a href="contact.php" class="post-user">Mauricio Macri</a>
-					<span class="post-date">21 de Julio de 2019 | 09:35</span>
-				</p>
-				<p class="post-message"><a href="mauricio_macri.php">@mauricio_macri</a> se unió al equipo de <a href="group.php">@finanzas</a></p>
-				
-				<div class="post-actions">
-					<i class="fas fa-thumbs-up"></i>
-					<i class="fas fa-reply"></i>
-					<i class="fas fa-share-alt"></i>
-				</div>
-			</div>
-			
-		</div>
-
-		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
-				<a href="contact.php"><img src="img/carrio.png" alt=""></a>
-			</div>
-			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
-				<p class="post-info">
-					<a href="contact.php" class="post-user">Elisa Carrio</a>
-					<span class="post-date">21 de Julio de 2019 | 09:35</span>
-				</p>
-				<p class="post-message">Hoy desayunamos en un bar de la zona de Playa Grande, @gmontenegro_ok junto al presidente <a href="mauricio_macri.php">@mauriciomacri</a> y el querido <a href="profe_eze.php">@profe_eze</a>. Comimos medialunas con jamón y queso y como me había quedado con hambre me pedí un tostado de crudo y queso. Ahora me estoy pidiendo unas empanadas por Rappi.</p>
-				
-				<div class="post-actions">
-					<i class="fas fa-thumbs-up"></i>
-					<i class="fas fa-reply"></i>
-					<i class="fas fa-share-alt"></i>
-				</div>
-			</div>
-			
-		</div>
-
-		<div class="post">
-			<div class="wrapper-img col-md-1 col-2 col-sm-2">
-				<a href="contact.php"><img src="img/eze.png" alt=""></a>
-			</div>
-			
-			<div class="wrapper-txt col-md-11 col-10 col-sm-10">
-				<p class="post-info">
-					<a href="contact.php" class="post-user">Profe Eze</a>
-					<span class="post-date">21 de Julio de 2019 | 09:35</span>
-				</p>
-				<p class="post-message">PHP, ¿Qué?</p>
-				
-				<div class="post-actions">
-					<i class="fas fa-thumbs-up"></i>
-					<i class="fas fa-reply"></i>
-					<i class="fas fa-share-alt"></i>
-				</div>
-			</div>
-			
-		</div>
 
 	</div>
 

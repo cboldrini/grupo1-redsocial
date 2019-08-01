@@ -36,6 +36,19 @@ $nombre_usr = $datos_usr["first_name"];
 $apellido_usr = $datos_usr["last_name"];
 $telefono_usr = $datos_usr["phone"];
 $nacimiento_usr = $datos_usr["born_date"];
+
+// $foto_usr = $datos_usr["photo"];
+
+
+// if ($foto_usr != NULL) {
+// 	$foto_usr = $datos_usr["photo"];
+// }
+
+// else{
+// 	$foto_usr = 'img/users/default.png';
+// }
+
+
 if (file_exists('img/users/' . $id_usr . '.png')) {
 	$foto_usr = 'img/users/' . $id_usr . '.png';
 } else{

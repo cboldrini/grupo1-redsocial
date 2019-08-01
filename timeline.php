@@ -18,6 +18,8 @@ if (!$conexion) {
 }
 
 
+$posts = obtenerPosts($conexion);
+
 
 
 

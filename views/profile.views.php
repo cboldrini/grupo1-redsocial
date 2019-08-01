@@ -18,7 +18,7 @@
 
 		<div class="wrapper-txt col-md-10 col-10">
 			<p class="user-name"><?php echo $nombre_usr; ?></p>
-			<p class="job-title">Coordinador</p>
+			<p class="job-title">Aprendiz</p>
 			<p class="area"><a href="desarrollo.php">Departamento de Desarrollo</a></p>
 			<div class="actions">
 				<a href="profile_edit.php" class="btn-azul-claro">Editar perfil</a>
