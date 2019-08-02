@@ -18,39 +18,21 @@ if (!$conexion) {
 }
 
 
-$posts = obtenerPosts($conexion);
-
-// print_r($posts[0][4]);
-// $post_date = $posts[0][3];
 
 
+$area_id = $_GET["area"];
 
+$area = obtenerAreaPorId($conexion, $area_id);
+$area_name = $area["name"];
+$area_description = $area["description"];
+$area_foto = $area["photo"];
 
-
-///////////////////////////// NUEVO POST //////////////////////////////////
-
-
-// echo $id_usr;
-
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$message = $_POST['message'];
-	$created_date = date("Y-m-d H:i:s");
-	$id_usr = $datos_usr["id"];
-
-
-	nuevoPost($conexion, $message, $id_usr, $created_date);
-
-}
 
 
 
 
 ////////////////////////// LLAMANDO A LA VISTA ////////////////////////////
 
-require_once 'views/timeline.views.php';
+require_once 'views/area.views.php';
 
 ?>
-
-
-

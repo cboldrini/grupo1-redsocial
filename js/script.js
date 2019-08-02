@@ -179,8 +179,54 @@ $('#email').blur(function(){
 
 
 
+/////////////////////////////  CARGAR NUEVO POST  /////////////////////////////
+
+$("#nuevo_post").submit(nuevo_post)
 
 
+   function nuevo_post(e){
+
+   e.preventDefault();
+	var mensaje = new FormData($("#nuevo_post")[0])
+	
+
+   $.ajax({
+            url         : 'timeline.php',
+            type        : 'POST',
+            data        : mensaje, 
+            processData : false,
+            contentType : false,
+            success: function(response)
+            {
+               // $("#recarga_posts").html(response)
+               $("#recarga_posts").load('recargar_posts.php');
+               return false;
+
+            },
+            error : function(response)
+            {
+                alert(response)
+            }
+   //return false;
+})
+
+}
+
+// function nuevoPost(e){
+// 	e.preventDefault();
+// 	var mensaje = $("#message").val();
+
+// 	$.ajax({
+// 		type:'post',
+// 		url:'new_post.php',
+// 		data:mensaje,
+// 		succes:function(respuesta){
+// 			alert("Funciona");
+// 		}
+// 	})
+
+// 	return false;
+// }
 
 
 

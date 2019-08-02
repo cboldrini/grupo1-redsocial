@@ -31,6 +31,7 @@ $apellido = $usuario["last_name"];
 $email = $usuario["email"];
 $foto = $usuario["photo"];
 $nombreCompleto = $nombre ." " . $apellido;
+$area_id = $area["id"];
 $area = $area["area"];
 
 

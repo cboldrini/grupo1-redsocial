@@ -21,8 +21,8 @@
 				<img src="<?php echo $foto_usr; ?>" alt="">
 			</div>
 
-		<form action="#" class="col-md-11 col-10">
-			<input type="text" class="col-md-10 col-8" placeholder="Escribe un nuevo post...">
+		<form id="nuevo_post" method="post" class="col-md-11 col-10">
+			<input type="text" class="col-md-10 col-8" name="message" id="message" placeholder="Escribe un nuevo post...">
 			<button><i class="fas fa-plus"></i></button>
 		</form>
 
@@ -35,7 +35,7 @@
 	require_once 'partials/posts_filters.php';
  	?>
 
-	<div class="posts col-md-11">
+	<div class="posts col-md-11" id="recarga_posts">
 
 		<?php foreach ($posts as $post): ?>
 
@@ -51,7 +51,7 @@
 						</a>
 
 						<span class="post-date">
-							<?php echo $post['created_date'];?>
+							<?php echo $post[3];?>
 						</span>
 					</p>
 					<p class="post-message">

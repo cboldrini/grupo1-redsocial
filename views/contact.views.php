@@ -20,7 +20,7 @@
 		<div class="wrapper-txt col-md-10 col-10">
 			<p class="user-name"><?php echo $nombreCompleto ; ?></p>
 			<p class="job-title">Aprendiz</p>
-			<p class="area"><a href="group.php"><?php echo $area ; ?></a></p>
+			<p class="area"><a href="area.php?area=<?php echo $area_id;?>"><?php echo $area ; ?></a></p>
 			<div class="actions">
 				<i class="fas fa-envelope"></i>
 				<i class="fas fa-comment"></i>
@@ -50,7 +50,7 @@
 						</a>
 
 						<span class="post-date">
-							<?php echo $post['created_date'];?>
+							<?php echo $post[3];?>
 						</span>
 					</p>
 					<p class="post-message">

@@ -19,12 +19,20 @@ if (!$conexion) {
 
 
 
+
+$area_id = $_GET["group"];
+
+$area = obtenerAreaPorId($conexion, $area_id);
+$area_name = $area["name"];
+$area_description = $area["description"];
+$area_foto = $area["photo"];
+
+
+
+
+
+////////////////////////// LLAMANDO A LA VISTA ////////////////////////////
+
 require_once 'views/group.views.php';
-
-
-
-
-
-
 
 ?>

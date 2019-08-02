@@ -162,7 +162,8 @@ function obtenerDatosDeUsuarioPorId($conexion, $id){
 
 function obtenerAreaPorIdUsuario($conexion, $id){
     $sentencia = $conexion->prepare("
-      SELECT areas.name as area FROM users 
+      SELECT areas.name as area, areas.id as id 
+      FROM users 
       INNER JOIN areas 
       ON area_id = areas.id 
       WHERE users.id= '$id' 
@@ -171,13 +172,23 @@ function obtenerAreaPorIdUsuario($conexion, $id){
   return $sentencia->fetch();
 }
 
+function obtenerAreaPorId($conexion, $id){
+    $sentencia = $conexion->prepare("
+      SELECT *
+      FROM areas 
+      WHERE id= '$id' 
+      ;");
+    $sentencia->execute();
+  return $sentencia->fetch();
+}
+
 function obtenerPostsPorIdUsuario($conexion, $id){
     $sentencia = $conexion->prepare("
-      SELECT * FROM posts
-      INNER JOIN users
-      ON user_id = users.id 
+      SELECT * FROM posts as p
+      INNER JOIN users as u
+      ON user_id = u.id 
       WHERE user_id = '$id' 
-
+      ORDER BY p.created_date DESC
       ;");
     $sentencia->execute();
   return $sentencia->fetchAll();
@@ -197,9 +208,11 @@ function obtenerIdNuevoUsuario($conexion){
 
 function obtenerPosts($conexion){
     $sentencia = $conexion->prepare("
-      SELECT * FROM posts 
-      INNER JOIN users 
-      ON user_id = users.id 
+      SELECT * 
+      FROM posts as p
+      INNER JOIN users as u
+      ON user_id = u.id 
+      ORDER BY p.created_date DESC
       ;");
     $sentencia->execute();
   return $sentencia->fetchAll();
@@ -213,6 +226,7 @@ function obtenerPosts($conexion){
 //////////////////////////////////////////////////////////////////////////
 
 
+///////////////////////////// NUEVO USUARIO //////////////////////////////
 
 function nuevoUsuario($conexion, $email, $nombre, $apellido, $password){
   $sentencia = $conexion->prepare(
@@ -228,6 +242,21 @@ function nuevoUsuario($conexion, $email, $nombre, $apellido, $password){
   ));
 }
 
+
+///////////////////////////// NUEVO POST ////////////////////////////////
+
+function nuevoPost($conexion, $message, $user_id, $created_date){
+  $sentencia = $conexion->prepare(
+    "INSERT INTO posts(id, message, user_id, created_date) 
+    VALUES (null,:message,:user_id,:created_date)"
+  );
+
+   $sentencia->execute(array(
+    ':message' => $message,
+    ':user_id' => $user_id,
+    ':created_date' => $created_date
+  ));
+}
 
 
 ///////////////////////// GUARDAR FOTO TEMPORAL /////////////////////////////
