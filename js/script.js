@@ -198,7 +198,6 @@ $("#nuevo_post").submit(nuevo_post)
             contentType : false,
             success: function(response)
             {
-               // $("#recarga_posts").html(response)
                $("#recarga_posts").load('recargar_posts.php');
                return false;
 
@@ -207,26 +206,11 @@ $("#nuevo_post").submit(nuevo_post)
             {
                 alert(response)
             }
-   //return false;
+   
 })
 
 }
 
-// function nuevoPost(e){
-// 	e.preventDefault();
-// 	var mensaje = $("#message").val();
-
-// 	$.ajax({
-// 		type:'post',
-// 		url:'new_post.php',
-// 		data:mensaje,
-// 		succes:function(respuesta){
-// 			alert("Funciona");
-// 		}
-// 	})
-
-// 	return false;
-// }
 
 
 
