@@ -8,7 +8,7 @@
 
 function conexion($db_config){
 	try {
-	$conexion = new PDO('mysql:host=149.56.21.30;dbname='.$db_config['basedatos'], $db_config['usuario'], $db_config['pass']);
+	$conexion = new PDO($db_config['dsn'].$db_config['basedatos'], $db_config['usuario'], $db_config['pass']);
 	$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		return $conexion;
@@ -220,6 +220,85 @@ function obtenerPosts($conexion){
 
 
 
+//////////////////  OBTENER CONVERSACIONES POR USUARIO ////////////////////
+
+function obtConvPorUsr($conexion, $id){
+  $sentencia = $conexion->prepare("
+  SELECT c.conversation_id, u.first_name, u.last_name, u.photo, m.message 
+  FROM conversation_user as c 
+  INNER JOIN users as u 
+  ON c.user_id = u.id 
+  INNER JOIN messages as m 
+  ON m.conversation_id = c.conversation_id 
+  WHERE c.conversation_id IN (
+                      SELECT c.conversation_id 
+                      FROM conversation_user as c
+                      WHERE c.user_id = '$id'
+                      )
+  AND c.user_id != '$id'
+  GROUP BY u.id
+  ;");
+  $sentencia->execute();
+  return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+
+//////////////////  OBTENER MENSAJES POR CONVERSACION ////////////////////
+
+// function obtMsjPorConv($conexion, $id){
+//   $sentencia->prepare("
+//     SELECT u.first_name, u.last_name, u.photo, m.message, m.created_date, m.user_s_id 
+//     FROM users as user_id 
+//     INNER JOIN messages as m 
+//     ON m.conversation_id = c.conversation_id 
+//     INNER JOIN conversation_user as c 
+//     ON c.conversation_id = 
+//   ")
+// }
+
+
+function obtMsjPorConv($conexion, $conv_id, $usr_id){
+  $sentencia = $conexion->prepare("
+    SELECT u.first_name, u.last_name, u.photo, u.id, m.message, m.created_date, m.user_s_id 
+    FROM conversation_user as c 
+    INNER JOIN users as u 
+    ON c.user_id = u.id 
+    INNER JOIN messages as m 
+    ON m.conversation_id = c.conversation_id 
+    WHERE c.conversation_id = $conv_id 
+    AND c.user_id != '$usr_id'
+    ;");
+    $sentencia->execute();
+    return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+
+
+// Array ( 
+//   [0] => Array ( 
+//     [first_name] => Cristian 
+//     [last_name] => Boldrini 
+//     [photo] => img/users/2.png 
+//     [message] => Hola 
+//     [created_date] => 2019-08-02 19:13:57 
+//     [user_s_id] => 1 
+//   ) 
+
+//   [1] => Array ( 
+//     [first_name] => Cristian 
+//     [last_name] => Boldrini 
+//     [photo] => img/users/2.png 
+//     [message] => Fran 
+//     [created_date] => 2019-08-02 20:12:57 
+//     [user_s_id] => 2 
+//   ) 
+
+//   [2] => Array ( [first_name] => Cristian [last_name] => Boldrini [photo] => img/users/2.png [message] => Qu� onda? [created_date] => 2019-08-02 21:12:57 [user_s_id] => 2 ) 
+//   [3] => Array ( [first_name] => Cristian [last_name] => Boldrini [photo] => img/users/2.png [message] => Todo bien, vos? [created_date] => 2019-08-02 21:14:57 [user_s_id] => 1 ) )
+
+
 
 //////////////////////////////////////////////////////////////////////////
 //////////////////// INSERTAR DATOS EN BASE DE DATOS /////////////////////
@@ -228,17 +307,18 @@ function obtenerPosts($conexion){
 
 ///////////////////////////// NUEVO USUARIO //////////////////////////////
 
-function nuevoUsuario($conexion, $email, $nombre, $apellido, $password){
+function nuevoUsuario($conexion, $email, $nombre, $apellido, $password, $photo){
   $sentencia = $conexion->prepare(
-    "INSERT INTO users(id, email, first_name, last_name, password) 
-    VALUES (null,:email,:nombre,:apellido,:password)"
+    "INSERT INTO users(id, email, first_name, last_name, password, photo) 
+    VALUES (null,:email,:nombre,:apellido,:password,:photo)"
   );
 
    $sentencia->execute(array(
     ':email' => $email,
     ':nombre' => $nombre,
     ':apellido' => $apellido,
-    ':password' => $password
+    ':password' => $password,
+    ':photo' => $photo
   ));
 }
 

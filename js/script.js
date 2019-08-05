@@ -11,8 +11,6 @@ $( document ).ready(function() {
 
 
 
-
-
 ////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// REGISTRO /////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -33,10 +31,14 @@ function checkLengthPassword() {
 
 	if (longitudPassword < 6) {
 		$("#validacionPassword").html("<span><i class='icon-alert fas fa-exclamation-circle'></i>Debe tener al menos 6 caracteres.</span>");
+		val_pass1_registro = "0";
+		cambiarPasoRegistro();
 	} 
 
 	else{
 		$("#validacionPassword").html("<span><i class='icon-check fas fa-check'></i></span>");
+		val_pass1_registro = "1";
+		cambiarPasoRegistro();
 	}
 };
 
@@ -50,6 +52,8 @@ $("#password").blur(checkPasswordMatch);
 $("#password2").keyup(checkPasswordMatch2);
 $("#password2").blur(checkPasswordMatch2);
 
+var val_pass1_registro = "0";
+var val_pass2_registro = "0";
 
 
 function checkPasswordMatch() {
@@ -58,10 +62,16 @@ function checkPasswordMatch() {
 
 	if (password != password2 && password != "" && password2 != "") {
 		$("#validacionPassword2").html("<span><i class='icon-alert fas fa-exclamation-circle'></i>Las contraseñas no coinciden.</span>");
+		val_pass1_registro = "0";
+		val_pass2_registro = "0";
+		cambiarPasoRegistro();
 	} 
 
 	else if(password == password2 && password != "" && password2 != "") {
 		$("#validacionPassword2").html("<span><i class='icon-check fas fa-check'></i>Las contraseñas son iguales.</span>");
+		val_pass1_registro = "1";
+		val_pass2_registro = "1";
+		cambiarPasoRegistro();
 	}
 }
 
@@ -73,10 +83,16 @@ function checkPasswordMatch2() {
 
 	if (password != password2) {
 		$("#validacionPassword2").html("<span><i class='icon-alert fas fa-exclamation-circle'></i>Las contraseñas no coinciden.</span>");
+		val_pass2_registro = "0";
+		val_pass1_registro = "0";
+		cambiarPasoRegistro();
 	} 
 
 	else if(password == password2 && password != "" && password2 != "") {
 		$("#validacionPassword2").html("<span><i class='icon-check fas fa-check'></i></span>");
+		val_pass2_registro = "1";
+		val_pass1_registro = "1";
+		cambiarPasoRegistro();
 	}
 }
 
@@ -88,17 +104,25 @@ function checkPasswordMatch2() {
 $("#nombre").keyup(checkNombre);
 $("#nombre").blur(checkNombre);
 
+var val_nombre_registro = "0";
+
 
 function checkNombre() {
+
+
 	var nombre = $("#nombre").val();
 	var longitudNombre = nombre.length;
 
 	if (longitudNombre < 3) {
 		$("#validacionNombre").html("<span><i class='icon-alert fas fa-exclamation-circle'></i>El nombre debe tener al menos 3 letras.</span>");
+		val_nombre_registro = "0";
+		cambiarPasoRegistro();
 	} 
 
 	else {
 		$("#validacionNombre").html("<span><i class='icon-check fas fa-check'></i></span>");
+		val_nombre_registro = "1";
+		cambiarPasoRegistro();
 	}
 }
 
@@ -109,6 +133,8 @@ function checkNombre() {
 $("#apellido").keyup(checkApellido);
 $("#apellido").blur(checkApellido);
 
+var val_apellido_registro = "0";
+
 
 function checkApellido() {
 	var apellido = $("#apellido").val();
@@ -116,25 +142,35 @@ function checkApellido() {
 
 	if (longitudApellido < 3) {
 		$("#validacionApellido").html("<span><i class='icon-alert fas fa-exclamation-circle'></i>El apellido debe tener al menos 3 letras.</span>");
+		val_apellido_registro = "0";
+		cambiarPasoRegistro();
 	} 
 	
 
 	else {
 		$("#validacionApellido").html("<span><i class='icon-check fas fa-check'></i></span>");
+		val_apellido_registro = "1";
+		cambiarPasoRegistro();
 	}
 }
 
 
 ///////////////////////////////  VALIDAR EMAIL  ////////////////////////////////
 
+var val_email_registro = "0";
 
-$('#email').blur(function(){
+$('#email').blur(checkEmail);
+$('#email').keyup(checkEmail);
 
+
+function checkEmail(){
 	var email = $("#email").val();
 	var longitudEmail = email.length;
 
 	if (longitudEmail == 0) {
 		$("#validacionEmail").html("<i class='icon-alert fas fa-exclamation-circle'></i>Debes ingresar un email.<input id='emailChecker' type='hidden' value='0' name='emailChecker'> ");
+		val_email_registro = "0";
+		cambiarPasoRegistro();
 		
 	} 
 
@@ -148,10 +184,14 @@ $('#email').blur(function(){
 		    success: function(respuesta) {
 		   		if (respuesta == 1) {
 		   			$("#validacionEmail").html("<i class='icon-alert fas fa-exclamation-circle'></i><span id='mensajeEmail'>El email ya está registrado.</span><input id='emailChecker' type='hidden' value='0' name='emailChecker'> ");
+					val_email_registro = "0";
+					cambiarPasoRegistro();
 		    	} 
 
 		    	else {
 		    		$("#validacionEmail").html("<i class='icon-check fas fa-check'></i><span id='mensajeEmail'></span><input id='emailChecker' type='hidden' value='0' name='emailChecker'> ");
+					val_email_registro = "1";
+					cambiarPasoRegistro();
 		    	}
 		   	}
 
@@ -167,7 +207,111 @@ $('#email').blur(function(){
 
 
 
-});
+};
+
+
+
+
+
+
+
+
+//////////////////////////  CAMBIAR DE PASO //////////////////////////////
+// let btn_siguiente = $('.icon-btn-siguiente');
+// btn_siguiente.removeClass('disabled');
+
+function cambiarPasoRegistro(){
+	let btn_siguiente = $('#btn-siguiente');
+
+if ($('.btn-siguiente') && 
+	$('.btn-anterior') && 
+	$('.btn-paso1') && 
+	$('.btn-paso2') && 
+	$('.wrapper-paso1') && 
+	$('.wrapper-paso2') && 
+	val_email_registro == "1" &&
+	val_nombre_registro == "1" &&
+	val_apellido_registro == "1" &&
+	val_pass1_registro == "1" &&
+	val_pass2_registro == "1"
+ ) {
+
+	
+
+	let btn_siguiente = $('#btn-siguiente');
+	let btn_anterior = $('.btn-anterior');
+	let btn_paso_1 = $('.btn-paso1');
+	let btn_paso_2 = $('.btn-paso2');
+	let wrapper_paso_1 = $('.wrapper-paso1');
+	let wrapper_paso_2 = $('.wrapper-paso2');
+
+
+	btn_siguiente.removeClass('disabled');
+	$('#btn-enviar-registro').attr("disabled", false);
+
+
+	btn_siguiente.click(function(){
+		wrapper_paso_1.addClass('none');
+		wrapper_paso_1.removeClass('active');
+		wrapper_paso_2.addClass('active');
+		wrapper_paso_2.removeClass('none');
+		btn_paso_1.addClass('not-focus');
+		btn_paso_2.removeClass('focus');
+		btn_paso_2.addClass('focus');
+		btn_paso_2.removeClass('not-focus');
+	});
+
+	btn_paso_1.click(function(){
+		wrapper_paso_1.removeClass('none');
+		wrapper_paso_1.addClass('active');
+		wrapper_paso_2.removeClass('active');
+		wrapper_paso_2.addClass('none');
+		btn_paso_2.addClass('not-focus');
+		btn_paso_2.removeClass('focus');
+		btn_paso_1.addClass('focus');
+		btn_paso_1.removeClass('not-focus');
+	});
+
+	btn_paso_2.click(function(){
+		wrapper_paso_1.addClass('none');
+		wrapper_paso_1.removeClass('active');
+		wrapper_paso_2.addClass('active');
+		wrapper_paso_2.removeClass('none');
+		btn_paso_1.addClass('not-focus');
+		btn_paso_2.removeClass('focus');
+		btn_paso_2.addClass('focus');
+		btn_paso_2.removeClass('not-focus');
+	});
+
+	btn_anterior.click(function(){
+		wrapper_paso_1.removeClass('none');
+		wrapper_paso_1.addClass('active');
+		wrapper_paso_2.removeClass('active');
+		wrapper_paso_2.addClass('none');
+		btn_paso_2.addClass('not-focus');
+		btn_paso_2.removeClass('focus');
+		btn_paso_1.addClass('focus');
+		btn_paso_1.removeClass('not-focus');
+	});
+
+}
+
+else{
+	btn_siguiente.addClass('disabled');
+	$('#btn-enviar-registro').attr("disabled", true);
+}
+
+}
+
+
+
+//////////////////////  HABILITAR/DESHABILITAR BOTONES  ///////////////////////
+
+
+
+
+
+
 
 
 
@@ -176,6 +320,14 @@ $('#email').blur(function(){
 
 
 
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// POSTS ////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -188,6 +340,10 @@ $("#nuevo_post").submit(nuevo_post)
 
    e.preventDefault();
 	var mensaje = new FormData($("#nuevo_post")[0])
+
+	var contenedor = $("#wrapper-loader");
+	contenedor.css("visibility","visible");
+	contenedor.css("opacity","1");
 	
 
    $.ajax({
@@ -198,7 +354,14 @@ $("#nuevo_post").submit(nuevo_post)
             contentType : false,
             success: function(response)
             {
+            	
+
                $("#recarga_posts").load('recargar_posts.php');
+               $("#message").val("");
+               	
+               	contenedor.css("visibility","hidden");
+				contenedor.css("opacity","0");
+
                return false;
 
             },
@@ -210,6 +373,16 @@ $("#nuevo_post").submit(nuevo_post)
 })
 
 }
+
+
+
+////////////////////////////////  LOADER  //////////////////////////////////////
+
+// window.onload * function(){
+// 	var contenedor = $(".wrapper-loader");
+// 	contenedor.style.visibility = 'hidden';
+// 	contenedor.style.opacity = '0';
+// };
 
 
 
@@ -345,71 +518,6 @@ if( document.querySelector("#menu_left_groups") &&
 
 
 
-
-
-///////////////////////  CAMBIAR DE PASO EN REGISTRO  /////////////////////////
-
-if (document.querySelector('.btn-siguiente') && 
-	document.querySelector('.btn-anterior') && 
-	document.querySelector('.btn-paso1') && 
-	document.querySelector('.btn-paso2') && 
-	document.querySelector('.wrapper-paso1') && 
-	document.querySelector('.wrapper-paso2')
- ) {
-
-	let btn_siguiente = document.querySelector('.btn-siguiente');
-	let btn_anterior = document.querySelector('.btn-anterior');
-	let btn_paso_1 = document.querySelector('.btn-paso1');
-	let btn_paso_2 = document.querySelector('.btn-paso2');
-	let wrapper_paso_1 = document.querySelector('.wrapper-paso1');
-	let wrapper_paso_2 = document.querySelector('.wrapper-paso2');
-
-
-	btn_siguiente.addEventListener('click',function(){
-		wrapper_paso_1.classList.add('none');
-		wrapper_paso_1.classList.remove('active');
-		wrapper_paso_2.classList.add('active');
-		wrapper_paso_2.classList.remove('none');
-		btn_paso_1.classList.add('not-focus');
-		btn_paso_2.classList.remove('focus');
-		btn_paso_2.classList.add('focus');
-		btn_paso_2.classList.remove('not-focus');
-	});
-
-	btn_paso_1.addEventListener('click',function(){
-		wrapper_paso_1.classList.remove('none');
-		wrapper_paso_1.classList.add('active');
-		wrapper_paso_2.classList.remove('active');
-		wrapper_paso_2.classList.add('none');
-		btn_paso_2.classList.add('not-focus');
-		btn_paso_2.classList.remove('focus');
-		btn_paso_1.classList.add('focus');
-		btn_paso_1.classList.remove('not-focus');
-	});
-
-	btn_paso_2.addEventListener('click',function(){
-		wrapper_paso_1.classList.add('none');
-		wrapper_paso_1.classList.remove('active');
-		wrapper_paso_2.classList.add('active');
-		wrapper_paso_2.classList.remove('none');
-		btn_paso_1.classList.add('not-focus');
-		btn_paso_2.classList.remove('focus');
-		btn_paso_2.classList.add('focus');
-		btn_paso_2.classList.remove('not-focus');
-	});
-
-	btn_anterior.addEventListener('click',function(){
-		wrapper_paso_1.classList.remove('none');
-		wrapper_paso_1.classList.add('active');
-		wrapper_paso_2.classList.remove('active');
-		wrapper_paso_2.classList.add('none');
-		btn_paso_2.classList.add('not-focus');
-		btn_paso_2.classList.remove('focus');
-		btn_paso_1.classList.add('focus');
-		btn_paso_1.classList.remove('not-focus');
-	});
-
-};
 
 
 

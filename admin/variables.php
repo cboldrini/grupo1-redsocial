@@ -34,8 +34,10 @@ $id_usr = $datos_usr["id"];
 $email_usr = $datos_usr["email"];
 $nombre_usr = $datos_usr["first_name"];
 $apellido_usr = $datos_usr["last_name"];
+$nombre_completo_usr = $nombre_usr . " " . $apellido_usr;
 $telefono_usr = $datos_usr["phone"];
 $nacimiento_usr = $datos_usr["born_date"];
+
 
 // $foto_usr = $datos_usr["photo"];
 

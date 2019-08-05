@@ -9,6 +9,7 @@ require_once 'admin/variables.php';
 
 $usuario = $_SESSION['user'];
 
+
 $conexion = conexion($db_config);
 
 comprobarSesion();
@@ -18,8 +19,17 @@ if (!$conexion) {
 }
 
 
+//////////////////////// OBTENER CONVERSACIONES ///////////////////////////
+
+$conversaciones = obtConvPorUsr($conexion,$id_usr);
 
 
+$conv_id = "1";
+$mensajes = obtMsjPorConv($conexion, $conv_id, $id_usr);
+
+// print_r($mensajes);
+
+// print_r($conversaciones);
 
 
 

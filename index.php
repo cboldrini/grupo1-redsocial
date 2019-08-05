@@ -26,8 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['usuario'])) {
 	if($emailExistente == "1"){
 		$passwordReal = obtenerPassword($conexion, $email);
 		$passwordReal = $passwordReal[0][0];
+		$result = password_verify($password, $passwordReal);
 
-	    if($password == $passwordReal) {
+	    if($result == true) {
 			$_SESSION['user'] = $email;
 			header('Location: timeline.php');
 		}

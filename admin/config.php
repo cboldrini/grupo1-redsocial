@@ -2,6 +2,7 @@
 
 
 $db_config = array(
+	'dsn' => 'mysql:host=149.56.21.30;dbname=',
 	'basedatos' => 'insidedh_',
 	'usuario' => 'inside_admin',
 	'pass' => '1487Sony!'

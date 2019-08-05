@@ -12,11 +12,11 @@
 			<div class="col-md-8 menu">
 				<nav>
 					<ul>
-						<li><a href="#nosotros"><p>NOSOTROS</p></a></li>
-						<li><a href="#servicios"><p>SERVICIOS</p></a></li>
-						<li><a href="#clientes"><p>CLIENTES</p></a></li>
+						<li><a href="index.php#nosotros"><p>NOSOTROS</p></a></li>
+						<li><a href="index.php#servicios"><p>SERVICIOS</p></a></li>
+						<li><a href="index.php#clientes"><p>CLIENTES</p></a></li>
 						<li><a href="faqs.php"><p>FAQs</p></a></li>
-						<li><a href="#contacto"><p>CONTACTO</p></a></li>
+						<li><a href="index.php#contacto"><p>CONTACTO</p></a></li>
 						<li><a href="index.php"><i class="fas fa-user"></i></a></li>
 					</ul>
 				</nav>

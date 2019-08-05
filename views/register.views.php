@@ -40,7 +40,7 @@
 			<!-- <?php echo $errorPassword2 ?> -->
 			
 			<div class="actions">
-				<span class="btn-azul-claro btn-siguiente">SIGUIENTE</span>
+				<span class="btn-siguiente"><i class="fas fa-arrow-circle-right disabled" id="btn-siguiente"></i></span>
 			</div>
 			
 		</div>
@@ -49,8 +49,8 @@
 			<label for="file-upload"><i class="fas fa-cloud-upload-alt"></i></label>
 			<input type="file" id="file-upload" name="foto" accept=".png" style='display: none;'>
 			<div class="actions">
-				<span class="btn-azul-claro btn-anterior">ANTERIOR</span>
-				<button class="btn-azul-claro">ENVIAR</button>
+				<span class="btn-anterior"><i class="fas fa-arrow-circle-left"></i></span>
+				<button class="btn-azul-claro" id="btn-enviar-registro">ENVIAR</button>
 			</div>
 		</div>
 

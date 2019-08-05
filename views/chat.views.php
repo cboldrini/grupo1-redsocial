@@ -12,300 +12,36 @@
 
 	
 	<div class="contacts col-lg-3 col-md-4 col-sm-4 col-12">
-		<div class="contact">
-			<div class="wrapper-img">
-				<div class="img">
-					<img src="img/lionel.png" alt="">
-				</div>
-			</div>
 
-			<div class="wrapper-txt">
-				<div class="top">
-					<span class="contact-name">Lionel Richie</span>
-					<span class="date-time">19:21</span>
-				</div>
-				<div class="bottom">
-					<span class="last-message">Dale! Pasame la dire y te caigo. </span>
-				</div>
-
+		<?php foreach ($conversaciones as $conversacion): ?>
 			
-				
-			</div>
-		</div>
-
-		<div class="contact">
-			<div class="wrapper-img">
-				<div class="img">
-					<img src="img/carrio.png" alt="">
+			<div class="contact">
+				<div class="wrapper-img">
+					<div class="img">
+						<img src="<?php echo $conversacion['photo'];?>" alt="">
+					</div>
 				</div>
-			</div>
 
-			<div class="wrapper-txt">
-				<div class="top">
-					<div class="wrapper-cnt-name"><span class="contact-name">Elisa Carrio de la ostra maldita</span></div>
+				<div class="wrapper-txt">
+					<div class="top">
+						<span class="contact-name">
+							<?php echo $conversacion['first_name'] . " " . $conversacion['last_name'];?>
+						</span>
+						<span class="date-time">19:21</span>
+					</div>
+					<div class="bottom">
+						<span class="last-message">
+							<?php echo $conversacion['message'];?>
+						</span>
+					</div>
+
+				
 					
-					<span class="date-time">18:35</span>
-				</div>
-				<div class="bottom">
-					<span class="last-message">Cuándo?</span>
-				</div>
-
-			
-				
-			</div>
-		</div>
-
-		<div class="contact">
-			<div class="wrapper-img">
-				<div class="img">
-					<img src="img/cristina.png" alt="">
 				</div>
 			</div>
 
-			<div class="wrapper-txt">
-				<div class="top">
-					<span class="contact-name">Cristina Fernandez</span>
-					<span class="date-time">18:14</span>
-				</div>
-				<div class="bottom">
-					<span class="last-message">Fijate ahí. </span>
-				</div>
-
-			
-				
-			</div>
-		</div>
-
-		<div class="contact">
-			<div class="wrapper-img">
-				<div class="img">
-					<img src="img/macri.png" alt="">
-				</div>
-			</div>
-
-			<div class="wrapper-txt">
-				<div class="top">
-					<span class="contact-name">Mauricio Macri</span>
-					<span class="date-time">13:41</span>
-				</div>
-				<div class="bottom">
-					<span class="last-message">Después lo vemos bien allá. </span>
-				</div>
-
-			
-				
-			</div>
-		</div>
-
-		<div class="contact">
-			<div class="wrapper-img">
-				<div class="img">
-					<img src="img/lionel.png" alt="">
-				</div>
-			</div>
-
-			<div class="wrapper-txt">
-				<div class="top">
-					<span class="contact-name">Lionel Richie</span>
-					<span class="date-time">19:21</span>
-				</div>
-				<div class="bottom">
-					<span class="last-message">Dale! Pasame la dire y te caigo. </span>
-				</div>
-
-			
-				
-			</div>
-		</div>
-
-		<div class="contact">
-			<div class="wrapper-img">
-				<div class="img">
-					<img src="img/carrio.png" alt="">
-				</div>
-			</div>
-
-			<div class="wrapper-txt">
-				<div class="top">
-					<span class="contact-name">Elisa Carrio</span>
-					<span class="date-time">18:35</span>
-				</div>
-				<div class="bottom">
-					<span class="last-message">Cuándo?</span>
-				</div>
-
-			
-				
-			</div>
-		</div>
-
-		<div class="contact">
-			<div class="wrapper-img">
-				<div class="img">
-					<img src="img/cristina.png" alt="">
-				</div>
-			</div>
-
-			<div class="wrapper-txt">
-				<div class="top">
-					<span class="contact-name">Cristina Fernandez</span>
-					<span class="date-time">18:14</span>
-				</div>
-				<div class="bottom">
-					<span class="last-message">Fijate ahí. </span>
-				</div>
-
-			
-				
-			</div>
-		</div>
-
-		<div class="contact">
-			<div class="wrapper-img">
-				<div class="img">
-					<img src="img/macri.png" alt="">
-				</div>
-			</div>
-
-			<div class="wrapper-txt">
-				<div class="top">
-					<span class="contact-name">Mauricio Macri</span>
-					<span class="date-time">13:41</span>
-				</div>
-				<div class="bottom">
-					<span class="last-message">Después lo vemos bien allá. </span>
-				</div>
-
-			
-				
-			</div>
-		</div>
-
-		<div class="contact">
-			<div class="wrapper-img">
-				<div class="img">
-					<img src="img/carrio.png" alt="">
-				</div>
-			</div>
-
-			<div class="wrapper-txt">
-				<div class="top">
-					<span class="contact-name">Elisa Carrio</span>
-					<span class="date-time">18:35</span>
-				</div>
-				<div class="bottom">
-					<span class="last-message">Cuándo?</span>
-				</div>
-
-			
-				
-			</div>
-		</div>
-
-		<div class="contact">
-			<div class="wrapper-img">
-				<div class="img">
-					<img src="img/cristina.png" alt="">
-				</div>
-			</div>
-
-			<div class="wrapper-txt">
-				<div class="top">
-					<span class="contact-name">Cristina Fernandez</span>
-					<span class="date-time">18:14</span>
-				</div>
-				<div class="bottom">
-					<span class="last-message">Fijate ahí. </span>
-				</div>
-
-			
-				
-			</div>
-		</div>
-
-		<div class="contact">
-			<div class="wrapper-img">
-				<div class="img">
-					<img src="img/macri.png" alt="">
-				</div>
-			</div>
-
-			<div class="wrapper-txt">
-				<div class="top">
-					<span class="contact-name">Mauricio Macri</span>
-					<span class="date-time">13:41</span>
-				</div>
-				<div class="bottom">
-					<span class="last-message">Después lo vemos bien allá. </span>
-				</div>
-
-			
-				
-			</div>
-		</div>
-
-		<div class="contact">
-			<div class="wrapper-img">
-				<div class="img">
-					<img src="img/carrio.png" alt="">
-				</div>
-			</div>
-
-			<div class="wrapper-txt">
-				<div class="top">
-					<span class="contact-name">Elisa Carrio</span>
-					<span class="date-time">18:35</span>
-				</div>
-				<div class="bottom">
-					<span class="last-message">Cuándo?</span>
-				</div>
-
-			
-				
-			</div>
-		</div>
-
-		<div class="contact">
-			<div class="wrapper-img">
-				<div class="img">
-					<img src="img/cristina.png" alt="">
-				</div>
-			</div>
-
-			<div class="wrapper-txt">
-				<div class="top">
-					<span class="contact-name">Cristina Fernandez</span>
-					<span class="date-time">18:14</span>
-				</div>
-				<div class="bottom">
-					<span class="last-message">Fijate ahí. </span>
-				</div>
-
-			
-				
-			</div>
-		</div>
-
-		<div class="contact">
-			<div class="wrapper-img">
-				<div class="img">
-					<img src="img/macri.png" alt="">
-				</div>
-			</div>
-
-			<div class="wrapper-txt">
-				<div class="top">
-					<span class="contact-name">Mauricio Macri</span>
-					<span class="date-time">13:41</span>
-				</div>
-				<div class="bottom">
-					<span class="last-message">Después lo vemos bien allá. </span>
-				</div>
-
-			
-				
-			</div>
-		</div>
+		<?php endforeach; ?>
+		
 
 	</div>
 
@@ -317,12 +53,14 @@
 
 		
 		<div class="wrapper-img">
-			<img src="img/lionel.png" alt="">
+			<img src="<?php echo $mensajes[0]['photo'];?>" alt="">
 		</div>
 		
 
 		<div class="wrapper-txt">
-			<span class="contact-name">Lionel Richie</span>
+			<span class="contact-name">
+				<?php echo $mensajes[0]['first_name'] . " " . $mensajes[0]['last_name'];?>
+			</span>
 		</div>
 
 	</div>
@@ -330,9 +68,128 @@
 
 	<div class="messages">
 
+		<?php foreach ($mensajes as $mensaje): ?>
+
+			<div class="wrapper-msg">
+				<div class="msg 
+					<?php 
+						if($mensaje['user_s_id'] != $id_usr){
+							echo "received";
+						}
+
+						else{
+							echo "sent";
+						};
+					?>
+				">
+					<div class="wrapper-img">
+						<img src="
+							<?php 
+								if($mensaje['user_s_id'] != $id_usr){
+									echo $mensaje['photo'];
+								}
+
+								else{
+									echo $foto_usr;
+								};
+							?>
+						" alt="">
+					</div>
+					<div class="wrapper-txt">
+						<div class="wrapper-user">
+							<span class="user">
+								<?php 
+									if($mensaje['user_s_id'] != $id_usr){
+										echo $mensaje['first_name'] . " " . $mensaje['last_name'];
+									}
+
+									else{
+										echo $nombre_completo_usr;
+									};
+								?>
+							</span>
+						</div>
+						<span class="txt">
+							<?php echo $mensaje['message'];?>
+						</span>
+					</div>
+					<span class="date-time">
+						<?php echo substr($mensaje['created_date'], 11, 5) ;?>
+					</span>
+				</div>
+			</div>
+
+		<?php endforeach; ?>
+
+		<!-- <div class="wrapper-msg">
+			<div class="msg sent">
+				<div class="wrapper-img">
+					<img src="img/users/1.png" alt="">
+				</div>
+				<div class="wrapper-txt">
+					<div class="wrapper-user">
+						<span class="user">Francisco Alberio</span>
+					</div>
+					<span class="txt">Qué onda wacho?</span>
+				</div>
+				<span class="date-time">19:21</span>
+			</div>
+		</div>
+
+		<div class="wrapper-msg">
+			<div class="msg received">
+				<div class="wrapper-img">
+					<img src="img/users/2.png" alt="">
+				</div>
+				<div class="wrapper-txt">
+					<div class="wrapper-user">
+						<span class="user">Cristian Boldrini</span>
+					</div>
+					<span class="txt">Acá andamos, vos? Pudiste ver eso?</span>
+				</div>
+				<span class="date-time">19:21</span>
+			</div>
+		</div>
+
+		<div class="wrapper-msg">
+			<div class="msg received">
+				<div class="wrapper-img">
+					<img src="img/users/2.png" alt="">
+				</div>
+				<div class="wrapper-txt">
+					<div class="wrapper-user">
+						<span class="user">Cristian Boldrini</span>
+					</div>
+					<span class="txt">Estoy en eso... </span>
+				</div>
+				<span class="date-time">19:21</span>
+			</div>
+		</div>
+
 		<div class="wrapper-msg">
 			<div class="msg sent">
+				<div class="wrapper-img">
+					<img src="img/users/1.png" alt="">
+				</div>
 				<div class="wrapper-txt">
+					<div class="wrapper-user">
+						<span class="user">Francisco Alberio</span>
+					</div>
+					<span class="txt">Che, vos tenés idea como se puede hacer para darle funcionalidad a un chat? Se me está quemando la cabeza!</span>
+				</div>
+				<span class="date-time">19:21</span>
+			</div>
+		</div>
+
+		<div class="wrapper-msg">
+			<div class="msg sent">
+				<div class="wrapper-img">
+					<img src="img/users/1.png" alt="">
+				</div>
+				<div class="wrapper-txt">
+					<div class="wrapper-user">
+						<span class="user">Francisco Alberio</span>
+					</div>
 					<span class="txt">Che, vos tenés idea como se puede hacer para darle funcionalidad a un chat? Se me está quemando la cabeza!</span>
 				</div>
 				<span class="date-time">19:21</span>
@@ -341,7 +198,13 @@
 
 		<div class="wrapper-msg">
 			<div class="msg received">
+				<div class="wrapper-img">
+					<img src="img/users/2.png" alt="">
+				</div>
 				<div class="wrapper-txt">
+					<div class="wrapper-user">
+						<span class="user">Cristian Boldrini</span>
+					</div>
 					<span class="txt">Mmm no ni idea... pero no te enroques al pedo. Para qué queres un chat?</span>
 				</div>
 				<span class="date-time">19:21</span>
@@ -350,35 +213,14 @@
 
 		<div class="wrapper-msg">
 			<div class="msg sent">
-				<div class="wrapper-txt">
-					<span class="txt">Porque pintó...</span>
+				<div class="wrapper-img">
+					<img src="img/users/1.png" alt="">
 				</div>
-				<span class="date-time">19:21</span>
-			</div>
-		</div>
-
-		<div class="wrapper-msg">
-			<div class="msg sent">
 				<div class="wrapper-txt">
-					<span class="txt">Algo va a salir.</span>
-				</div>
-				<span class="date-time">19:21</span>
-			</div>
-		</div>
-
-		<div class="wrapper-msg">
-			<div class="msg received">
-				<div class="wrapper-txt">
-					<span class="txt">Buscá en Google. Está todo.</span>
-				</div>
-				<span class="date-time">19:21</span>
-			</div>
-		</div>
-
-		<div class="wrapper-msg">
-			<div class="msg sent">
-				<div class="wrapper-txt">
-					<span class="txt">Seee... pero tampoco es tan fácil. Y la idea es hacerlo propio.</span>
+					<div class="wrapper-user">
+						<span class="user">Francisco Alberio</span>
+					</div>
+					<span class="txt">Che, vos tenés idea como se puede hacer para darle funcionalidad a un chat? Se me está quemando la cabeza!</span>
 				</div>
 				<span class="date-time">19:21</span>
 			</div>
@@ -386,48 +228,18 @@
 
 		<div class="wrapper-msg">
 			<div class="msg received">
+				<div class="wrapper-img">
+					<img src="img/users/2.png" alt="">
+				</div>
 				<div class="wrapper-txt">
-					<span class="txt">Bueno. Suerte!</span>
+					<div class="wrapper-user">
+						<span class="user">Cristian Boldrini</span>
+					</div>
+					<span class="txt">Mmm no ni idea... pero no te enroques al pedo. Para qué queres un chat?</span>
 				</div>
 				<span class="date-time">19:21</span>
 			</div>
-		</div>
-
-		<div class="wrapper-msg">
-			<div class="msg sent">
-				<div class="wrapper-txt">
-					<span class="txt">Jajajjaja gracias!!!</span>
-				</div>
-				<span class="date-time">19:21</span>
-			</div>
-		</div>
-
-		<div class="wrapper-msg">
-			<div class="msg received">
-				<div class="wrapper-txt">
-					<span class="txt">Después contame como te quedó.</span>
-				</div>
-				<span class="date-time">19:21</span>
-			</div>
-		</div>
-
-		<div class="wrapper-msg">
-			<div class="msg sent">
-				<div class="wrapper-txt">
-					<span class="txt">Dale! Vos cómo venis?</span>
-				</div>
-				<span class="date-time">19:21</span>
-			</div>
-		</div>
-
-		<div class="wrapper-msg">
-			<div class="msg received">
-				<div class="wrapper-txt">
-					<span class="txt">Bieen! Quemado también, pero me está gustando.</span>
-				</div>
-				<span class="date-time">19:21</span>
-			</div>
-		</div>
+		</div> -->
 
 
 	</div>
