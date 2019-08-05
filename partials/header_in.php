@@ -34,6 +34,11 @@
 				<li><a href="wiki.php"><p>WIKI</p></a></li>
 				<li><a href="chat.php"><p>CHAT</p></a></li>
 				<li class="btn-menu-profile"><img class="user" src="<?php echo $foto_usr; ?>" alt=""></li>
+				<li>
+					<div id="wrp-change-theme">
+						<div id="btn-change-theme"></div>
+					</div>
+				</li>
 			</ul>
 		</nav>
 	</div>

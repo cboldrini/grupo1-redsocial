@@ -6,6 +6,51 @@ $( document ).ready(function() {
 ////////////////////////////////////////////////////////////////////////////////
 
 
+///////////////////////  CAMBIAR TEMA  /////////////////////////
+
+
+$("#wrp-change-theme").click(darkMode);
+
+var themeMode = "l";
+
+function darkMode(){
+   let root = document.documentElement;
+   let btn = document.querySelector("#btn-change-theme");
+   
+   if (themeMode == "l") {
+
+   	   themeMode = "d";
+   	   root.style.setProperty('--blanco', '#222');
+	   root.style.setProperty('--blanco-2', '#333');
+	   root.style.setProperty('--blanco-3', '#444');
+	   root.style.setProperty('--blanco-4', '#555');
+	   root.style.setProperty('--blanco-5', '#666');
+	   root.style.setProperty('--gris-oscuro', '#eee');
+	   root.style.setProperty('--azul-claro', '#eee');
+	   root.style.setProperty('--azul-medio', '#ddd');
+	   root.style.setProperty('--azul-oscuro', '#ccc');
+	   btn.style.setProperty("float","right");
+   } 
+
+   else{
+   		themeMode = "l";
+   	   root.style.setProperty('--blanco', '#fff');
+	   root.style.setProperty('--blanco-2', '#eee');
+	   root.style.setProperty('--blanco-3', '#ddd');
+	   root.style.setProperty('--blanco-4', '#ccc');
+	   root.style.setProperty('--blanco-5', '#bbb');
+	   root.style.setProperty('--gris-oscuro', '#333');
+	   root.style.setProperty('--azul-claro', '#3A7CA5');
+	   root.style.setProperty('--azul-medio', '#2F6690');
+	   root.style.setProperty('--azul-oscuro', '#16425B');
+	   btn.style.setProperty("float","left");
+	   btn.style.setProperty("transition",".3s");
+   }
+   
+
+   
+
+};
 
 
 
@@ -130,13 +175,13 @@ function checkNombre() {
 ///////////////////////  VALIDAR LONGITUD DE APELLIDO  /////////////////////////
 
 
-$("#apellido").keyup(checkApellido);
-$("#apellido").blur(checkApellido);
+$("#apellido").keyup(checkLengthApellido);
+$("#apellido").blur(checkLengthApellido);
 
 var val_apellido_registro = "0";
 
 
-function checkApellido() {
+function checkLengthApellido() {
 	var apellido = $("#apellido").val();
 	var longitudApellido = apellido.length;
 
@@ -153,6 +198,9 @@ function checkApellido() {
 		cambiarPasoRegistro();
 	}
 }
+
+
+
 
 
 ///////////////////////////////  VALIDAR EMAIL  ////////////////////////////////
@@ -175,6 +223,16 @@ function checkEmail(){
 	} 
 
 	else { 
+		var caract = new RegExp(/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/);
+
+		if (caract.test(email) == false) {
+		$("#validacionEmail").html("<i class='icon-alert fas fa-exclamation-circle'></i>El email ingresado es inválido.<input id='emailChecker' type='hidden' value='0' name='emailChecker'> ");
+		val_email_registro = "0";
+		cambiarPasoRegistro();
+	} 
+	
+
+	else {
 
 		$.ajax(
 
@@ -195,14 +253,15 @@ function checkEmail(){
 		    	}
 		   	}
 
-		    // error: function() {
-		    // 	alert("no disponible");
-		    // 	alert(data);
-		    // $("#validacionEmail").html("<i class='icon-alert fas fa-exclamation-circle'></i>Hay un error.<input id='emailChecker' type='hidden' value='0' name='emailChecker'> ");
-		    // }
-
+		   
 		   }
 		);
+
+	}
+
+
+
+		
 	}
 
 

@@ -32,6 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$urlNueva = "img/users/" . $id . ".png";
 	$photo = $urlNueva;
 	$emailExistente = emailUsado($conexion, $email);
+	$area = $_POST['area'];
+	$puesto = $_POST['puesto'];
+	$genero = $_POST['genero'];
+	$nacimiento = $_POST['nacimiento'];
 
 
 	if($emailExistente == "1"){
@@ -60,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$_SESSION['user'] = $email;
 		header('Location: timeline.php');
 		$password = password_hash($password, PASSWORD_DEFAULT);
-		nuevoUsuario($conexion, $email, $nombre, $apellido, $password,$photo);
+		nuevoUsuario($conexion, $email, $nombre, $apellido, $password,$photo, $area, $puesto, $genero, $nacimiento);
 		// echo $fotoNombre;
 		// echo $fotoTemporal;
 		// echo $urlNueva;

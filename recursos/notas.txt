@@ -17,7 +17,10 @@ font-family: 'Exo', sans-serif;
 	--rosa-hover:#fF567A;
 	--turquesa:#23F0C7;
 	--blanco:#FFF;
-	--gris-claro:#E8EFF0;
+	--blanco-2:#eee;
+	--blanco-3:#ddd;
+	--blanco-4:#ccc;
+	--blanco-5:#bbb;
 	--amarillo: #eFd337;
 	--violeta: #6D466B;
 	--azul-claro:#3A7CA5;
@@ -31,6 +34,8 @@ font-family: 'Exo', sans-serif;
 	--verde-medio: #499167;
 	--gris-oscuro: #333;
 	--rojo: #EC0606;
+	--naranja-megatlon: #E93A1B;
+
 }
 
 

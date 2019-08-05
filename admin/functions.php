@@ -276,29 +276,6 @@ function obtMsjPorConv($conexion, $conv_id, $usr_id){
 
 
 
-// Array ( 
-//   [0] => Array ( 
-//     [first_name] => Cristian 
-//     [last_name] => Boldrini 
-//     [photo] => img/users/2.png 
-//     [message] => Hola 
-//     [created_date] => 2019-08-02 19:13:57 
-//     [user_s_id] => 1 
-//   ) 
-
-//   [1] => Array ( 
-//     [first_name] => Cristian 
-//     [last_name] => Boldrini 
-//     [photo] => img/users/2.png 
-//     [message] => Fran 
-//     [created_date] => 2019-08-02 20:12:57 
-//     [user_s_id] => 2 
-//   ) 
-
-//   [2] => Array ( [first_name] => Cristian [last_name] => Boldrini [photo] => img/users/2.png [message] => Qu� onda? [created_date] => 2019-08-02 21:12:57 [user_s_id] => 2 ) 
-//   [3] => Array ( [first_name] => Cristian [last_name] => Boldrini [photo] => img/users/2.png [message] => Todo bien, vos? [created_date] => 2019-08-02 21:14:57 [user_s_id] => 1 ) )
-
-
 
 //////////////////////////////////////////////////////////////////////////
 //////////////////// INSERTAR DATOS EN BASE DE DATOS /////////////////////
@@ -307,10 +284,10 @@ function obtMsjPorConv($conexion, $conv_id, $usr_id){
 
 ///////////////////////////// NUEVO USUARIO //////////////////////////////
 
-function nuevoUsuario($conexion, $email, $nombre, $apellido, $password, $photo){
+function nuevoUsuario($conexion, $email, $nombre, $apellido, $password, $photo, $area, $puesto, $genero, $nacimiento){
   $sentencia = $conexion->prepare(
-    "INSERT INTO users(id, email, first_name, last_name, password, photo) 
-    VALUES (null,:email,:nombre,:apellido,:password,:photo)"
+    "INSERT INTO users(id, email, first_name, last_name, password, photo, area_id, genre_id, job_title_id, born_date) 
+    VALUES (null,:email,:nombre,:apellido,:password,:photo,:area,:genero,:puesto,:nacimiento)"
   );
 
    $sentencia->execute(array(
@@ -318,7 +295,11 @@ function nuevoUsuario($conexion, $email, $nombre, $apellido, $password, $photo){
     ':nombre' => $nombre,
     ':apellido' => $apellido,
     ':password' => $password,
-    ':photo' => $photo
+    ':photo' => $photo,
+    ':area' => $area,
+    ':genero' => $genero,
+    ':puesto' => $puesto,
+    ':nacimiento' => $nacimiento
   ));
 }
 

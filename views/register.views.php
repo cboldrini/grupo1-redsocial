@@ -46,8 +46,48 @@
 		</div>
 		
 		<div class="wrapper-paso2">
-			<label for="file-upload"><i class="fas fa-cloud-upload-alt"></i></label>
-			<input type="file" id="file-upload" name="foto" accept=".png" style='display: none;'>
+			<div class="item">
+				<select name="area" id="area">
+					<option value="1">Desarrollo</option>
+					<option value="2">Comunicaciones</option>
+					<option value="3">Finanzas</option>
+					<option value="4">Recursos Humanos</option>
+				</select>
+			</div>
+			
+			<div class="item">
+				<select name="puesto" id="job_title">
+					<option value="1">Aprendiz</option>
+					<option value="2">Pasante</option>
+					<option value="3">Coordinador/a</option>
+					<option value="4">Gerente/a</option>
+					<option value="5">Director/a</option>
+					<option value="6">Analista</option>
+				</select>
+			</div>
+
+			<div class="item">
+				<select name="genero" id="genero">
+					<option value="1">Mujer</option>
+					<option value="2">Hombre</option>
+					<option value="3">Otro</option>
+				</select>
+			</div>
+
+			<div class="item">
+				<input type="date" name="nacimiento">
+			</div>
+
+			<div class="wrapper-file">
+				<label for="file-upload">
+					<div class="wrp-icon">
+						<i class="fas fa-cloud-upload-alt"></i>
+					</div>
+					<span>CARGAR FOTO</span>
+				</label>
+				<input type="file" id="file-upload" name="foto" accept=".png" style='display: none;'>
+			</div>
+
 			<div class="actions">
 				<span class="btn-anterior"><i class="fas fa-arrow-circle-left"></i></span>
 				<button class="btn-azul-claro" id="btn-enviar-registro">ENVIAR</button>

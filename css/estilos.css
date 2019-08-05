@@ -13,7 +13,10 @@
 	--rosa-hover:#fF567A;
 	--turquesa:#23F0C7;
 	--blanco:#FFF;
-	--gris-claro:#E8EFF0;
+	--blanco-2:#eee;
+	--blanco-3:#ddd;
+	--blanco-4:#ccc;
+	--blanco-5:#bbb;
 	--amarillo: #eFd337;
 	--violeta: #6D466B;
 	--azul-claro:#3A7CA5;
@@ -42,6 +45,10 @@
 	padding: 0;
 	font-family: 'Exo', sans-serif;
 	box-sizing: border-box;
+}
+
+body{
+	color: var(--gris-oscuro);
 }
 
 a{
@@ -183,7 +190,7 @@ a:hover{
 }
 
 .loader{
-	border: 7px solid #ccc;
+	border: 7px solid var(--blanco-4);
 	border-top-color: var(--azul-claro);
 	/*border-top-style: groove;*/
 	height: 50px;
@@ -264,7 +271,7 @@ a:hover{
 	padding: 10px 5px;
 	margin-bottom: 10px;
 	border: none;
-	border: 1px solid #ccc;
+	border: 1px solid var(--blanco-4);
 }
 
 .modal-new-group .contacts{
@@ -1094,7 +1101,7 @@ header .icon-toggle, header .icon-exit{
 }
 
 .not-focus{
-	background-color: #bbb !important;
+	background-color: var(--blanco-5) !important;
 }
 
 #register .item{
@@ -1116,16 +1123,12 @@ header .icon-toggle, header .icon-exit{
 	border-bottom: 2px solid var(--azul-claro);
 }
 
-#register form input:nth-child(2), #register form input:nth-child(3), #register form input:nth-child(4), #register form input:nth-child(5){
-	width: 65%;
-	margin-right: 1%;
-}
 
 #register .item i{
 	font-size: 1rem;
 	line-height: 2rem;
-   margin-right: 10px;
-   margin-left: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 #register .icon-check{
@@ -1141,25 +1144,66 @@ header .icon-toggle, header .icon-exit{
 	line-height: 2rem;
 }
 
-/*
-#register form .error{
+#register form .wrapper-paso2 .item{
+	display: flex;
+	justify-content: flex-start;
 }
 
-#register form .error i{
-	margin-right: 5px;
-	color: var(--rojo);
-}*/
+#register form .wrapper-paso2 select{
+	width: 65%;
+	margin-bottom: 5px;
+	font-size: 1rem;
+	padding: 10px;
+	border: none;
+	border-bottom: 2px solid var(--azul-claro);
+}
+
+#register form .wrapper-paso2 input{
+	width: 65%;
+	margin-bottom: 5px;
+	font-size: 1rem;
+	padding: 10px;
+	border: none;
+	border-bottom: 2px solid var(--azul-claro);
+}
+
 
 #register form .wrapper-paso2 label{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+#register form .wrapper-paso2 label .wrp-icon{
 	background-color: var(--azul-claro);
 	color: var(--blanco);
-	font-size: 70px;
-	line-height: 120px;
-	width: 120px;
-	height: 120px;
+    font-size: 25px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
 	text-align:center;
 	border-radius: 50%;
-	cursor: pointer;
+	margin-right: 5px;
+}
+
+#register form .wrapper-paso2 label:hover .wrp-icon{
+	background-color: var(--azul-oscuro);
+}
+
+#register form .wrapper-paso2 .wrapper-file{
+	margin-top: 15px;
+}
+
+#register form .wrapper-paso2 .wrapper-file span{
+	color: var(--azul-claro);
+	font-size: 1rem;
+	line-height: 1rem;
+	font-weight: bold;
+}
+
+#register form .wrapper-paso2 .wrapper-file:hover span{
+	text-decoration: underline;
+	color: var(--azul-oscuro);
 }
 
 #register form .wrapper-paso2 input[type="file"]{
@@ -1179,7 +1223,7 @@ header .icon-toggle, header .icon-exit{
 }
 
 .disabled{
-	color: #bbb !important;
+	color: var(--blanco-5) !important;
 	cursor: auto !important;
 }
 
@@ -1263,7 +1307,7 @@ header .icon-toggle, header .icon-exit{
 	position: fixed;
 	right: 0;
 	top: 60px;
-	background-color: var(--gris-claro);
+	background-color: var(--blanco-2);
 	display: none;
 }
 
@@ -1275,7 +1319,7 @@ header .icon-toggle, header .icon-exit{
 	list-style: none;
 	padding: 10px 20px;
 	margin-bottom: 0;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid var(--blanco-3);
 }
 
 .header-in .menu-profile nav ul li a{
@@ -1287,6 +1331,25 @@ header .icon-toggle, header .icon-exit{
 	text-decoration: underline;
 }
 
+.header-in #wrp-change-theme{
+	background-color: var(--blanco-5);
+	width: 24px;
+	height: 12px;
+	margin: 25px 0;
+	padding: 1px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.header-in #btn-change-theme{
+	background-color: var(--gris-oscuro);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	float: left;
+	font-weight: bold;
+	transition: .3s;
+}
 
 
 /********************************************************************************************  
@@ -1294,7 +1357,7 @@ header .icon-toggle, header .icon-exit{
  ********************************************************************************************/
 
 .menu-left{
-	background-color: var(--gris-claro);
+	background-color: var(--blanco-2);
 	position: fixed;
     height: calc(100% - 60px);
 }
@@ -1362,6 +1425,7 @@ header .icon-toggle, header .icon-exit{
 .main{
 	position: absolute;
 	right: 0;
+	background-color: var(--blanco);
 }
 
 
@@ -1376,7 +1440,7 @@ header .icon-toggle, header .icon-exit{
 
 .filters ul{
 	margin-top: 30px;
-	border-bottom: 1px solid var(--gris-claro);
+	border-bottom: 1px solid var(--blanco-2);
 	width: 100%;
 }
 
@@ -1526,7 +1590,7 @@ header .icon-toggle, header .icon-exit{
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	border: 1px solid #ddd;
+	border: 1px solid var(--blanco-3);
 }
 
 #timeline .main .post-new .wrapper-img img{
@@ -1803,7 +1867,7 @@ header .icon-toggle, header .icon-exit{
 }
 
 #profile_edit .column-2 .datos .dato{
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid var(--blanco-3);
 	padding: 10px 0;
 }
 
@@ -2230,7 +2294,7 @@ header .icon-toggle, header .icon-exit{
 }
 
 #wiki .busqueda{
-	border: 1px solid var(--gris-claro);
+	border: 1px solid var(--blanco-2);
 	/*margin-top: 15px;*/
 	margin: 15px auto;	
 }
@@ -2378,16 +2442,16 @@ height: 10px;
 }
 
 ::-webkit-scrollbar-track-piece  {
-    background-color: #eee;
+    background-color: var(--blanco-2);
 }
 
 ::-webkit-scrollbar-thumb:vertical {
     height: 30px;
-    background-color: #ddd;
+    background-color: var(--blanco-3);
 }
 
 #chat .menu-contacts{
-	background-color: var(--gris-claro);
+	background-color: var(--blanco-2);
 	position: fixed;
     height: calc(100% - 60px);
 	padding-left: 0;
@@ -2397,7 +2461,7 @@ height: 10px;
 
 #chat .menu-contacts .busqueda{
 	background-color: var(--blanco);
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid var(--blanco-3);
 	position: fixed;
 	height: 55px;
 	width: 100%;
@@ -2422,7 +2486,7 @@ height: 10px;
     height: calc(100% - 115px);
 	bottom: 0;
 	overflow: auto;
-	scrollbar-color: #ddd #eee;
+	scrollbar-color: var(--blanco-2);
 	scrollbar-width: none;
 }
 
@@ -2438,12 +2502,12 @@ height: 10px;
 	padding-left: 15px;
 	padding-right: 15px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--blanco-3);
     cursor: pointer;
 }
 
 #chat .menu-contacts .contact:hover{
-	background-color: #ccc;
+	background-color: var(--blanco-4);
 }
 
 #chat .menu-contacts .contact .wrapper-img .img{
@@ -2498,17 +2562,17 @@ height: 10px;
 }
 
 #chat .conversation{
-	background-color: #eee;
+	background-color: var(--blanco-2);
 	height: calc(100% - 60px);
-	border-left: 1px solid #ddd;
+	border-left: 1px solid var(--blanco-3);
 	position: absolute;
 	right: 0;
 	padding: 0;
 }
 
 #chat .conversation .contact{
-	background-color: var(--gris-claro);
-	border-bottom: 1px solid #ddd;
+	background-color: var(--blanco-2);
+	border-bottom: 1px solid var(--blanco-3);
 	color: var(--gris-oscuro);
 	height: 55px;
 	position: fixed;
@@ -2545,7 +2609,7 @@ height: 10px;
 #chat .conversation .messages{
 	width: 90%;
 	margin: auto;
-	scrollbar-color: #ddd #eee;
+	scrollbar-color: var(--blanco-3);
 	scrollbar-width: thin;
 	margin-bottom: 70px;
 	margin-top: 50px;
@@ -2558,7 +2622,7 @@ height: 10px;
 }
 
 #chat .conversation .messages .msg{
-	background-color: #ddd;
+	background-color: var(--blanco-3);
 	border-radius: 4px;
 	color: var(--gris-oscuro);
 	max-width: 65%;
@@ -2615,7 +2679,7 @@ height: 10px;
 
 #chat .conversation .new-msg{
 	background-color: var(--blanco);
-	border-top: 1px solid #ddd;
+	border-top: 1px solid var(--blanco-3);
 	color: var(--gris-oscuro);
 	height: 60px;
 	position: fixed;
@@ -2837,7 +2901,7 @@ header .menu{
 	padding: 15px 0;
 	list-style: none;
 	display: block;
-	border-bottom: .04px solid #ccc;
+	border-bottom: .04px solid var(--blanco-4);
 }
 
 
