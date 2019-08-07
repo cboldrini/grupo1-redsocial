@@ -446,6 +446,104 @@ $("#nuevo_post").submit(nuevo_post)
 
 
 
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////// CHAT ///////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////  NUEVO MENSAJE  /////////////////////////////////
+
+$("#new-msg").submit(nuevo_mensaje);
+
+
+   function nuevo_mensaje(e){
+
+   e.preventDefault();
+	var mensaje = new FormData($("#new-msg")[0])
+
+	var contenedor = $("#wrapper-loader");
+	contenedor.css("visibility","visible");
+	contenedor.css("opacity","1");
+	
+
+   $.ajax({
+            url         : 'recargar_mensajes.php',
+            type        : 'POST',
+            data        : mensaje, 
+            processData : false,
+            contentType : false,
+            success: function(response)
+            {
+            	
+            	console.log(response);
+               $("#recargar-mensajes").html(response);
+               $("#message").val("");
+               	
+               	contenedor.css("visibility","hidden");
+				contenedor.css("opacity","0");
+
+               return false;
+
+            },
+            error : function(response)
+            {
+                alert(response)
+            }
+   
+})
+
+}
+
+
+
+///////////////////////////  MOSTRAR CONVERSACION  /////////////////////////////
+
+$(".conv-contact").click(mostrarConversacion);
+
+
+   function mostrarConversacion(e){
+
+   e.preventDefault();
+
+   	var idConversacion = $(this).attr("id");
+   	var mensaje = {"idConversacion" : idConversacion};
+	var contenedor = $("#wrapper-loader");
+	contenedor.css("visibility","visible");
+	contenedor.css("opacity","1");
+	
+
+   $.ajax({
+            url         : 'mostrar_conversacion.php',
+            type        : 'POST',
+            data        : mensaje, 
+            // processData : false,
+            // contentType : false,
+            success: function(response)
+            {
+            	
+            console.log(response);
+               $("#conversation").html(response);
+               $("#message").val("");
+               	
+               	contenedor.css("visibility","hidden");
+				contenedor.css("opacity","0");
+
+
+               return false;
+
+            },
+            error : function(response)
+            {
+                alert(response)
+            }
+   
+})
+
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// MENUS ////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

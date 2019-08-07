@@ -27,9 +27,19 @@ $conversaciones = obtConvPorUsr($conexion,$id_usr);
 $conv_id = "1";
 $mensajes = obtMsjPorConv($conexion, $conv_id, $id_usr);
 
-// print_r($mensajes);
 
-// print_r($conversaciones);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	if(isset($message)){
+		$message = $_POST['message'];
+		$created_date = date("Y-m-d H:i:s");
+		$id_usr = $datos_usr["id"];
+		$conversation_id = $conv_id;
+
+
+		nuevoMensaje($conexion, $message, $id_usr, $created_date, $conversation_id);
+	} 
+
+};
 
 
 

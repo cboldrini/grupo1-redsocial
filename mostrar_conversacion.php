@@ -1,54 +1,34 @@
-<?php 
-	require_once 'partials/header_in.php';
- ?>
-
-<section id="chat" class="container-fluid row">
-
-<div class="menu-contacts col-lg-3 col-md-4 col-sm-4 col-12">
-
-	<div class="busqueda col-lg-3 col-md-4 col-sm-4">
-		<input type="text" placeholder="Buscar">
-	</div>
-
-	
-	<div class="contacts col-lg-3 col-md-4 col-sm-4 col-12">
-
-		<?php foreach ($conversaciones as $conversacion): ?>
-			
-			<div class="conv-contact" id="<?php echo $conversacion['conversation_id']; ?>">
-				<div class="wrapper-img">
-					<div class="img">
-						<img src="<?php echo $conversacion['photo'];?>" alt="">
-					</div>
-				</div>
-
-				<div class="wrapper-txt">
-					<div class="top">
-						<span class="contact-name">
-							<?php echo $conversacion['first_name'] . " " . $conversacion['last_name'];?>
-						</span>
-						<span class="date-time">19:21</span>
-					</div>
-					<div class="bottom">
-						<span class="last-message">
-							<?php echo $conversacion['message'];?>
-						</span>
-					</div>
-
-				
-					
-				</div>
-			</div>
-
-		<?php endforeach; ?>
-		
-
-	</div>
-
-</div>
+<?php session_start();
 
 
-<div class="conversation col-lg-9 col-md-8 col-sm-8" id="conversation">
+/////////////// LLAMANDO A LAS CONFIGIGURACIONES GENERALES ////////////////
+
+require_once 'admin/config.php';
+require_once 'admin/functions.php';
+require_once 'admin/variables.php';
+
+$usuario = $_SESSION['user'];
+
+$conexion = conexion($db_config);
+
+comprobarSesion();
+
+if (!$conexion) {
+	header('Location: error.php');
+}
+
+
+
+
+$conv_id = $_POST['idConversacion'];
+$mensajes = obtMsjPorConv($conexion, $conv_id, $id_usr);
+
+
+?>
+
+
+
+
 	<div class="contact">
 
 		
@@ -134,19 +114,10 @@
 
 	</div>
 
-	
-</div>
-
-
-	
-		
-
-	
 
 
 
-</section>
 
-<?php 
-	require_once 'partials/footer_scripts.php';
- ?>
+
+
+

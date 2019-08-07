@@ -320,6 +320,23 @@ function nuevoPost($conexion, $message, $user_id, $created_date){
 }
 
 
+////////////////////////// NUEVO MENSAJE ////////////////////////////////
+
+function nuevoMensaje($conexion, $message, $user_id, $created_date, $conversation_id){
+  $sentencia = $conexion->prepare(
+    "INSERT INTO messages(id, message, user_s_id, created_date, conversation_id) 
+    VALUES (null,:message,:user_id,:created_date,:conversation_id)"
+  );
+
+   $sentencia->execute(array(
+    ':message' => $message,
+    ':user_id' => $user_id,
+    ':created_date' => $created_date,
+    ':conversation_id' => $conversation_id
+  ));
+}
+
+
 ///////////////////////// GUARDAR FOTO TEMPORAL /////////////////////////////
 
 
