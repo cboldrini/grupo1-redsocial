@@ -129,7 +129,7 @@
 	<div class="new-msg">
 		<form id="new-msg" method="post">
 			<input class="col-lg-8 col-md-8 col-sm-8" type="text" name="message" id="message" placeholder="Escribe un nuevo mensaje">
-			<button><i class="fas fa-plus"></i></button>
+			<button><i class="fas fa-paper-plane"></i></button>
 		</form>
 
 	</div>

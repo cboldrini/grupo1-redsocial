@@ -70,7 +70,17 @@ a:hover{
 	padding-right: 0;
 }
 
+input:focus{ 
+	outline: none;
+}
 
+select:focus{ 
+	outline: none;
+}
+
+button:focus{
+	outline: none;
+}
 /********************************************************************************************  
  ******************************  MOSTRAR/OCULTAR ELEMENTOS **********************************
  *******************************************************************************************/
@@ -1122,6 +1132,11 @@ header .icon-toggle, header .icon-exit{
 	border: none;
 	border-bottom: 2px solid var(--azul-claro);
 }
+
+#register form .wrapper-paso1 input:focus{
+	border-bottom: 4px solid var(--azul-claro);
+}
+
 
 
 #register .item i{
@@ -2608,13 +2623,15 @@ height: 10px;
 }
 
 #chat .conversation .messages{
-	width: 90%;
-	margin: auto;
+	background-color: var(--blanco-2);
+	width: 100%;
 	scrollbar-color: var(--blanco-3);
 	scrollbar-width: thin;
-	margin-bottom: 70px;
+	margin-bottom: 60px;
 	margin-top: 50px;
 	padding-top: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
 	overflow: auto;
 }
 
@@ -2699,6 +2716,19 @@ height: 10px;
 	border: none;
 }
 
+#chat .conversation .new-msg button{
+	border: none;
+	background-color: transparent;
+}
+
+#chat .conversation .new-msg button:focus{
+	outline: none;
+}
+
+#chat .conversation .new-msg button i{
+	color: var(--azul-claro);
+	font-size: 1.2rem;
+}
 
 
 

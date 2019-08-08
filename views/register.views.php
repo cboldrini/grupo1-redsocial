@@ -5,7 +5,7 @@
 
 <section id="register">
 	
-	<form action="#" method="post" enctype="multipart/form-data" class="col-md-8" id="form-registro">
+	<form action="#" method="post" enctype="multipart/form-data" class="col-md-10" id="form-registro">
 		<div class="pasos">
 			<span class="btn-paso btn-paso1">1</span>
 			<span class="btn-paso btn-paso2 not-focus">2</span>
