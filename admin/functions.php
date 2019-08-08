@@ -220,6 +220,20 @@ function obtenerPosts($conexion){
 
 
 
+////////////////////////  OBTENER CONTACTOS /////////////////////////////
+
+function obtCtcs($conexion, $id){
+    $sentencia = $conexion->prepare("
+      SELECT * 
+      FROM users
+      WHERE id != '$id'
+      ;");
+    $sentencia->execute();
+  return $sentencia->fetchAll();
+}
+
+
+
 //////////////////  OBTENER CONVERSACIONES POR USUARIO ////////////////////
 
 function obtConvPorUsr($conexion, $id){

@@ -41,6 +41,35 @@
 			</div>
 
 		<?php endforeach; ?>
+
+		<?php foreach ($contacts as $contact): ?>
+			
+			<div class="conv-contact" id="<?php echo $contact['conversation_id']; ?>">
+				<div class="wrapper-img">
+					<div class="img">
+						<img src="<?php echo $contact['photo'];?>" alt="">
+					</div>
+				</div>
+
+				<div class="wrapper-txt">
+					<div class="top">
+						<span class="contact-name">
+							<?php echo $contact['first_name'] . " " . $contact['last_name'];?>
+						</span>
+						<span class="date-time">19:21</span>
+					</div>
+					<div class="bottom">
+						<span class="last-message">
+							
+						</span>
+					</div>
+
+				
+					
+				</div>
+			</div>
+
+		<?php endforeach; ?>
 		
 
 	</div>
